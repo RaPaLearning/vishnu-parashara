@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.de291b3a.js",
-    "static/js/453.1a16ed4e.chunk.js": "/static/js/453.1a16ed4e.chunk.js",
-    "index.html": "/index.html",
-    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.de291b3a.js.map": "/static/js/main.de291b3a.js.map",
-    "453.1a16ed4e.chunk.js.map": "/static/js/453.1a16ed4e.chunk.js.map"
+    "main.css": "/vishnu-parashara/static/css/main.f855e6bc.css",
+    "main.js": "/vishnu-parashara/static/js/main.a2ac759c.js",
+    "static/js/453.1a16ed4e.chunk.js": "/vishnu-parashara/static/js/453.1a16ed4e.chunk.js",
+    "index.html": "/vishnu-parashara/index.html",
+    "main.f855e6bc.css.map": "/vishnu-parashara/static/css/main.f855e6bc.css.map",
+    "main.a2ac759c.js.map": "/vishnu-parashara/static/js/main.a2ac759c.js.map",
+    "453.1a16ed4e.chunk.js.map": "/vishnu-parashara/static/js/453.1a16ed4e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.de291b3a.js"
+    "static/js/main.a2ac759c.js"
   ]
 }
