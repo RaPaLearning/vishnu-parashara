@@ -19,6 +19,11 @@ jobs:
               working-directory: frontend
               run: npm install
 
+            - name: Get ready for github
+              run: |
+                git config --global user.name 'deploy-bot'
+                git config --global user.email 'deploy-bot@rapalearning.com'
+
             - name: Deploy
               working-directory: frontend
               run: npm run deploy
