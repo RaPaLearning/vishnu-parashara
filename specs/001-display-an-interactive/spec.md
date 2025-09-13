@@ -63,7 +63,8 @@ A user wants to interactively explore the Vishnu Sahasranama, chant the shlokas,
 ### Acceptance Scenarios
 1. **Given** the user opens the interactive Vishnu Sahasranama, **When** they scroll through the shlokas, **Then** the text is displayed in a readable, sequential manner suitable for chanting.
 2. **Given** a user selects or hovers over a word, **When** they request its meaning, **Then** the system displays the meaning and relevant commentary from Parashara Bhatta.
-3. **Given** a user is viewing a word and its context, **When** they choose to construct a prompt, **Then** the system generates a context-rich prompt suitable for LLM input.
+3. **Given** a user taps or hovers on a word, **When** the meaning or commentary is displayed, **Then** the word should remain in the same position and should not move or shift on the screen.
+4. **Given** a user is viewing a word and its context, **When** they choose to construct a prompt, **Then** the system generates a context-rich prompt suitable for LLM input.
 
 ### Edge Cases
 - All information (words, meanings, commentary) are static, so none of them would be missing at runtime.
@@ -78,7 +79,10 @@ A user wants to interactively explore the Vishnu Sahasranama, chant the shlokas,
 - **FR-003**: System MUST display Parashara Bhatta's commentary for each word or shloka, where available.
 - **FR-004**: System MUST allow users to construct a prompt for LLMs using a selected word and its context.
 - **FR-005**: System MUST present the text in a format suitable for chanting (clear, sequential, readable).
-- **FR-007**: System MUST be able to search for a word
+- **FR-007**: System MUST be able to search for a word.
+- **FR-008**: System MUST be hostable as a static site (e.g., GitHub Pages).
+- **FR-009**: System MUST automate deployment to GitHub Pages using CI/CD (GitHub Actions workflow).
+- **FR-010**: System SHOULD be responsive and usable on both desktop and mobile devices.
 
 ### Key Entities
 - **Shloka**: Represents a verse in the Vishnu Sahasranama; attributes: number, text, sequence.

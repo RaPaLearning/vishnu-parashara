@@ -19,4 +19,16 @@ describe('Word highlight interaction', () => {
     fireEvent.mouseOut(word);
     expect(word).not.toHaveStyle('background-color: #ffe066');
   });
+
+  it('does not move word when highlighted', () => {
+    render(<App />);
+    const word = screen.getByText('विश्वं');
+    // Record initial position
+    const rectBefore = word.getBoundingClientRect();
+    fireEvent.click(word);
+    const rectAfter = word.getBoundingClientRect();
+    // Allow a 1px tolerance for rendering differences
+    expect(Math.abs(rectBefore.top - rectAfter.top)).toBeLessThanOrEqual(1);
+    expect(Math.abs(rectBefore.left - rectAfter.left)).toBeLessThanOrEqual(1);
+  });
 });
