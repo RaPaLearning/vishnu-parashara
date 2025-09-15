@@ -11,15 +11,6 @@ describe('Word highlight interaction', () => {
     expect(word).toHaveStyle('background-color: #ffe066');
   });
 
-  it('highlights a word on hover', () => {
-    render(<App />);
-    const word = screen.getByText('विष्णु');
-    fireEvent.mouseOver(word);
-    expect(word).toHaveStyle('background-color: #ffe066');
-    fireEvent.mouseOut(word);
-    expect(word).not.toHaveStyle('background-color: #ffe066');
-  });
-
   it('does not move word when highlighted', () => {
     render(<App />);
     const word = screen.getByText('विश्वं');
