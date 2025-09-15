@@ -7,7 +7,7 @@ describe('Word meaning and commentary display', () => {
     render(<App />);
     const word = screen.getByText('विश्वं');
     fireEvent.click(word);
-    expect(screen.getByTestId('meaning-box')).toHaveTextContent('complete');
+    expect(screen.getByTestId('meaning-box')).toHaveTextContent('Complete');
     expect(screen.getByTestId('meaning-box')).toHaveTextContent('पूर्णत्वात्');
   });
 
@@ -15,7 +15,7 @@ describe('Word meaning and commentary display', () => {
     render(<App />);
     const word = screen.getByText('विष्णु');
     fireEvent.mouseOver(word);
-    expect(screen.getByTestId('meaning-box')).toHaveTextContent('pervader');
+    expect(screen.getByTestId('meaning-box')).toHaveTextContent('pervades');
     expect(screen.getByTestId('meaning-box')).toHaveTextContent('वेशनात्');
     fireEvent.mouseOut(word);
     expect(screen.queryByTestId('meaning-box')).toBeNull();

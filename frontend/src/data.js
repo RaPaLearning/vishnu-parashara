@@ -17,3 +17,7 @@ export function getWordMeaningAndCommentary(shlokaNum, lineNum, wordIdx) {
     commentary: commentary[shlokaNum - 1]?.[lineNum - 1]?.[wordIdx] || ''
   }
 }
+
+export function numberOfShlokas() {
+  return shlokas.length;
+}

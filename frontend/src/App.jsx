@@ -1,7 +1,7 @@
 
 import './App.css';
 import { useState } from 'react';
-import { getWordsForShlokaLine, getWordMeaningAndCommentary } from './data';
+import { getWordsForShlokaLine, getWordMeaningAndCommentary, numberOfShlokas } from './data';
 
 function App() {
   const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
@@ -51,67 +51,64 @@ function App() {
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
       <div style={{ fontSize: '2.5rem', color: '#3b3b3b', marginBottom: '0.5rem' }}>
-        {'श्री'}
+      {'श्री'}
       </div>
       <h1 style={{ fontFamily: 'serif', fontWeight: 700 }}>Vishnu Sahasranama</h1>
       <div style={{
-        marginTop: '2rem',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        gap: '2rem',
-        width: '100%'
+      marginTop: '2rem',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      gap: '2rem',
+      width: '100%'
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 340, maxWidth: 600 }}>
-          {[1, 2].map((shlokaNum) => (
-            <div key={shlokaNum} style={{ marginBottom: '2rem', width: '100%' }}>
-              <div style={{ fontWeight: 600, marginBottom: 4 }}>Shloka {shlokaNum}</div>
-              {[1, 2].map((lineNum) => (
-                <div key={lineNum} style={{ fontSize: '1.3rem', margin: '0.2rem 0' }}>
-                  {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
-                    const isHighlighted =
-                      highlighted.shloka === shlokaNum &&
-                      highlighted.line === lineNum &&
-                      highlighted.idx === idx;
-                    return (
-                      <span
-                        key={idx}
-                        style={{
-                          margin: '0 0.5rem',
-                          backgroundColor: isHighlighted
-                            ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-                                ? '#ffe06633' // semi-transparent yellow for dark mode
-                                : '#ffe066') // solid yellow for light mode
-                            : undefined,
-                          color: isHighlighted
-                            ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-                                ? '#222' // dark text for highlight in dark mode
-                                : '#222') // dark text for highlight in light mode
-                            : undefined,
-                          borderRadius: isHighlighted ? '0.3em' : undefined,
-                          cursor: 'pointer',
-                          transition: 'background 0.2s, color 0.2s'
-                        }}
-                        onClick={() => handleHighlight(shlokaNum, lineNum, idx)}
-                        onMouseOver={() => handleHighlight(shlokaNum, lineNum, idx)}
-                        onMouseOut={handleUnhighlight}
-                      >
-                        {word}
-                      </span>
-                    );
-                  })}
-                </div>
-              ))}
-            </div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 340, maxWidth: 600 }}>
+        {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
+        <div key={shlokaNum} style={{ marginBottom: '2rem', width: '100%' }}>
+          <div style={{ fontWeight: 600, marginBottom: 4 }}>Shloka {shlokaNum}</div>
+          {[1, 2].map((lineNum) => (
+          <div key={lineNum} style={{ fontSize: '1.3rem', margin: '0.2rem 0' }}>
+            {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
+            const isHighlighted =
+              highlighted.shloka === shlokaNum &&
+              highlighted.line === lineNum &&
+              highlighted.idx === idx;
+            return (
+              <span
+              key={idx}
+              style={{
+                margin: '0 0.5rem',
+                backgroundColor: isHighlighted
+                ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                  ? '#ffe06633' // semi-transparent yellow for dark mode
+                  : '#ffe066')
+                : undefined,
+                color: isHighlighted
+                ? '#222' : undefined,
+                borderRadius: isHighlighted ? '0.3em' : undefined,
+                cursor: 'pointer',
+                transition: 'background 0.2s, color 0.2s'
+              }}
+              onClick={() => handleHighlight(shlokaNum, lineNum, idx)}
+              onMouseOver={() => handleHighlight(shlokaNum, lineNum, idx)}
+              onMouseOut={handleUnhighlight}
+              >
+              {word}
+              </span>
+            );
+            })}
+          </div>
           ))}
         </div>
-        <div style={{ minWidth: 340, maxWidth: 340 }}>
-          {meaningBox}
-        </div>
+        ))}
+      </div>
+      <div style={{ minWidth: 340, maxWidth: 340 }}>
+        {meaningBox}
+      </div>
       </div>
     </div>
-  );
+    );
 }
 
 export default App

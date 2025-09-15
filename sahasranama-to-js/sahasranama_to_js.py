@@ -3,17 +3,50 @@ import gspread
 def read_google_sheet_to_json(sheet_url, worksheet_name='निरुक्त', creds_json_path='credentials.json'):
     client = gspread.service_account(filename=creds_json_path)
     print("Authenticated successfully.")
-
-    # Open the sheet
     sheet = client.open_by_url(sheet_url)
     print(f"Opened sheet: {sheet.title}")
     worksheet = sheet.worksheet(worksheet_name)
     print(f"Accessing worksheet: {worksheet.title}")
-    # Get all records as list of dicts
     records = worksheet.get_all_records()
     return records
 
 
+def arrange_by_shlokas(rows):
+    unique_shlokas = set(row['श्लोक'] for row in rows if 'श्लोक' in row)
+    print(f"Number of unique 'श्लोक': {len(unique_shlokas)}")
+    shlokas = [[[], []] for _ in range(len(unique_shlokas))]
+    commentary = [[[], []] for _ in range(len(unique_shlokas))]
+    meanings = [[[], []] for _ in range(len(unique_shlokas))]
+    for idx, r in enumerate(rows):
+        try:
+            print(f'\rProcessing row {idx + 1}/{len(rows)}', end='')
+            shloka_index = int(r['श्लोक']) - 1
+            line_index = int(r['line']) - 1
+            shlokas[shloka_index][line_index].append(r['नाम'])
+            commentary[shloka_index][line_index].append(r['निरुक्त'])
+            meanings[shloka_index][line_index].append(r['meaning'] if 'meaning' in r else '')
+        except KeyError as e:
+            print(f"\nMissing key: {e} in row {idx + 1}")
+        except ValueError as e:
+            print(f"\nStrange: {e} in row {idx + 1}")
+    print("\nArrangement complete.")
+    return {
+        'shlokas': shlokas,
+        'commentary': commentary,
+        'meanings': meanings
+    }
+
+
+def generate_js(file_path, by_shlokas):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        for sahasranama_aspect in by_shlokas:
+            f.write(f'export const {sahasranama_aspect} = ')
+            f.write(repr(by_shlokas[sahasranama_aspect]).replace('], [', '],\n  [').replace('[[', '[\n  [').replace(']]', ']\n]'))
+            f.write(';\n\n')
+    print(f"JavaScript file generated at: {file_path}")
+
+
 sheet_url = 'https://docs.google.com/spreadsheets/d/1GSlkxfaZNf7iYALmWIM26SP5l5PZ69l4mg6OaU2iIVE'
-data = read_google_sheet_to_json(sheet_url)
-print(data)
+rows = read_google_sheet_to_json(sheet_url)
+by_shlokas = arrange_by_shlokas(rows)
+generate_js('../frontend/src/sahasranama.js', by_shlokas)
