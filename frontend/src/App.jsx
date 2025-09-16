@@ -51,18 +51,18 @@ function App() {
   console.log(`innerHeight: ${window.innerHeight}, innerWidth: ${window.innerWidth}`);
   const isPortrait = window.innerHeight > window.innerWidth;
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'left' }}>
       <div style={{ fontSize: '1.5rem', color: '#3b3b3b' }}>
       {'श्री'}
       </div>
       <div
       style={{
-        marginTop: '2rem',
+        marginTop: '0.5rem',
         display: 'flex',
         flexDirection: isPortrait ? 'column' : 'row',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        gap: '2rem',
+        gap: '0.2rem',
         width: '100%'
       }}
       >
@@ -71,16 +71,24 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minWidth: 340,
-        maxWidth: 600,
-        maxHeight: isPortrait ? `calc(100vh - 20rem)` : `calc(100vh - 8rem)`,
+        height: isPortrait ? '60vh' : undefined,
+        width: isPortrait ? undefined : '60vw',
+        maxWidth: isPortrait ? 600 : '60vw',
+        maxHeight: isPortrait ? '60vh' : `calc(100vh - 8rem)`,
         overflowY: 'auto'
         }}
       >
         {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
         <div key={shlokaNum} style={{ marginBottom: '2rem', width: '100%' }}>
           {[1, 2].map((lineNum) => (
-          <div key={lineNum} style={{ fontSize: '1.3rem', margin: '0.2rem 0' }}>
+          <div
+            key={lineNum}
+            style={{
+            fontSize: '1.3rem',
+            overflowX: 'auto',
+            whiteSpace: 'nowrap'
+            }}
+          >
             {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
             const isHighlighted =
               highlighted.shloka === shlokaNum &&
