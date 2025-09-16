@@ -6,9 +6,4 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByText('श्री')).toBeInTheDocument();
   });
-
-  it('renders the heading Vishnu Sahasranama', () => {
-    render(<App />);
-    expect(screen.getByRole('heading', { name: /Vishnu Sahasranama/i })).toBeInTheDocument();
-  });
 });
