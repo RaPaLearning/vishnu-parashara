@@ -11,7 +11,7 @@ describe('Word highlight interaction', () => {
     expect(word).toHaveStyle('background-color: #ffe066');
   });
 
-  it('does not move the word while highlighted', () => {
+  it('does not move the word while highlighting', () => {
     render(<App />);
     const word = screen.getByText('विश्वं');
     // Record initial position

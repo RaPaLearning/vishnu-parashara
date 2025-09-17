@@ -10,6 +10,36 @@ function App() {
     setHighlighted({ shloka, line, idx });
   };
 
+  const formatWordsInShlokaLine = (shlokaNum, lineNum) => {
+    return (
+      <>
+        {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
+          const isHighlighted =
+            highlighted.shloka === shlokaNum &&
+            highlighted.line === lineNum &&
+            highlighted.idx === idx;
+          return (
+              <span className={isHighlighted ? 'highlight-word' : undefined}
+              key={idx}
+              style={{
+                paddingLeft: '0.4rem',
+                paddingRight: '0.4rem',
+                paddingBottom: '0.1rem',
+                borderRadius: isHighlighted ? '0.3em' : undefined,
+                cursor: 'pointer',
+                transition: 'background 0.2s, color 0.2s'
+              }}
+              onClick={() => handleHighlight(shlokaNum, lineNum, idx)}
+              >
+              {word}
+              </span>
+            );
+        })}
+        <span>{lineEndings[lineNum - 1](shlokaNum)}</span>
+      </>
+    );
+  };
+
   let meaningBox = null;
   if (
     highlighted.shloka &&
@@ -24,22 +54,12 @@ function App() {
       highlighted.idx
     );
     meaningBox = (
-      <div
+      <div className='meaning-box'
         data-testid="meaning-box"
-        style={{
-          margin: '1.0rem 0 1.0rem 0.5rem',
-          padding: '1rem',
-          minWidth: 220,
-          background: 'var(--meaning-bg, #f8f9fa)',
-          borderRadius: '0.5em',
-          boxShadow: '0 2px 8px 0 #0001',
-          textAlign: 'left',
-          color: 'var(--meaning-color, #222)'
-        }}
       >
         <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
         <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
-        <div style={{ fontSize: '0.98rem', color: '#555' }}>
+        <div style={{ fontSize: '0.98rem' }}>
           {commentary.split('\n').map((line, idx) => (
             <div key={idx}>{line}</div>
           ))}
@@ -48,84 +68,23 @@ function App() {
     );
   }
 
-  console.log(`innerHeight: ${window.innerHeight}, innerWidth: ${window.innerWidth}`);
-  const isPortrait = window.innerHeight > window.innerWidth;
   return (
-    <div style={{ textAlign: 'left' }}>
-      <div style={{ fontSize: '1.5rem', color: '#3b3b3b' }}>
-      {'श्री'}
-      </div>
-      <div
-      style={{
-        marginTop: '0.5rem',
-        display: 'flex',
-        flexDirection: isPortrait ? 'column' : 'row',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        gap: '0.2rem',
-        width: '100%'
-      }}
-      >
-      <div
-        style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        height: isPortrait ? '60vh' : undefined,
-        width: isPortrait ? undefined : '60vw',
-        maxWidth: isPortrait ? 600 : '60vw',
-        maxHeight: isPortrait ? '60vh' : `calc(100vh - 8rem)`,
-        overflowY: 'auto'
-        }}
-      >
-        {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
-        <div key={shlokaNum} style={{ marginBottom: '2rem', width: '100%' }}>
-          {[1, 2].map((lineNum) => (
-          <div
-            key={lineNum}
-            style={{
-            fontSize: '1.3rem',
-            overflowX: 'auto',
-            whiteSpace: 'nowrap'
-            }}
-          >
-            {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
-            const isHighlighted =
-              highlighted.shloka === shlokaNum &&
-              highlighted.line === lineNum &&
-              highlighted.idx === idx;
-            return (
-              <span
-              key={idx}
-              style={{
-                margin: '0 0.5rem',
-                backgroundColor: isHighlighted
-                ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-                  ? '#ffe06633' // semi-transparent yellow for dark mode
-                  : '#ffe066')
-                : undefined,
-                color: isHighlighted ? '#222' : undefined,
-                borderRadius: isHighlighted ? '0.3em' : undefined,
-                cursor: 'pointer',
-                transition: 'background 0.2s, color 0.2s'
-              }}
-              onClick={() => handleHighlight(shlokaNum, lineNum, idx)}
-              >
-              {word}
-              </span>
-            );
-            })}
-            <span>{lineEndings[lineNum - 1](shlokaNum)}</span>
-          </div>
-          ))}
-        </div>
+    <>
+      <div className="shloka-box">
+      <p style={{ textAlign: 'center', color: 'orange' }}>श्री</p>
+      {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
+        <div key={shlokaNum}>
+        {[1, 2].map((lineNum) => (
+          <div key={lineNum}>{formatWordsInShlokaLine(shlokaNum, lineNum)}</div>
         ))}
+        <div style={{ height: '1rem' }}></div>
+        </div>
+      ))}
       </div>
-      <div style={{ minWidth: 340, maxWidth: 340 }}>
-        {meaningBox}
+      <div className="meaning-box">
+      <p>{meaningBox}</p>
       </div>
-      </div>
-    </div>
+    </>
     );
 }
 
