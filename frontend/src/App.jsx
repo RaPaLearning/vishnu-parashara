@@ -54,14 +54,12 @@ function App() {
       highlighted.idx
     );
     meaningBox = (
-      <div className='meaning-box'
-        data-testid="meaning-box"
-      >
+      <div data-testid="meaning-container">
         <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
         <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
-        <div style={{ fontSize: '0.98rem' }}>
+        <div >
           {commentary.split('\n').map((line, idx) => (
-            <div key={idx}>{line}</div>
+            <div key={idx} style={{ fontSize: '1.2rem'}}>{line}</div>
           ))}
         </div>
       </div>
@@ -71,7 +69,7 @@ function App() {
   return (
     <>
       <div className="shloka-box">
-      <p style={{ textAlign: 'center', color: 'orange' }}>श्री</p>
+      <p style={{ textAlign: 'center', fontSize: '1rem', color: 'orange' }}>श्री</p>
       {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
         <div key={shlokaNum}>
         {[1, 2].map((lineNum) => (
