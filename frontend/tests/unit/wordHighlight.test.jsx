@@ -8,12 +8,12 @@ describe('Word highlight interaction', () => {
     // Find a word from the first shloka
     const word = screen.getByText('विश्वं');
     fireEvent.click(word);
-    expect(word).toHaveStyle('background-color: #ffe066');
+    expect(word).toHaveClass('highlight-word');
   });
 
   it('does not move the word while highlighting', () => {
     render(<App />);
-    const word = screen.getByText('विश्वं');
+    const word = screen.getByText('भूतात्मा');
     // Record initial position
     const rectBefore = word.getBoundingClientRect();
     fireEvent.click(word);
