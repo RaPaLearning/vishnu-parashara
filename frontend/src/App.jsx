@@ -8,8 +8,36 @@ function App() {
 
   const handleHighlight = (shloka, line, idx) => {
     setHighlighted({ shloka, line, idx });
+    localStorage.setItem(
+      'highlightedWord',
+      JSON.stringify({ shloka, line, idx })
+    );
   };
-
+  // Recall highlighted word at startup
+  useState(() => {
+    const saved = localStorage.getItem('highlightedWord');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (
+          parsed &&
+          typeof parsed.shloka === 'number' &&
+          typeof parsed.line === 'number' &&
+          typeof parsed.idx === 'number'
+        ) {
+          setHighlighted(parsed);
+          setTimeout(() => {
+            const shlokaElement = document.querySelector(`[data-shloka="${parsed.shloka}"]`);
+            if (shlokaElement) {
+              shlokaElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 0);
+        }
+      } catch {
+        console.error('Failed to parse saved highlighted word from localStorage');
+      }
+    }
+  });
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => {
     return (
       <>
@@ -71,7 +99,7 @@ function App() {
       <div className="shloka-box">
       <p style={{ textAlign: 'center', fontSize: '1rem', color: 'orange' }}>श्री</p>
       {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
-        <div key={shlokaNum}>
+        <div key={shlokaNum} data-shloka={shlokaNum}>
         {[1, 2].map((lineNum) => (
           <div key={lineNum}>{formatWordsInShlokaLine(shlokaNum, lineNum)}</div>
         ))}
