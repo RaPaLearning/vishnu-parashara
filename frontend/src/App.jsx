@@ -108,7 +108,7 @@ function App() {
       ))}
       </div>
       <div className="meaning-box">
-      <p>{meaningBox}</p>
+        {meaningBox}
       </div>
     </>
     );

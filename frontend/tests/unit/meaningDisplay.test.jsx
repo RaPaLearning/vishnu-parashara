@@ -7,7 +7,7 @@ describe('Word meaning and commentary display', () => {
     render(<App />);
     const word = screen.getByText('विश्वं');
     fireEvent.click(word);
-    expect(screen.getByTestId('meaning-box')).toHaveTextContent('Complete');
-    expect(screen.getByTestId('meaning-box')).toHaveTextContent('पूर्णत्वात्');
+    expect(screen.getByTestId('meaning-container')).toHaveTextContent('Complete');
+    expect(screen.getByTestId('meaning-container')).toHaveTextContent('पूर्णत्वात्');
   });
 });
