@@ -67,13 +67,10 @@ function App() {
       </>
     );
   };
-
-  let meaningBox = null;
-  if (
-    highlighted.shloka &&
-    highlighted.line &&
-    highlighted.idx !== null
-  ) {
+  const explanationContent = () => {
+    if (!highlighted.shloka || !highlighted.line || highlighted.idx === null) {
+      return {word: '', meaning: '', commentary: ''};
+    }
     const words = getWordsForShlokaLine(highlighted.shloka, highlighted.line);
     const word = words[highlighted.idx];
     const { meaning, commentary } = getWordMeaningAndCommentary(
@@ -81,18 +78,10 @@ function App() {
       highlighted.line,
       highlighted.idx
     );
-    meaningBox = (
-      <div data-testid="meaning-container">
-        <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
-        <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
-        <div >
-          {commentary.split('\n').map((line, idx) => (
-            <div key={idx} style={{ fontSize: '1.2rem'}}>{line}</div>
-          ))}
-        </div>
-      </div>
-    );
-  }
+    return {word, meaning, commentary};
+  };
+
+  const { word, meaning, commentary } = explanationContent();
 
   return (
     <>
@@ -108,7 +97,15 @@ function App() {
       ))}
       </div>
       <div className="meaning-box">
-        {meaningBox}
+        <div data-testid="meaning-container">
+          <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
+          <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
+          <div >
+            {commentary.split('\n').map((line, idx) => (
+              <div key={idx} style={{ fontSize: '1.2rem'}}>{line}</div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
     );
