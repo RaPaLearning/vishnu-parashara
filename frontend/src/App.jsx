@@ -2,12 +2,23 @@
 import './App.css';
 import { useState } from 'react';
 import { getWordsForShlokaLine, getWordMeaningAndCommentary, numberOfShlokas } from './data';
+import { promptWithContext } from './prompt';
 
 function App() {
   const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
 
+  const [copied, setCopied] = useState(false);
+  const makeContext = (shlokaNum, lineNum, wordIndex) => {
+    const textToCopy = promptWithContext(shlokaNum, lineNum, wordIndex);
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      setCopied(true);
+      window.open(`https://chatgpt.com/?prompt=${encodeURIComponent(textToCopy)}`);
+    });
+  };
+  
   const handleHighlight = (shloka, line, idx) => {
     setHighlighted({ shloka, line, idx });
+    setCopied(false);
     localStorage.setItem(
       'highlightedWord',
       JSON.stringify({ shloka, line, idx })
@@ -38,6 +49,7 @@ function App() {
       }
     }
   });
+
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => {
     return (
       <>
@@ -67,6 +79,7 @@ function App() {
       </>
     );
   };
+
   const explanationContent = () => {
     if (!highlighted.shloka || !highlighted.line || highlighted.idx === null) {
       return {word: '', meaning: '', commentary: ''};
@@ -96,19 +109,33 @@ function App() {
         </div>
       ))}
       </div>
-      <div className="meaning-box">
-        <div data-testid="meaning-container">
-          <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
-          <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
-          <div >
-            {commentary.split('\n').map((line, idx) => (
-              <div key={idx} style={{ fontSize: '1.2rem'}}>{line}</div>
-            ))}
-          </div>
+      <div className="meaning-box" style={{ position: 'relative' }}>
+      <div data-testid="meaning-container">
+        <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
+        <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
+        <div>
+        {commentary.split('\n').map((line, idx) => (
+          <div key={idx} style={{ fontSize: '1.2rem' }}>{line}</div>
+        ))}
         </div>
       </div>
+      {word && (
+        <div style={{ display: 'flex', justifyContent: 'left', marginTop: 16 }}>
+        <button className='highlight-word'
+          aria-label="Chat"
+          onClick={() => makeContext(highlighted.shloka, highlighted.line, highlighted.idx)}
+        >
+          {/* Simple chat icon SVG */}
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+        {copied && <span style={{ marginLeft: 8 }}>Copied and launched!</span>}
+        </div>
+      )}
+      </div>
     </>
-    );
+  );
 }
 
 const lineEndings = [
