@@ -15,7 +15,8 @@
   background-color: #EDE7F6;
   color: #4A4A6A;
   overflow-y: auto;
-  padding: 20px;
+  padding: 16px;
+  white-space: nowrap;
   box-sizing: border-box;
 }
 
