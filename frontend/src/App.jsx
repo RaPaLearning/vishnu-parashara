@@ -7,18 +7,20 @@ import { promptWithContext } from './prompt';
 function App() {
   const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
 
-  const [copied, setCopied] = useState(false);
-  const makeContext = (shlokaNum, lineNum, wordIndex) => {
+  const [context, setContext] = useState('');
+  const copyContext = (shlokaNum, lineNum, wordIndex) => {
     const textToCopy = promptWithContext(shlokaNum, lineNum, wordIndex);
     navigator.clipboard.writeText(textToCopy).then(() => {
-      setCopied(true);
-      window.open(`https://chatgpt.com/?prompt=${encodeURIComponent(textToCopy)}`);
+      setContext(textToCopy);
     });
   };
-  
+  const launchChatGPT = () => {
+    window.open(`https://chatgpt.com/?prompt=${encodeURIComponent(context)}`);
+  };
+
   const handleHighlight = (shloka, line, idx) => {
     setHighlighted({ shloka, line, idx });
-    setCopied(false);
+    setContext('');
     localStorage.setItem(
       'highlightedWord',
       JSON.stringify({ shloka, line, idx })
@@ -123,14 +125,27 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'left', marginTop: 16 }}>
         <button className='highlight-word'
           aria-label="Chat"
-          onClick={() => makeContext(highlighted.shloka, highlighted.line, highlighted.idx)}
+          onClick={() => {
+            if (context.length == 0) {
+              copyContext(highlighted.shloka, highlighted.line, highlighted.idx);
+            } else {
+              launchChatGPT();
+            }
+          }}
         >
           {/* Simple chat icon SVG */}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
         </button>
-        {copied && <span style={{ marginLeft: 8 }}>Copied and launched!</span>}
+        {context.length > 0 && (
+        <div style={{ marginLeft: 8, cursor: 'pointer' }} onClick={launchChatGPT}>
+          <div>Paste the prompt yourself</div>
+          <div style={{ color: '#007acc', textDecoration: 'underline'}}>
+            or click to paste in chatgpt.com
+          </div>
+        </div>
+        )}
         </div>
       )}
       </div>
