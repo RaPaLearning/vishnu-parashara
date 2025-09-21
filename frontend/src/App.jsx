@@ -113,7 +113,9 @@ function App() {
       </div>
       <div className="meaning-box" style={{ position: 'relative' }}>
       <div data-testid="meaning-container">
-        <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{word}</div>
+        <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>
+          {word ? word : 'Click on a name to see its commentary.'}
+        </div>
         <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
         <div>
         {commentary.split('\n').map((line, idx) => (
@@ -140,9 +142,9 @@ function App() {
         </button>
         {context.length > 0 && (
         <div style={{ marginLeft: 8, cursor: 'pointer' }} onClick={launchChatGPT}>
-          <div>Paste the prompt yourself</div>
+          <div>Paste the prompt into an AI chat and send.</div>
           <div style={{ color: '#007acc', textDecoration: 'underline'}}>
-            or click to paste in chatgpt.com
+            Or click to launch in chatgpt.com. Press send there
           </div>
         </div>
         )}
