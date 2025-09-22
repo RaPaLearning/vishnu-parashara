@@ -142,7 +142,7 @@ function App() {
         </button>
         {context.length > 0 && (
         <div style={{ marginLeft: 8, cursor: 'pointer' }} onClick={launchChatGPT}>
-          <div>Paste the prompt into an AI chat and send.</div>
+          <div>Prompt copied. Paste in an AI chat.</div>
           <div style={{ color: '#007acc', textDecoration: 'underline'}}>
             Or click to launch in chatgpt.com. Press send there
           </div>
