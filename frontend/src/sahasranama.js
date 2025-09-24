@@ -171,8 +171,8 @@ export const shlokas = [
   ['वीरः', 'शक्तिमतां श्रेष्ठः ', 'धर्मः', 'धर्मविदुत्तमः']
 ],
   [
-  [],
-  []
+  ['वैकुण्ठः', 'पुरुषः', 'प्राणः', 'प्राणदः', 'प्रणमः ', 'पृथुः '],
+  ['हिरण्यगर्भः', 'शत्रुघ्नः', 'व्याप्तः', 'वायुः', 'अधोक्षजः ']
 ]];
 
 export const commentary = [
@@ -236,7 +236,7 @@ export const commentary = [
   ['वासुदेवादि रूपत्वात् चतुरात्मा इति कथ्यते ', 'जाग्रत् स्वप्न सुषुप्त्यादौ व्यूहावस्था चतुष्टये।\nएतैः विशिष्ट मूर्तित्वात् चतुर्व्यूहः इति ईरितः॥', 'दंष्ट्रा चतुष्क व्यूक्तत्वात् चतुर्दंष्ट्र इति स्मृतः', 'महापुरुष रूपत्वात् उच्यते हि चतुर्भुजः']
 ],
   [
-  ['उपासितृभ्यो भ्राजिष्णुः स्वप्रकाशन शीलतः', 'सुखेन भोजनं प्राहुः यो भक्तैः अनुभूयते', 'भोक्ता आर्पितस्य भोक्तृत्वात् ; भोक्ता अमृतस्य वा', 'प्रागूर्ध्वम् संचितानां च बुद्ध्या च करणैः सदा ।\nकृतानां सर्वथा तेषां निषेध विधि साधनं ।\nअतीत्य क्रीयमाणानां असत्सेवानुबन्धिनां ।\nसर्वसहेन स्वेनापि दुस्सहानां विशेषतः ।\nस्वभक्त विषयाणां च निर्मर्याद कृतैनसां ।\nसहनैक स्वशीलत्वात् सहिष्णुः इति विश्रुतः ॥', 'वर्णितो अभूत् व्यूहभेदो विभवस्तु प्रतन्यते ।\nजगतां आदिभूतासु मूर्तिषु अन्यतमत्वतः ।\nजातत्वात् विष्णुरूपेण प्रोच्यते जगदादिजः॥'],
+  ['उपासितृभ्यो भ्राजिष्णुः स्वप्रकाशन शीलतः', 'सुखेन भोजनं प्राहुः यो भक्तैः अनुभूयते', 'भोक्ता अर्पितस्य भोक्तृत्वात् ; भोक्ता अमृतस्य वा', 'प्रागूर्ध्वम् संचितानां च बुद्ध्या च करणैः सदा ।\nकृतानां सर्वथा तेषां निषेध विधि साधनं ।\nअतीत्य क्रीयमाणानां असत्सेवानुबन्धिनां ।\nसर्वसहेन स्वेनापि दुस्सहानां विशेषतः ।\nस्वभक्त विषयाणां च निर्मर्याद कृतैनसां ।\nसहनैक स्वशीलत्वात् सहिष्णुः इति विश्रुतः ॥', 'वर्णितो अभूत् व्यूहभेदो विभवस्तु प्रतन्यते ।\nजगतां आदिभूतासु मूर्तिषु अन्यतमत्वतः ।\nजातत्वात् विष्णुरूपेण प्रोच्यते जगदादिजः॥'],
   ['पाप प्रतिस्पर्धी अनघः ', 'विजयो जगतां जयी', 'स्वाभिप्राये स्थापयिता जेता स्यात् विधि शंकरौ ', 'विश्वं तत्कार्यवर्गः स्यात् योनिस्तस्य तु कारणं।\nतस्य ब्रह्मादिमुखतो विश्वयोनिः इति ईरितः॥', 'ब्रह्मादिष्वपि देवेषु हि अन्तरात्मतया च यः।\nपुनः निवसनात् नित्यं पुनर्वसुः उदाहृतः ॥']
 ],
   [
@@ -288,7 +288,7 @@ export const commentary = [
   ['मातृवत् जठरे कृत्वा भक्तान् वर्धयति स्वयं ।\nवर्धनः प्रोच्यते नित्यं सप्तार्णो वृद्धिदो मनुः ॥', 'वर्धयन् तान् स्वयमपि वर्धमानश्च वर्धनः', 'लोकोत्तरादि वृत्तांतात् स्वैकांतात् गुणबृम्हितात् ।\nविविक्त इति विख्यातः पावनत्वप्रदो मनुः ॥', 'नदीनां सागर इव स्वगुणोक्ति विधाजुषाम् ।\nश्रुतीनां अवसानात्वात् कथ्यते श्रुतिसागरः॥']
 ],
   [
-  ['प्रपन्न भरणे धुर्यभुजो यः सुभूजस्तु सः ', 'परैः दुर्वारवेगो यः दुर्धरः स च कथ्यते', 'वेदलक्षण वक्तृत्वात् वाग्मी प्रियाहितोक्तितः', 'परमैश्वर्यवत्वेन महेन्द्र इति शब्द्यते', 'वसुदो धनादानाच्च धनायद्भ्यो विशेषतः', 'सर्वस्य हरीरूपत्वात् धनं यस्मात् वसुः ततः'],
+  ['प्रपन्न भरणे धुर्यभुजो यः सुभुजस्तु सः ', 'परैः दुर्वारवेगो यः दुर्धरः स च कथ्यते', 'वेदलक्षण वक्तृत्वात् वाग्मी प्रियाहितोक्तितः', 'परमैश्वर्यवत्वेन महेन्द्र इति शब्द्यते', 'वसुदो धनादानाच्च धनायद्भ्यो विशेषतः', 'सर्वस्य हरीरूपत्वात् धनं यस्मात् वसुः ततः'],
   ['यस्सदा बहुरूपश्च नैकरूपः स कीर्तितः।\nतत्तज्जन ज्ञान योग्यं रूपं यस्य विशेषतः।\nनैकरुपः समुद्दिष्टः सर्व प्रत्ययागोचरः ॥', 'व्याप्नुवत् यस्य रूपं तु बृहद्रूपः स कीर्तितः ', 'शिपयो रश्मयः प्रोक्ताः व्याप्य तेष्वपि वर्तनात्।\nशिपिविष्टः समाख्यातः सूर्येन्दु अग्नि आदि रूपवत्॥', 'दिव्यरूपं दिदृक्षुभ्यः पार्थादिभ्यो विशेषतः।\nरूपं प्रकाशयति यः स प्रकाशन ईरितः॥']
 ],
   [
@@ -308,7 +308,7 @@ export const commentary = [
   ['अतर्क वृत्तान्ततया जगतः प्रलये अपि यः।\nन लभ्यः चिन्त्यमानः अपि सः अदृश्य इति कथ्यते॥', 'महाजले संचरतो मार्कण्डेयस्य धीमतः ।\nदृश्यो यो व्यक्तरूपत्वात् दिव्यविग्रह धारणात् ॥', 'सहस्रयुग संख्याकं सर्व कल्पान्तं एव हि ।\nशयान एव जयति सहस्रजित् इति स्मृतः ॥', 'मितस्य शिषुरूपस्य कदाचिद् कश्चिदेव च ।\nकथंचित् अवधिः नास्ति महिम्नः परमात्मनः ।\nतस्मात् अनन्तजित् इति वस्वर्णो जयदो मनुः ॥']
 ],
   [
-  ['इष्टो अविशिष्टः कथितः सर्व रक्षण तत्परः', '(included in above)', 'मार्कण्डेय द्विजादीनां पण्डितेषु अग्रयायिनां ।\nउत्कृष्ट पुरुषार्थत्वेन इष्टः शिष्टेष्टः उच्यते ॥', 'आत्यप्रधृष्यं ऐश्वर्यं परं यत् तेजः आस्थितं ।\nतत् शिखण्डं तु यस्यास्ति तं शिखण्डी इति चक्षते ॥', 'जीवान् स्वमायया नित्यं नहुषो नयति इति सः ', 'सागरस्योदरे नित्यं वसन् अमृतरूपया ।\nस्वदेहकान्त्या वाचा अपि सम्यक् आश्वासयन्  मुहुः ।\nनहुशः सिंचति तु यः वृषः स परिपठ्यते ॥'],
+  ['इष्टो अविशिष्टः कथितः सर्व रक्षण तत्परः', 'इष्टो अविशिष्टः कथितः सर्व रक्षण तत्परः', 'मार्कण्डेय द्विजादीनां पण्डितेषु अग्रयायिनां ।\nउत्कृष्ट पुरुषार्थत्वेन इष्टः शिष्टेष्टः उच्यते ॥', 'आत्यप्रधृष्यं ऐश्वर्यं परं यत् तेजः आस्थितं ।\nतत् शिखण्डं तु यस्यास्ति तं शिखण्डी इति चक्षते ॥', 'जीवान् स्वमायया नित्यं नहुषो नयति इति सः ', 'सागरस्योदरे नित्यं वसन् अमृतरूपया ।\nस्वदेहकान्त्या वाचा अपि सम्यक् आश्वासयन्  मुहुः ।\nनहुशः सिंचति तु यः वृषः स परिपठ्यते ॥'],
   ['काश्यपस्य प्रार्थनया यः क्रोधं क्षत्रहानिदं ।\nहतवान् क्रोधहा प्रोक्तः षडर्णः क्रोधनाशकः ॥', 'क्रोधकृत् क्षत्रियेभ्यो यः पुरा क्रोधं करोति सः ', 'कृद्धेतोः कार्तवीर्यस्य छेत्ता कर्तेति शब्द्यते', 'विश्वस्मै यस्य बाहू सः विश्वबाहुः प्रकीर्तितः', 'भारावतरणम् कृत्वा गां धत्ते स महीधरः']
 ],
   [
@@ -348,8 +348,8 @@ export const commentary = [
   ['वीरः कम्पनहेतुत्वात् रक्षसां अतिभीमतः', 'सूरादीनां शक्तिमतां यः प्रशस्यतमः स्मृतः।\nतस्मात् शक्तिमतां श्रेष्ठः दशार्णः श्रेष्ठदो मनुः॥', 'निःश्रेयसाभ्युदयतो धर्मः सर्वस्य धारणात्', 'वसिष्ठादि उपजीव्यो यः धर्म धर्माविदुत्तमः']
 ],
   [
-  [],
-  []
+  ['संश्लेष प्रतिघातश्च कुठिघात्वर्थ उच्यते।\nविगतः स च एषां ते विकुंठाः स्युः उदीरिताः।\nतेषां एवैष इति हि वैकुण्ठः परिकीर्तितः॥', '"स यत्पूर्व" इति श्रुत्या पुरुषः पावनात्वतः।\nप्रुधातोः पालनार्थाद्धि कुषन् प्रत्यय योगतः।\nसर्वपालकता लब्ध्या पुरुषः प्रोच्यते बुधैः॥', 'प्राणः सर्वप्राणानाद्धि ', 'तद्दानात् प्राणदः स्मृतः', 'गुणैः चराचराणां हि नामनात् प्रणमः स्मृतः', 'यशो विस्तारवत्वाच्च पृथुः इत्युच्यते बुधैः'],
+  ['हितस्य रमणीयस्य ध्यातृणाम् हृदयस्य हि ।\nहिरण्यगर्भस्तु अन्तःस्थः स शुभाश्रायण स्मृतः ।\nयद्वा हिरण्यगर्भः असौ हिरण्यनिधि साम्यतः ॥', 'शत्रून् इन्द्रियवर्गान् यो हन्ति शत्रुघ्न उच्यते', 'नीचपूज्याविशेषेण व्यापनात् व्याप्त उच्यते', 'तत्र तत्र स्थितान् सर्वान् भरद्वाज गुहादिकान्।\nगच्छति स्वयमेव एतान् स वायुः इति शब्द्यते ॥', 'सदा उपभूज्यमानः अपि सर्वैः अमृतसिन्धुवत्।\nअधो न क्षीयते जातु यस्मात् तस्मात् अधोक्षजः ॥']
 ]];
 
 export const meanings = [
@@ -358,174 +358,174 @@ export const meanings = [
 ],
   [
   ['Pure Self', 'Ultimate Self', 'Supreme goal of the liberated'],
-  ["By whom the liberated aren't sent away", 'Generous', 'Direct witness', 'Knower of the field', 'Yet never wanes']
+  ["By whom the liberated aren't sent away", 'Generous', 'Direct witness', 'Knower of the field', 'And never wanes']
 ],
   [
-  ['', '', ''],
-  ['', '', '', '']
+  ['The means', 'leader of yoga-practitioners', 'Lord of primordial matter and jeevatmas'],
+  ['body of a human combined with lion', 'having a lovely form', 'with awesome locks of hair', 'supreme person']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '', '', '']
+  ['all', 'remover', 'confers auspiciousness', 'persistent, without breaks', 'eagerly resorted to by all', 'inexhaustible treasure'],
+  ['manifests for approachability', 'saviour', 'supporter', 'sublime born without blemish', 'all powerful', 'supreme ruler']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['manifests according to will', 'happiness', 'person in the sun', 'lotus-eyed', 'venerable sound'],
+  ['without beginning or end', 'creator', 'producer', 'ultimate among producers']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '', '', '']
+  ['immeasurable', 'controller of sense organs', 'with a lotus in the navel', 'lord of the immortals'],
+  ['agent of all actions', 'wills', 'chiseller', 'huge', 'existent, independent of time', 'firm and unchanging']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['beyond grasp', 'eternal', 'exceedingly delighted', 'red-eyed', 'destroyer'],
+  ['affluent', 'has the three-fold worlds as a residence', 'purity', 'supreme auspiciousness']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['controller', 'life-giver', 'life', 'praise-worthy', 'pre-eminent, served by praise', 'Lord of the liberated'],
+  ['is in a lovely abode', 'protector of the Earth', 'husband of Lakshmi', 'attracts the liberated senses']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '', '']
+  ['ruler', 'powerful', 'wielder of the bow', 'omniscient', 'moves on the bird', 'prosperous'],
+  ['unsurpassed', 'unassailable', 'grateful for virtue', 'the act of virtue', 'owner of the Self']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '', '']
+  ['Lord of gods', 'the refuge', 'bliss', 'creator of the universe', 'abode of living beings'],
+  ['never forsakes', 'lives to uplift', 'accepts', 'reliable', 'displays all glory']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '']
+  ['remover of obstacles', 'reaches all', 'ever existing', 'goal', 'source of all', 'never separated from devotees'],
+  ['varaha, the dharma', 'incomprehensible', 'attainable by all means']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['dwells', 'thinks of devotees as treasure', 'well-disposed', 'uniformly disposed', 'grasped by devotees in limitation', 'equally disposed towards those recently familiarized'],
+  ['never futile', 'eye of the liberated', 'virtuous doer', 'virtuous form']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['makes devotees shed tears of joy', 'multi-headed', 'supporter', 'associates with all', 'listens to pure words'],
+  ['nectar', 'eternal and steady', 'supreme object of attainment', 'great knowledge']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '', '', '']
+  ['moves with all', 'obtains all', 'shines', 'army for protecting all', 'destroyer of persons'],
+  ['propounder of knowledge', 'knower', 'not bereft of any branches of knowledge', 'knowledge as body', 'enforces practice according to the knowledge of rules', 'sees beyond']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['presides over the world', 'presides over the compliant', 'presides over virtue', 'giver of temporary and the permanent'],
+  ['takes the form of vasudeva, sankarshana, pradyumna, aniruddha', 'present in all four states: awake, sleep, deep-sleep and the final state', 'has four teeth', 'has four arms']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '', '']
+  ['effulgent', 'food, the object of enjoyment', 'the enjoyer', 'the forgiver', 'born at the beginning of the universe'],
+  ['flawless', 'victory', 'conqueror', 'cause of the universe', 'again lives in it']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '', '', '']
+  ['brother of Indra', 'dwarf', 'giant', 'never purposeless', 'pure', 'ever strong'],
+  ['beyond Indra', 'easily reached', 'self-creates for easy reach', 'supports every Self', 'disciplines', 'rules']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['can be realized', 'knower of the remedy', 'ever alert', 'slayer of the strong', 'propounds knowledge', 'like honey, sweet inside-out'],
+  ['beyond the range of senses', 'wonderful power of enchantment', 'unstoppable initiative', 'immense strength']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['immense intellect', 'potency to remain unfazed', 'immense power', 'great splendor'],
+  ['indescribable body', 'beautiful', 'immeasurable depth', 'bearer of great mountains']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['wields the mighty bow', 'bearer of the earth', 'residence of Lakshmi', 'refuge of the pious'],
+  ['irresistible', 'source of delight to the compliant', 'recipient of praise', 'protector of those who know the words of praise']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['ray', 'dispeller', 'swan', 'lovely feathers', 'master of the serpent'],
+  ['having a beautiful navel', 'great intellect and resolve', 'lotus-navel, the origin', 'lord of beings']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '', '']
+  ['foe of death', 'sees all', 'the lion', 'makes devotees to unite with him', 'ever united with devotees', 'firmly attached to devotees'],
+  ['birthless', 'impossible to overcome', 'restrains obstacles', 'heard with wonder', 'slayer of enemies of the compliant']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '', '']
+  ['foremost among the preceptors', 'the place of residence', 'good', 'with truthful activity'],
+  ['eyes closed', 'ever awake', 'with a garland', 'Lord of speech', 'vast knowledge for the benefit of all']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['guide to a high place', 'leader of the hosts', 'beautiful even as a fish', 'just', 'carries out commands of devotees', 'sets activities in motion'],
+  ['thousand headed', 'the Self of the universe', 'thousand eyed', 'thousand footed']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['turns the wheel', 'rises above', 'remains hidden', 'dispels darkness'],
+  ['turns the day', 'bears the universe in the form of space', 'giver of life-breath', 'bearer of the earth, which bears others']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '', '', '']
+  ['bestows favors', 'clear minded', 'creates the universe out of kindness', 'pervades and protects the universe'],
+  ['honours those who are true', 'is worshipped', 'carries out their wishes', 'concealer', 'pervades and supports in every way', 'imperishable']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['uncountable', 'immeasurable', 'superior', 'makes them eminent', 'clean'],
+  ['achieves all desires', 'achieves all intentions', 'bestows powers', 'makes the means as pleasant as the goal']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['daybreak of virtue', 'showers virtues', 'pervades without gaps', 'steps of virtue', 'belly of virtue'],
+  ['nourishes', 'grows', 'unique', 'sea of scriptures']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['great arms', 'impossible to contain', 'worthy of praise', 'has great wealth', 'gives wealth', 'the wealth'],
+  ['has multiple forms', 'has immense form', 'pervades the rays', 'shows']
 ],
   [
-  ['', '', ''],
-  ['', '', '', '', '']
+  ['endowed with strength, vigour, brilliance', 'well known to all', 'scorches'],
+  ['plentiful', 'clear words', 'protects those who meditate', 'rays like that of the moon', 'effulgence of the sun']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '']
+  ['source of the nectar-rayed moon', 'lustrous sun', 'disowns the evil-minded', 'Lord of the compliant'],
+  ['medicine', 'barrier of the universe', 'valor and virtue']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '', '', '']
+  ['Lord of all in the past, present, future', 'moves about', 'purifier', 'insatiable'],
+  ['destroyer of desires', 'creator of desires', 'desirable', 'lovable', 'grants desires', 'powerful']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['creator at the beginning of a yuga', 'rotates the yugas', 'multiple wonders', 'voracious eater'],
+  ['cannot be seen', 'has a manifest form', 'conqueror of a hundred', 'boundless']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '', '']
+  ['liked', 'equal attitude towards others', 'dear to eminent persons', 'has the plume of lordship', 'binds', 'drenches the fatigued and consoles'],
+  ['gave up anger', 'showed anger', 'cuts', 'arms for favoring the world', 'supporter of the world']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['never falls', 'great reputation', 'life-breath', 'life-giver', 'born after Indra to help him'],
+  ['sustainer of the waters of the ocean', 'support', 'vigilant', 'self-dependent']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '']
+  ['dries and destroys', 'supporter of the destroyer', 'the prop', 'granter of boons', 'vayu as his vehicle'],
+  ['pervades and sports', 'profuse lustre', 'the first deity', 'destroyer of cities']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['dispels sorrow', 'takes to the other shore', 'savior', 'valiant', 'son of the valiant', 'owns the people like wealth'],
+  ['within reach', 'hundred whirlpools', 'has a lotus', 'lotus-like glances']
 ],
   [
-  ['', '', '', ''],
-  ['', '', '', '', '']
+  ['lotus-like navel', 'lotus-eyed', 'installed in the heart-lotus', 'protector of the body'],
+  ['immense riches', 'prosperous', 'full-grown nature', 'powerful axle', 'Garuda-bannered']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '']
+  ['has no equal', 'destroyer', 'formidable', 'knower of conventions', 'takes offerings'],
+  ['distinguished by all symbols', 'always with Lakshmi', 'victor in battles']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['never wanes', 'red complexion', 'sought after', 'cause', 'worlds in the belly', 'patient'],
+  ['supporter of the earth', 'extremely fortunate', 'quick', 'limitless eater']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '', '', '']
+  ['remover of bondage', 'creator of commotion', 'entertains himself', "always has Lakshmi's company", 'supreme ruler'],
+  ['the means', 'moves others to action', 'the agent', 'moved by emotions', 'inscrutable', 'saviour']
 ],
   [
-  ['', '', '', '', ''],
-  ['', '', '', '', '']
+  ['the pivot', 'basis for the divisions of time', 'the final end', 'giver of the supreme abode', 'the stationary'],
+  ['noble and auspicious qualities', 'explicit greatness', 'pleased', 'replete', 'auspicious-eyed']
 ],
   [
-  ['', '', '', '', '', ''],
-  ['', '', '', '']
+  ['delights', 'before whom all become powerless', 'unattached , sought after, flawless path', 'governed by devotees', 'draws everyone', 'cannot be drawn away'],
+  ['cause of fear', 'greatest among the powerful', 'virtue', 'foremost among those who know virtue']
 ],
   [
-  [],
-  []
+  ['remover of obstacles', 'purifier of all ', 'the vital air', 'the life-giver', 'moves others to bow to Him', 'well known'],
+  ['lives in loving and delightful hearts; like a treasure of gold', 'enemy-slayer', 'full of affection', 'moves towards devotees', 'never diminishes']
 ]];
 

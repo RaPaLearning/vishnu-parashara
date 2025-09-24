@@ -2,20 +2,26 @@ import {wordsBefore, wordsAfter, promptWithContext} from '../../src/prompt';
 
 describe('prompt context generation', () => {
   it('generates correct words before a middle word', () => {
-    expect(wordsBefore({ shlokaNum: 4, lineNum: 1, wordIndex: 3 }))
-        .toBe('The names before this are सर्वः, शर्वः, शिवः\n');
+    const beforeSequence = wordsBefore({ shlokaNum: 4, lineNum: 1, wordIndex: 3 });
+    expect(beforeSequence).toContain('सर्वः (all)');
+    expect(beforeSequence).toContain('शर्वः (remover)');
+    expect(beforeSequence).toContain('शिवः (confers auspiciousness)');
   });
   it('generates correct words before a first word in the second line', () => {
-    expect(wordsBefore({ shlokaNum: 2, lineNum: 2, wordIndex: 0 }))
-        .toBe('The names before this are पूतात्मा, परमात्मा च, मुक्तानां परमा गतिः\n');
+    const beforeSequence = wordsBefore({ shlokaNum: 2, lineNum: 2, wordIndex: 0 });
+    expect(beforeSequence).toContain('पूतात्मा (Pure Self)');
+    expect(beforeSequence).toContain('परमात्मा च (Ultimate Self)');
+    expect(beforeSequence).toContain('मुक्तानां परमा गतिः (Supreme goal of the liberated)');
   });
   it('generates correct words before a first word in the first line', () => {
-    expect(wordsBefore({ shlokaNum: 2, lineNum: 1, wordIndex: 0 }))
-        .toBe('The names before this are भावः, भूतात्मा, भूतभावनः\n');
+    const beforeSequence = wordsBefore({ shlokaNum: 2, lineNum: 1, wordIndex: 0 });
+    expect(beforeSequence).toContain('भावः (One who exists)');
+    expect(beforeSequence).toContain('भूतात्मा (Basis of all beings)');
+    expect(beforeSequence).toContain('भूतभावनः (One who nourishes all beings)');
   });
   it('generates one word before the second word in the first line', () => {
     expect(wordsBefore({ shlokaNum: 1, lineNum: 1, wordIndex: 1 }))
-        .toBe('The names before this are विश्वं\n');
+        .toContain('विश्वं (Complete in all respects)');
   });
   it('generates no words before the first word in the first line', () => {
     expect(wordsBefore({ shlokaNum: 1, lineNum: 1, wordIndex: 0 }))
@@ -23,15 +29,15 @@ describe('prompt context generation', () => {
   });
   it('generates correct words after a middle word', () => {
     expect(wordsAfter({ shlokaNum: 4, lineNum: 1, wordIndex: 3 }))
-        .toBe('The name after this is भूतादिः\n');
+        .toContain('भूतादिः (eagerly resorted to by all)');
   });
   it('generates correct words after the last word in the first line', () => {
     expect(wordsAfter({ shlokaNum: 1, lineNum: 1, wordIndex: 3 }))
-        .toBe('The name after this is भूतकृत्\n');
+        .toContain('भूतकृत् (Creator of all beings)');
   });
   it('generates correct words after the last word in the second line', () => {
     expect(wordsAfter({ shlokaNum: 2, lineNum: 2, wordIndex: 4 }))
-        .toBe('The name after this is योगो\n');
+        .toContain('योगो (The means)');
   });
   it('generates no words after the last word in the last shloka', async () => {
     const {shlokas} = await import('../../src/sahasranama');
