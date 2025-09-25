@@ -37,6 +37,7 @@
   color: #4A4A6A;
   padding-top: 16px;
   padding-left: 16px;
+  white-space: nowrap;
   box-sizing: border-box;
   box-shadow: 0 -4px 16px 0 #7b68ee80;
 }

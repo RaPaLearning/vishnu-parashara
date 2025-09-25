@@ -12,7 +12,7 @@ def read_google_sheet_to_json(sheet_url, worksheet_name='निरुक्त',
 
 
 def arrange_by_shlokas(rows):
-    unique_shlokas = set(row['श्लोक'] for row in rows if 'श्लोक' in row)
+    unique_shlokas = set(row['श्लोक'] for row in rows if 'श्लोक' in row and row['श्लोक'])
     print(f"Number of unique 'श्लोक': {len(unique_shlokas)}")
     shlokas = [[[], []] for _ in range(len(unique_shlokas))]
     commentary = [[[], []] for _ in range(len(unique_shlokas))]
@@ -24,7 +24,9 @@ def arrange_by_shlokas(rows):
             line_index = int(r['line']) - 1
             shlokas[shloka_index][line_index].append(r['नाम'])
             commentary[shloka_index][line_index].append(r['निरुक्त'])
-            meanings[shloka_index][line_index].append(r['meaning'] if 'meaning' in r else '')
+            meanings[shloka_index][line_index].append(
+                (r['meaning'][0].upper() + r['meaning'][1:] if 'meaning' in r and r['meaning'] else '')
+            )
         except KeyError as e:
             print(f"\nMissing key: {e} in row {idx + 1}")
         except ValueError as e:

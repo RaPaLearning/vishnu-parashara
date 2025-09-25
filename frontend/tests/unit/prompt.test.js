@@ -3,9 +3,9 @@ import {wordsBefore, wordsAfter, promptWithContext} from '../../src/prompt';
 describe('prompt context generation', () => {
   it('generates correct words before a middle word', () => {
     const beforeSequence = wordsBefore({ shlokaNum: 4, lineNum: 1, wordIndex: 3 });
-    expect(beforeSequence).toContain('सर्वः (all)');
-    expect(beforeSequence).toContain('शर्वः (remover)');
-    expect(beforeSequence).toContain('शिवः (confers auspiciousness)');
+    expect(beforeSequence).toContain('सर्वः (All)');
+    expect(beforeSequence).toContain('शर्वः (Remover)');
+    expect(beforeSequence).toContain('शिवः (Confers auspiciousness)');
   });
   it('generates correct words before a first word in the second line', () => {
     const beforeSequence = wordsBefore({ shlokaNum: 2, lineNum: 2, wordIndex: 0 });
@@ -29,7 +29,7 @@ describe('prompt context generation', () => {
   });
   it('generates correct words after a middle word', () => {
     expect(wordsAfter({ shlokaNum: 4, lineNum: 1, wordIndex: 3 }))
-        .toContain('भूतादिः (eagerly resorted to by all)');
+        .toContain('भूतादिः (Eagerly resorted to by all)');
   });
   it('generates correct words after the last word in the first line', () => {
     expect(wordsAfter({ shlokaNum: 1, lineNum: 1, wordIndex: 3 }))

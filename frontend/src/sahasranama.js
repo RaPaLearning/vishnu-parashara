@@ -361,171 +361,171 @@ export const meanings = [
   ["By whom the liberated aren't sent away", 'Generous', 'Direct witness', 'Knower of the field', 'And never wanes']
 ],
   [
-  ['The means', 'leader of yoga-practitioners', 'Lord of primordial matter and jeevatmas'],
-  ['body of a human combined with lion', 'having a lovely form', 'with awesome locks of hair', 'supreme person']
+  ['The means', 'Leader of yoga-practitioners', 'Lord of primordial matter and jeevatmas'],
+  ['Body of a human combined with lion', 'Having a lovely form', 'With awesome locks of hair', 'Supreme person']
 ],
   [
-  ['all', 'remover', 'confers auspiciousness', 'persistent, without breaks', 'eagerly resorted to by all', 'inexhaustible treasure'],
-  ['manifests for approachability', 'saviour', 'supporter', 'sublime born without blemish', 'all powerful', 'supreme ruler']
+  ['All', 'Remover', 'Confers auspiciousness', 'Persistent, without breaks', 'Eagerly resorted to by all', 'Inexhaustible treasure'],
+  ['Manifests for approachability', 'Saviour', 'Supporter', 'Sublime born without blemish', 'All powerful', 'Supreme ruler']
 ],
   [
-  ['manifests according to will', 'happiness', 'person in the sun', 'lotus-eyed', 'venerable sound'],
-  ['without beginning or end', 'creator', 'producer', 'ultimate among producers']
+  ['Manifests according to will', 'Happiness', 'Person in the sun', 'Lotus-eyed', 'Venerable sound'],
+  ['Without beginning or end', 'Creator', 'Producer', 'Ultimate among producers']
 ],
   [
-  ['immeasurable', 'controller of sense organs', 'with a lotus in the navel', 'lord of the immortals'],
-  ['agent of all actions', 'wills', 'chiseller', 'huge', 'existent, independent of time', 'firm and unchanging']
+  ['Immeasurable', 'Controller of sense organs', 'With a lotus in the navel', 'Lord of the immortals'],
+  ['Agent of all actions', 'Wills', 'Chiseller', 'Huge', 'Existent, independent of time', 'Firm and unchanging']
 ],
   [
-  ['beyond grasp', 'eternal', 'exceedingly delighted', 'red-eyed', 'destroyer'],
-  ['affluent', 'has the three-fold worlds as a residence', 'purity', 'supreme auspiciousness']
+  ['Beyond grasp', 'Eternal', 'Exceedingly delighted', 'Red-eyed', 'Destroyer'],
+  ['Affluent', 'Has the three-fold worlds as a residence', 'Purity', 'Supreme auspiciousness']
 ],
   [
-  ['controller', 'life-giver', 'life', 'praise-worthy', 'pre-eminent, served by praise', 'Lord of the liberated'],
-  ['is in a lovely abode', 'protector of the Earth', 'husband of Lakshmi', 'attracts the liberated senses']
+  ['Controller', 'Life-giver', 'Life', 'Praise-worthy', 'Pre-eminent, served by praise', 'Lord of the liberated'],
+  ['Is in a lovely abode', 'Protector of the Earth', 'Husband of Lakshmi', 'Attracts the liberated senses']
 ],
   [
-  ['ruler', 'powerful', 'wielder of the bow', 'omniscient', 'moves on the bird', 'prosperous'],
-  ['unsurpassed', 'unassailable', 'grateful for virtue', 'the act of virtue', 'owner of the Self']
+  ['Ruler', 'Powerful', 'Wielder of the bow', 'Omniscient', 'Moves on the bird', 'Prosperous'],
+  ['Unsurpassed', 'Unassailable', 'Grateful for virtue', 'The act of virtue', 'Owner of the Self']
 ],
   [
-  ['Lord of gods', 'the refuge', 'bliss', 'creator of the universe', 'abode of living beings'],
-  ['never forsakes', 'lives to uplift', 'accepts', 'reliable', 'displays all glory']
+  ['Lord of gods', 'The refuge', 'Bliss', 'Creator of the universe', 'Abode of living beings'],
+  ['Never forsakes', 'Lives to uplift', 'Accepts', 'Reliable', 'Displays all glory']
 ],
   [
-  ['remover of obstacles', 'reaches all', 'ever existing', 'goal', 'source of all', 'never separated from devotees'],
-  ['varaha, the dharma', 'incomprehensible', 'attainable by all means']
+  ['Remover of obstacles', 'Reaches all', 'Ever existing', 'Goal', 'Source of all', 'Never separated from devotees'],
+  ['Varaha, the dharma', 'Incomprehensible', 'Attainable by all means']
 ],
   [
-  ['dwells', 'thinks of devotees as treasure', 'well-disposed', 'uniformly disposed', 'grasped by devotees in limitation', 'equally disposed towards those recently familiarized'],
-  ['never futile', 'eye of the liberated', 'virtuous doer', 'virtuous form']
+  ['Dwells', 'Thinks of devotees as treasure', 'Well-disposed', 'Uniformly disposed', 'Grasped by devotees in limitation', 'Equally disposed towards those recently familiarized'],
+  ['Never futile', 'Eye of the liberated', 'Virtuous doer', 'Virtuous form']
 ],
   [
-  ['makes devotees shed tears of joy', 'multi-headed', 'supporter', 'associates with all', 'listens to pure words'],
-  ['nectar', 'eternal and steady', 'supreme object of attainment', 'great knowledge']
+  ['Makes devotees shed tears of joy', 'Multi-headed', 'Supporter', 'Associates with all', 'Listens to pure words'],
+  ['Nectar', 'Eternal and steady', 'Supreme object of attainment', 'Great knowledge']
 ],
   [
-  ['moves with all', 'obtains all', 'shines', 'army for protecting all', 'destroyer of persons'],
-  ['propounder of knowledge', 'knower', 'not bereft of any branches of knowledge', 'knowledge as body', 'enforces practice according to the knowledge of rules', 'sees beyond']
+  ['Moves with all', 'Obtains all', 'Shines', 'Army for protecting all', 'Destroyer of persons'],
+  ['Propounder of knowledge', 'Knower', 'Not bereft of any branches of knowledge', 'Knowledge as body', 'Enforces practice according to the knowledge of rules', 'Sees beyond']
 ],
   [
-  ['presides over the world', 'presides over the compliant', 'presides over virtue', 'giver of temporary and the permanent'],
-  ['takes the form of vasudeva, sankarshana, pradyumna, aniruddha', 'present in all four states: awake, sleep, deep-sleep and the final state', 'has four teeth', 'has four arms']
+  ['Presides over the world', 'Presides over the compliant', 'Presides over virtue', 'Giver of temporary and the permanent'],
+  ['Takes the form of vasudeva, sankarshana, pradyumna, aniruddha', 'Present in all four states: awake, sleep, deep-sleep and the final state', 'Has four teeth', 'Has four arms']
 ],
   [
-  ['effulgent', 'food, the object of enjoyment', 'the enjoyer', 'the forgiver', 'born at the beginning of the universe'],
-  ['flawless', 'victory', 'conqueror', 'cause of the universe', 'again lives in it']
+  ['Effulgent', 'Food, the object of enjoyment', 'The enjoyer', 'The forgiver', 'Born at the beginning of the universe'],
+  ['Flawless', 'Victory', 'Conqueror', 'Cause of the universe', 'Again lives in it']
 ],
   [
-  ['brother of Indra', 'dwarf', 'giant', 'never purposeless', 'pure', 'ever strong'],
-  ['beyond Indra', 'easily reached', 'self-creates for easy reach', 'supports every Self', 'disciplines', 'rules']
+  ['Brother of Indra', 'Dwarf', 'Giant', 'Never purposeless', 'Pure', 'Ever strong'],
+  ['Beyond Indra', 'Easily reached', 'Self-creates for easy reach', 'Supports every Self', 'Disciplines', 'Rules']
 ],
   [
-  ['can be realized', 'knower of the remedy', 'ever alert', 'slayer of the strong', 'propounds knowledge', 'like honey, sweet inside-out'],
-  ['beyond the range of senses', 'wonderful power of enchantment', 'unstoppable initiative', 'immense strength']
+  ['Can be realized', 'Knower of the remedy', 'Ever alert', 'Slayer of the strong', 'Propounds knowledge', 'Like honey, sweet inside-out'],
+  ['Beyond the range of senses', 'Wonderful power of enchantment', 'Unstoppable initiative', 'Immense strength']
 ],
   [
-  ['immense intellect', 'potency to remain unfazed', 'immense power', 'great splendor'],
-  ['indescribable body', 'beautiful', 'immeasurable depth', 'bearer of great mountains']
+  ['Immense intellect', 'Potency to remain unfazed', 'Immense power', 'Great splendor'],
+  ['Indescribable body', 'Beautiful', 'Immeasurable depth', 'Bearer of great mountains']
 ],
   [
-  ['wields the mighty bow', 'bearer of the earth', 'residence of Lakshmi', 'refuge of the pious'],
-  ['irresistible', 'source of delight to the compliant', 'recipient of praise', 'protector of those who know the words of praise']
+  ['Wields the mighty bow', 'Bearer of the earth', 'Residence of Lakshmi', 'Refuge of the pious'],
+  ['Irresistible', 'Source of delight to the compliant', 'Recipient of praise', 'Protector of those who know the words of praise']
 ],
   [
-  ['ray', 'dispeller', 'swan', 'lovely feathers', 'master of the serpent'],
-  ['having a beautiful navel', 'great intellect and resolve', 'lotus-navel, the origin', 'lord of beings']
+  ['Ray', 'Dispeller', 'Swan', 'Lovely feathers', 'Master of the serpent'],
+  ['Having a beautiful navel', 'Great intellect and resolve', 'Lotus-navel, the origin', 'Lord of beings']
 ],
   [
-  ['foe of death', 'sees all', 'the lion', 'makes devotees to unite with him', 'ever united with devotees', 'firmly attached to devotees'],
-  ['birthless', 'impossible to overcome', 'restrains obstacles', 'heard with wonder', 'slayer of enemies of the compliant']
+  ['Foe of death', 'Sees all', 'The lion', 'Makes devotees to unite with him', 'Ever united with devotees', 'Firmly attached to devotees'],
+  ['Birthless', 'Impossible to overcome', 'Restrains obstacles', 'Heard with wonder', 'Slayer of enemies of the compliant']
 ],
   [
-  ['foremost among the preceptors', 'the place of residence', 'good', 'with truthful activity'],
-  ['eyes closed', 'ever awake', 'with a garland', 'Lord of speech', 'vast knowledge for the benefit of all']
+  ['Foremost among the preceptors', 'The place of residence', 'Good', 'With truthful activity'],
+  ['Eyes closed', 'Ever awake', 'With a garland', 'Lord of speech', 'Vast knowledge for the benefit of all']
 ],
   [
-  ['guide to a high place', 'leader of the hosts', 'beautiful even as a fish', 'just', 'carries out commands of devotees', 'sets activities in motion'],
-  ['thousand headed', 'the Self of the universe', 'thousand eyed', 'thousand footed']
+  ['Guide to a high place', 'Leader of the hosts', 'Beautiful even as a fish', 'Just', 'Carries out commands of devotees', 'Sets activities in motion'],
+  ['Thousand headed', 'The Self of the universe', 'Thousand eyed', 'Thousand footed']
 ],
   [
-  ['turns the wheel', 'rises above', 'remains hidden', 'dispels darkness'],
-  ['turns the day', 'bears the universe in the form of space', 'giver of life-breath', 'bearer of the earth, which bears others']
+  ['Turns the wheel', 'Rises above', 'Remains hidden', 'Dispels darkness'],
+  ['Turns the day', 'Bears the universe in the form of space', 'Giver of life-breath', 'Bearer of the earth, which bears others']
 ],
   [
-  ['bestows favors', 'clear minded', 'creates the universe out of kindness', 'pervades and protects the universe'],
-  ['honours those who are true', 'is worshipped', 'carries out their wishes', 'concealer', 'pervades and supports in every way', 'imperishable']
+  ['Bestows favors', 'Clear minded', 'Creates the universe out of kindness', 'Pervades and protects the universe'],
+  ['Honours those who are true', 'Is worshipped', 'Carries out their wishes', 'Concealer', 'Pervades and supports in every way', 'Imperishable']
 ],
   [
-  ['uncountable', 'immeasurable', 'superior', 'makes them eminent', 'clean'],
-  ['achieves all desires', 'achieves all intentions', 'bestows powers', 'makes the means as pleasant as the goal']
+  ['Uncountable', 'Immeasurable', 'Superior', 'Makes them eminent', 'Clean'],
+  ['Achieves all desires', 'Achieves all intentions', 'Bestows powers', 'Makes the means as pleasant as the goal']
 ],
   [
-  ['daybreak of virtue', 'showers virtues', 'pervades without gaps', 'steps of virtue', 'belly of virtue'],
-  ['nourishes', 'grows', 'unique', 'sea of scriptures']
+  ['Daybreak of virtue', 'Showers virtues', 'Pervades without gaps', 'Steps of virtue', 'Belly of virtue'],
+  ['Nourishes', 'Grows', 'Unique', 'Sea of scriptures']
 ],
   [
-  ['great arms', 'impossible to contain', 'worthy of praise', 'has great wealth', 'gives wealth', 'the wealth'],
-  ['has multiple forms', 'has immense form', 'pervades the rays', 'shows']
+  ['Great arms', 'Impossible to contain', 'Worthy of praise', 'Has great wealth', 'Gives wealth', 'The wealth'],
+  ['Has multiple forms', 'Has immense form', 'Pervades the rays', 'Shows']
 ],
   [
-  ['endowed with strength, vigour, brilliance', 'well known to all', 'scorches'],
-  ['plentiful', 'clear words', 'protects those who meditate', 'rays like that of the moon', 'effulgence of the sun']
+  ['Endowed with strength, vigour, brilliance', 'Well known to all', 'Scorches'],
+  ['Plentiful', 'Clear words', 'Protects those who meditate', 'Rays like that of the moon', 'Effulgence of the sun']
 ],
   [
-  ['source of the nectar-rayed moon', 'lustrous sun', 'disowns the evil-minded', 'Lord of the compliant'],
-  ['medicine', 'barrier of the universe', 'valor and virtue']
+  ['Source of the nectar-rayed moon', 'Lustrous sun', 'Disowns the evil-minded', 'Lord of the compliant'],
+  ['Medicine', 'Barrier of the universe', 'Valor and virtue']
 ],
   [
-  ['Lord of all in the past, present, future', 'moves about', 'purifier', 'insatiable'],
-  ['destroyer of desires', 'creator of desires', 'desirable', 'lovable', 'grants desires', 'powerful']
+  ['Lord of all in the past, present, future', 'Moves about', 'Purifier', 'Insatiable'],
+  ['Destroyer of desires', 'Creator of desires', 'Desirable', 'Lovable', 'Grants desires', 'Powerful']
 ],
   [
-  ['creator at the beginning of a yuga', 'rotates the yugas', 'multiple wonders', 'voracious eater'],
-  ['cannot be seen', 'has a manifest form', 'conqueror of a hundred', 'boundless']
+  ['Creator at the beginning of a yuga', 'Rotates the yugas', 'Multiple wonders', 'Voracious eater'],
+  ['Cannot be seen', 'Has a manifest form', 'Conqueror of a hundred', 'Boundless']
 ],
   [
-  ['liked', 'equal attitude towards others', 'dear to eminent persons', 'has the plume of lordship', 'binds', 'drenches the fatigued and consoles'],
-  ['gave up anger', 'showed anger', 'cuts', 'arms for favoring the world', 'supporter of the world']
+  ['Liked', 'Equal attitude towards others', 'Dear to eminent persons', 'Has the plume of lordship', 'Binds', 'Drenches the fatigued and consoles'],
+  ['Gave up anger', 'Showed anger', 'Cuts', 'Arms for favoring the world', 'Supporter of the world']
 ],
   [
-  ['never falls', 'great reputation', 'life-breath', 'life-giver', 'born after Indra to help him'],
-  ['sustainer of the waters of the ocean', 'support', 'vigilant', 'self-dependent']
+  ['Never falls', 'Great reputation', 'Life-breath', 'Life-giver', 'Born after Indra to help him'],
+  ['Sustainer of the waters of the ocean', 'Support', 'Vigilant', 'Self-dependent']
 ],
   [
-  ['dries and destroys', 'supporter of the destroyer', 'the prop', 'granter of boons', 'vayu as his vehicle'],
-  ['pervades and sports', 'profuse lustre', 'the first deity', 'destroyer of cities']
+  ['Dries and destroys', 'Supporter of the destroyer', 'The prop', 'Granter of boons', 'Vayu as his vehicle'],
+  ['Pervades and sports', 'Profuse lustre', 'The first deity', 'Destroyer of cities']
 ],
   [
-  ['dispels sorrow', 'takes to the other shore', 'savior', 'valiant', 'son of the valiant', 'owns the people like wealth'],
-  ['within reach', 'hundred whirlpools', 'has a lotus', 'lotus-like glances']
+  ['Dispels sorrow', 'Takes to the other shore', 'Savior', 'Valiant', 'Son of the valiant', 'Owns the people like wealth'],
+  ['Within reach', 'Hundred whirlpools', 'Has a lotus', 'Lotus-like glances']
 ],
   [
-  ['lotus-like navel', 'lotus-eyed', 'installed in the heart-lotus', 'protector of the body'],
-  ['immense riches', 'prosperous', 'full-grown nature', 'powerful axle', 'Garuda-bannered']
+  ['Lotus-like navel', 'Lotus-eyed', 'Installed in the heart-lotus', 'Protector of the body'],
+  ['Immense riches', 'Prosperous', 'Full-grown nature', 'Powerful axle', 'Garuda-bannered']
 ],
   [
-  ['has no equal', 'destroyer', 'formidable', 'knower of conventions', 'takes offerings'],
-  ['distinguished by all symbols', 'always with Lakshmi', 'victor in battles']
+  ['Has no equal', 'Destroyer', 'Formidable', 'Knower of conventions', 'Takes offerings'],
+  ['Distinguished by all symbols', 'Always with Lakshmi', 'Victor in battles']
 ],
   [
-  ['never wanes', 'red complexion', 'sought after', 'cause', 'worlds in the belly', 'patient'],
-  ['supporter of the earth', 'extremely fortunate', 'quick', 'limitless eater']
+  ['Never wanes', 'Red complexion', 'Sought after', 'Cause', 'Worlds in the belly', 'Patient'],
+  ['Supporter of the earth', 'Extremely fortunate', 'Quick', 'Limitless eater']
 ],
   [
-  ['remover of bondage', 'creator of commotion', 'entertains himself', "always has Lakshmi's company", 'supreme ruler'],
-  ['the means', 'moves others to action', 'the agent', 'moved by emotions', 'inscrutable', 'saviour']
+  ['Remover of bondage', 'Creator of commotion', 'Entertains himself', "Always has Lakshmi's company", 'Supreme ruler'],
+  ['The means', 'Moves others to action', 'The agent', 'Moved by emotions', 'Inscrutable', 'Saviour']
 ],
   [
-  ['the pivot', 'basis for the divisions of time', 'the final end', 'giver of the supreme abode', 'the stationary'],
-  ['noble and auspicious qualities', 'explicit greatness', 'pleased', 'replete', 'auspicious-eyed']
+  ['The pivot', 'Basis for the divisions of time', 'The final end', 'Giver of the supreme abode', 'The stationary'],
+  ['Noble and auspicious qualities', 'Explicit greatness', 'Pleased', 'Replete', 'Auspicious-eyed']
 ],
   [
-  ['delights', 'before whom all become powerless', 'unattached , sought after, flawless path', 'governed by devotees', 'draws everyone', 'cannot be drawn away'],
-  ['cause of fear', 'greatest among the powerful', 'virtue', 'foremost among those who know virtue']
+  ['Delights', 'Before whom all become powerless', 'Unattached , sought after, flawless path', 'Governed by devotees', 'Draws everyone', 'Cannot be drawn away'],
+  ['Cause of fear', 'Greatest among the powerful', 'Virtue', 'Foremost among those who know virtue']
 ],
   [
-  ['remover of obstacles', 'purifier of all ', 'the vital air', 'the life-giver', 'moves others to bow to Him', 'well known'],
-  ['lives in loving and delightful hearts; like a treasure of gold', 'enemy-slayer', 'full of affection', 'moves towards devotees', 'never diminishes']
+  ['Remover of obstacles', 'Purifier of all ', 'The vital air', 'The life-giver', 'Moves others to bow to Him', 'Well known'],
+  ['Lives in loving and delightful hearts; like a treasure of gold', 'Enemy-slayer', 'Full of affection', 'Moves towards devotees', 'Never diminishes']
 ]];
 
