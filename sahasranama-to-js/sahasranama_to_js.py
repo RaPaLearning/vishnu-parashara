@@ -7,7 +7,9 @@ from google.oauth2.service_account import Credentials
 def authenticate_google_sheets(creds_json_path):
     if "DRIVE_JSON" in os.environ:
         creds_dict = json.loads(os.environ["DRIVE_JSON"])
-        creds = Credentials.from_service_account_info(creds_dict)
+        creds = Credentials.from_service_account_info(creds_dict, scope=[
+            "https://www.googleapis.com/auth/spreadsheets", 
+            "https://www.googleapis.com/auth/drive"])
         client = gspread.authorize(creds)
         print("Authenticated from environment")
     else:
