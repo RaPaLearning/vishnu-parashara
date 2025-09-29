@@ -1,8 +1,22 @@
+import os
+import json
 import gspread
+from google.oauth2.service_account import Credentials
+
+
+def authenticate_google_sheets(creds_json_path):
+    if "DRIVE_JSON" in os.environ:
+        creds_dict = json.loads(os.environ["DRIVE_JSON"])
+        client = Credentials.from_service_account_info(creds_dict, scopes=scope)
+        print("Authenticated from environment")
+    else:
+        client = gspread.service_account(filename=creds_json_path)
+        print("Authenticated from file")
+    return client
+
 
 def read_google_sheet_to_json(sheet_url, worksheet_name='निरुक्त', creds_json_path='credentials.json'):
-    client = gspread.service_account(filename=creds_json_path)
-    print("Authenticated successfully.")
+    client = authenticate_google_sheets(creds_json_path)
     sheet = client.open_by_url(sheet_url)
     print(f"Opened sheet: {sheet.title}")
     worksheet = sheet.worksheet(worksheet_name)

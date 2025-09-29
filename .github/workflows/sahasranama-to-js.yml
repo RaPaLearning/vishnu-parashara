@@ -1,0 +1,33 @@
+name: Sahasranama to JS
+
+on:
+    workflow_dispatch:
+
+jobs:
+  sahasranama:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install uv
+
+      - name: Sahasranama to JS
+        env:
+          DRIVE_JSON: ${{ secrets.DRIVE_JSON }}
+        run: uv run sahasranama_to_js.py
+
+      - name: Get ready for github
+        run: |
+          git config --global user.name 'deploy-bot'
+          git config --global user.email 'deploy-bot@rapalearning.com'
+
+      - name: Commit and Push changes
+        run: |
+          git add .
+          git commit -m "update sahasranama"
+          git push origin main
