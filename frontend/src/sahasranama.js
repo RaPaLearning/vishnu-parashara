@@ -197,6 +197,10 @@ export const shlokas = [
   [
   ['स्वापनः', 'स्ववशः', 'व्यापी', 'नैकात्मा', 'नैककर्मकृत्'],
   ['वत्सरः', 'वत्सलः', 'वत्सी', 'रत्नगर्भः', 'धनेश्वरः']
+],
+  [
+  ['धर्मगुप् ', 'धर्मकृत् ', 'धर्मी', 'सत् ', 'अक्षरम्', 'असत्', 'क्षरम्'],
+  ['अविज्ञाता', 'सहस्रांशुः', 'विधाता', 'कृतलक्षणः']
 ]];
 
 export const commentary = [
@@ -398,6 +402,10 @@ export const commentary = [
   [
   ['कटाक्ष भ्रूविलासाद्यैः नष्टशिष्टान् जनानपि।\nयः असौ सम्यक् मोहयति स्वापनः परिकीर्तितः॥', 'स्वकीयैः सह सुप्तेषु तेषु स्वैरविहारवान्।\nभवति स्ववाशः सः अन्यान् आधीनत्वप्रदो मनुः॥', 'देवरक्षो मन्दरेषु वासुकि प्रभृतिष्वपि।\nआप्यायनाय शक्त्या च व्यापी स्यात् व्यापनादसौ॥', 'तदातनैः ब्राह्मकौर्म मोहिन्यादि अवतारकैः।\nनैकात्मा इति श्रुतः सम्यक् मुन्यर्णो मनुरूपदः॥', 'समुद्रमथने अनेककर्मकृत् नैककर्मकृत् '],
   ['पुरुषार्थ स्थापनाय सर्वान्तर्वसनाच्च यः।\nधर्मात्मा वत्सरः स स्यात् मुन्यर्णो अभीष्टदो मनुः॥', 'सर्वस्य अन्तर्निवसने तस्य हेतुरथोच्यते।\nवत्से यतो धेनुरिव वत्सलः शरणागते॥', 'नित्यपोष्य आत्मवर्गाख्य वत्सभूयस्त्वतः सदा।\nवत्सी स्याद्धि विशेषेण षडर्णो गौप्रवो मनुः॥', 'धनायद्भ्यो यथाकामं प्रदेय धनवत्त्वतः।\nरात्नगर्भः समाख्यातः हि अष्टवर्णो धनदो मनुः॥', 'तत्तदिष्ट द्रव्यदाने शीघ्राकारी धनेश्वरः']
+],
+  [
+  ['कामं दत्वा अपि अर्थकामौ निवर्त्य विषयान्तरात्।\nताभ्यां हितस्य धर्मस्य रक्षणात् धर्मगुप् स्मृतः॥', 'सर्वं जनं धार्मिकयन् लीलानुग्रह लक्षणं।\nधर्मं करोति तस्माद्धि तस्मात् धर्मकृत् उच्यते॥', 'साधारणोपकरणम् धर्मो यस्यास्ति केवलं।\nस वै धर्मी इति विज्ञेयः षडर्णो धर्मदो मनुः॥', 'निरुपाधिक सद्भावात् नित्यसाद्गुण्ययोगतः।\nसत् शब्देन उच्यते विष्णुः वेदवेदान्त पारगैः॥', 'अपक्षय विनाशादि वर्जितो अक्षर उच्यते।\nततः अक्षरसत् इति एवं एकनाम च शस्यते॥', 'असताम् यः सदा अनन्त भवाख्याघप्रदानतः।\nअसत् इत्युच्यते सद्भिः ॥', '- तादृक् क्षरं असत् क्षरं॥'],
+  ['प्रपन्नकृत पापानां किञ्चिदपि अविचारणात्।\nअविज्ञाता इति कथितः बुधैः तद्रुणपारगैः॥', 'अंशवो बुद्धयः प्रोक्ताः सहस्रं सन्ति यस्य ते।\nसहस्रांशुः इति ख्यातः हि अष्टार्णो धीप्रदो मनुः॥', 'तादधीन्यात् यमादीनां विधाता इत्युच्यते बुधैः', 'कृतं हि लांछनं येन स्वोपादेयेषु जन्तुषु।\nपरमात्मा हृषीकेशः स तु स्यात् कृतलक्षणः॥']
 ]];
 
 export const meanings = [
@@ -513,7 +521,7 @@ export const meanings = [
   ['Nourishes', 'Grows', 'Unique', 'Sea of scriptures']
 ],
   [
-  ['Great arms', 'Impossible to contain', 'Worthy of praise', 'Has great wealth', 'Gives wealth', 'The wealth'],
+  ['Great arms', 'Impossible to contain', 'Whose words are cool and deep', 'Has great wealth', 'Gives wealth', 'The wealth'],
   ['Has multiple forms', 'Has immense form', 'Pervades the rays', 'Shows']
 ],
   [
@@ -599,5 +607,9 @@ export const meanings = [
   [
   ['Lulls to sleep', 'Under own control', 'Pervades to provide strength', 'Diverse forms', 'Diverse activities'],
   ['Lives within', 'Affectionate ', 'Possessed of loving children ', 'Has abundant wealth ', 'Quick giver of wealth ']
+],
+  [
+  ['Protector of virtue', 'Makes virtue happen', 'Whose natural way is righteousness itself', 'Commendable, unconditionally auspicious ', 'Free of decrease or destruction', 'Giver of endless existence to the pretentious ', '- with cycles of temporary miseries'],
+  ['Ignores the faults of those who surrender', 'Uncountable rays of knowledge', 'Controller', 'Has made the characteristics of the favored']
 ]];
 
