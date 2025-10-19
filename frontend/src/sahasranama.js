@@ -633,7 +633,7 @@ export const meanings = [
   ['Origin of brilliance', 'The great player', 'Owns all the powerful', 'Supports the powers', 'Teaches knowledge ']
 ],
   [
-  ['Rescuer', 'Master of words', 'Nurtures knowledge as hayagriva', 'Attainable by supreme knowledge ', 'Ancient, revealing self in every kalpa'],
+  ['Rescuer', 'Master of words', 'Nurtures knowledge as Hayagriva', 'Attainable by supreme knowledge ', 'Ancient, revealing self in every kalpa'],
   ['Bears the world and its elements as the body', 'The enjoyer ', 'Lord of the monkeys', 'Generous gifter']
 ]];
 
