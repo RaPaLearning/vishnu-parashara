@@ -217,6 +217,10 @@ export const shlokas = [
   [
   ['जीवः', 'विनयिता', 'साक्षी', 'मुकुन्दः', 'अमितविक्रमः '],
   ['अम्भोनिधिः', 'अनन्तात्मा', 'महोदधिशयः', 'अन्तकः']
+],
+  [
+  ['अजः', 'महार्हः', 'स्वाभाव्यः', 'जितामित्रः', 'प्रमोदनः'],
+  ['आनन्दः', 'नन्दनः', 'नन्दः ', 'सत्यधर्मा ', 'त्रिविक्रमः']
 ]];
 
 export const commentary = [
@@ -438,6 +442,10 @@ export const commentary = [
   [
   ['तान् आत्मनाशात् व्यावर्त्य सत्त्वान् यश्च स्वसेवया।\nउज्जीवयति जीवः सः भक्तक्लेशासहो मनुः॥', 'भक्तान् नित्य राजपुत्रलालनन्यायतः सुखं।\nरक्षति अतो विनयिता नयतेः रक्षणार्थतः॥', 'साक्षात्करोति यः साक्षी तद्वत्तं रक्षणाय सः ', 'तैः प्रार्थितः स्वयं मुक्तिं मुकुन्दः स्यात् ददाति यः ', 'तेषां ध्यानानुसंधेय तत्वसंदेहधारिणीम्।\nतां शक्तिं धृतवान् यः असौ स्मृतो हि अमितविक्रमः ॥'],
   ['आधारशक्ति कमठः स्वरूपेण अर्णवाम्भासि।\nनिधीयते स्वयं येन स हि आम्भोनिधिः उच्यते॥', 'कमठस्योपरि जगदाधारस्तम्भभोगिनः।\nस्वरूपेण स्थितो यः असौ अनंतात्मा प्रकीर्तितः॥', 'तस्मिन् अनन्तपर्यंके समुद्रे शयनाच्च यः।\nमहोदधिशयः ख्यातो दशार्णो मनुरुत्तमः॥', 'अन्तं करोति जगतो यः असौ अन्तकः ईरितः']
+],
+  [
+  ['तत्वावसाने प्रणवप्रकृतेः स तु अकारतः।\nस्मर्तव्यत्वात् अजः प्रोक्तः ह्यूषड्वर्णोर्मिनाशकः॥', 'स्वरूपादिकृतार्थेन तारेण आत्मनिवेदनम्।\nमहं पूजां अर्हतीति महार्ह इति कथ्यते॥', 'मन्त्रेणानेन आत्मभिस्तु स्वभूतैः आभिमुख्यतः।\nअवश्यं भावनीयत्वात् स्वाभाव्यः परिकीर्तितः॥', 'एतद्रहस्यविज्ञान विरोधि ममतादयः।\nजितास्तेषाम् अनेनेति जितामित्रः अष्टवर्णकः॥', 'ध्यानासक्तेषु भक्तेषु मोदमानः प्रमोदनः'],
+  ['आनन्दवल्ली मीमांस्यस्तु अवाक् मनसगोचरः ।\nआनन्दो ह्यस्य नित्यः अस्तीति आनन्दः परिकीर्तितः॥', 'तमानन्दम् यथोक्तायां मुक्तौ प्रापय्य यः सदा।\nमुक्तान् नित्यान् नन्दयति नन्दनः स तु कीर्तितः॥', 'भोग्यैः भोगोपकरणैः भोगैः भोक्तृभिरेव च।\nतस्मिन् समृद्ध्यते नित्यं इति नन्दः प्रकीर्तितः॥', 'आप्रक्रमात् आ स्वप्राप्तेः आर्जवात् सत्यवर्तनः।\nयः स्यात् स सत्यधर्मा च वस्वर्णः सत्यवर्तनः ॥', 'त्रीन् वेदान् क्रमते यो हि महिम्ना स त्रिविक्रमः।']
 ]];
 
 export const meanings = [
@@ -481,7 +489,7 @@ export const meanings = [
   ['Never forsakes', 'Lives to uplift', 'Accepts', 'Reliable', 'Displays all glory']
 ],
   [
-  ['Remover of obstacles', 'Reaches all', 'Ever existing', 'Goal', 'Source of all', 'Never separated from devotees'],
+  ['Remover of obstacles', 'Reaches all', 'Naturally achievable', 'Goal', 'Source of all', 'Never separated from devotees'],
   ['Varaha, the dharma', 'Incomprehensible', 'Attainable by all means']
 ],
   [
@@ -657,7 +665,11 @@ export const meanings = [
   ['Subdues', 'Is conquered by those who take refuge in him', 'His promises are always true', 'Deserves all gifts, including the self', 'Lord of the authentic']
 ],
   [
-  ['Gives life, preventing devotees from ruin', 'Protects by treating with love and affection', 'The observer', 'Giver of liberation', 'Boundless valor to support everything that devotees worship'],
+  ['Gives life, preventing devotees from ruin', 'Protects by treating with love and affection', 'The observer', 'Giver of liberation', 'Boundless valor to support devotees'],
   ['Placed under the water in the form of a tortoise', 'The self in ananta, the pillar of the universe', 'Reclines in the vast ocean', 'Brings the end']
+],
+  [
+  ["The sound of 'a', which is the base of all sounds", 'Worthy of supreme worship', 'Naturally worshipped by those who belong to him', 'Wins over the possessiveness of devotees', 'Delights his devotees'],
+  ['Bliss', 'Bliss giver', 'Replete with blissful things', 'True in action from start to goal', 'Pervades the three vedas']
 ]];
 
