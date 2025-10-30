@@ -108,7 +108,7 @@ export const shlokas = [
 ],
   [
   ['वृषाही', 'वृषभः', 'विष्णुः', 'वृषपर्वा', 'वृषोदरः'],
-  ['वर्धनः', 'वर्धमानः', 'विविक्तः', 'श्रुतिसागरः']
+  ['वर्धनः', 'वर्धमानः च', 'विविक्तः', 'श्रुतिसागरः']
 ],
   [
   ['सुभुजो', 'दुर्धरः ', 'वाग्मी', 'महेन्द्रो', 'वसुदः', 'वसुः'],
@@ -221,6 +221,10 @@ export const shlokas = [
   [
   ['अजः', 'महार्हः', 'स्वाभाव्यः', 'जितामित्रः', 'प्रमोदनः'],
   ['आनन्दः', 'नन्दनः', 'नन्दः ', 'सत्यधर्मा ', 'त्रिविक्रमः']
+],
+  [
+  ['महर्षिः', 'कपिलाचार्यः', 'कृतज्ञः', 'मेदिनीपतिः'],
+  ['त्रिपदः ', 'त्रिदशाध्यक्षः ', 'महाशृङ्गः', 'कृतान्तकृत् ']
 ]];
 
 export const commentary = [
@@ -257,7 +261,7 @@ export const commentary = [
 ],
   [
   ['ईशनात् रमणात् चापि ईश्वरः परिकीर्तितः', 'विक्रमः पौरुषं प्रोक्तः तद्वत्त्वात् विक्रमी बुधैः', 'पौरुषानुगुणम् शार्ङ्गं यस्य धन्वी स कथ्यते', 'निस्सीम भूमानुगुण नित्य सर्वज्ञ लक्षणा ।\nमेधा यस्यास्ति स प्रोक्तः मेधावी इति विचक्षणैः ॥', 'गमनम् पक्षिराजेन यस्य विक्रम उच्यते', 'क्रमणात क्रमहेतुत्वात् क्रम एष उदाहृतः'],
-  ['उत्तमो नास्ति यस्मात् सः अनुत्तम उदाहृतः', 'अपां निधिवत् अक्षोभ्यः दुराधर्षः इतीरितः ।\nदुर्विज्ञेयगतिः यर्स्मात् दुराधर्षः प्रकीर्तितः॥', 'प्राणिभिः यत् कृतं कर्म तत् ज्ञात्वा फलदः यतः ।\nपत्र पुस्पादिना तुष्ठः कृतज्ञो मोक्षदानतः ॥', 'यस्मात् प्रसन्नात् सुकृतं तेषां स कृतिः इष्यते ।\nप्रयत्नो वा क्रिया वा अथ कृतिः उक्ता क्रियावतां॥', 'एषाम् आत्मशरीरादि निरासात् अथवा आत्मवान् ।\nस्वे महिम्नि प्रतिष्ठानात् आत्मवान् अभिदीयते ॥']
+  ['उत्तमो नास्ति यस्मात् सः अनुत्तम उदाहृतः', 'अपां निधिवत् अक्षोभ्यः दुराधर्षः इतीरितः ।\nदुर्विज्ञेयगतिः यर्स्मात् दुराधर्षः प्रकीर्तितः॥', 'प्राणिभिः यत् कृतं कर्म तत् ज्ञात्वा फलदः यतः ।\nपत्र पुष्पादिना तुष्ठः कृतज्ञो मोक्षदानतः ॥', 'यस्मात् प्रसन्नात् सुकृतं तेषां स कृतिः इष्यते ।\nप्रयत्नो वा क्रिया वा अथ कृतिः उक्ता क्रियावतां॥', 'एषाम् आत्मशरीरादि निरासात् अथवा आत्मवान् ।\nस्वे महिम्नि प्रतिष्ठानात् आत्मवान् अभिदीयते ॥']
 ],
   [
   ['ब्रह्मादीनां फल्गु फल लिप्सूनां त्रिदिवौकसां ।\nसंविधाता सुरेषष्च प्रोच्यते विबुधोत्तमैः ॥', 'आर्तानाम् आर्तिहन्तृत्वात् शरणं परिकीर्तितः ।\nयदुपासं भयं दुःखं पापं बन्धो न बाधते ।\nप्रतिष्ठा च सुखं ज्ञानं भवेत् शरणं इत्यतः ॥', 'परमानन्द रूपत्वात् शर्म हिंसादि मन्थनात् ', 'विश्वं रेतो भगवतो विश्वरेताः हरिः स्मृतः ।\nज्ञानेन्द्रियादिकं विश्वं परिचर्यार्थं एव हि ।\nयः प्रजानां करोति इति विश्वरेताश्च स स्मृतः ॥', 'तद्दत्तैः एव करणैः तस्मिन् अभिमुखाः प्रजाः ।\nसर्वाश्चैव भवन्ति इति प्रजाभवः उदाहृतः ॥'],
@@ -446,6 +450,10 @@ export const commentary = [
   [
   ['तत्वावसाने प्रणवप्रकृतेः स तु अकारतः।\nस्मर्तव्यत्वात् अजः प्रोक्तः ह्यूषड्वर्णोर्मिनाशकः॥', 'स्वरूपादिकृतार्थेन तारेण आत्मनिवेदनम्।\nमहं पूजां अर्हतीति महार्ह इति कथ्यते॥', 'मन्त्रेणानेन आत्मभिस्तु स्वभूतैः आभिमुख्यतः।\nअवश्यं भावनीयत्वात् स्वाभाव्यः परिकीर्तितः॥', 'एतद्रहस्यविज्ञान विरोधि ममतादयः।\nजितास्तेषाम् अनेनेति जितामित्रः अष्टवर्णकः॥', 'ध्यानासक्तेषु भक्तेषु मोदमानः प्रमोदनः'],
   ['आनन्दवल्ली मीमांस्यस्तु अवाक् मनसगोचरः ।\nआनन्दो ह्यस्य नित्यः अस्तीति आनन्दः परिकीर्तितः॥', 'तमानन्दम् यथोक्तायां मुक्तौ प्रापय्य यः सदा।\nमुक्तान् नित्यान् नन्दयति नन्दनः स तु कीर्तितः॥', 'भोग्यैः भोगोपकरणैः भोगैः भोक्तृभिरेव च।\nतस्मिन् समृद्ध्यते नित्यं इति नन्दः प्रकीर्तितः॥', 'आप्रक्रमात् आ स्वप्राप्तेः आर्जवात् सत्यवर्तनः।\nयः स्यात् स सत्यधर्मा च वस्वर्णः सत्यवर्तनः ॥', 'त्रीन् वेदान् क्रमते यो हि महिम्ना स त्रिविक्रमः।']
+],
+  [
+  ['साक्षात् द्रष्टा स वेदानां महर्षिः कपिल स्मृतः ', 'तत्वप्रवचनादेव कपिलाचार्य उच्यते', 'स्वाभिनम्रत्व सुकृतं किंचित् अंशुमता कृतं।\nविदितं येन कारुण्यात् कृतज्ञः सः अभिधीयते॥', 'कापिलं रूपं आस्थाय यो धारयति मेदिनीम्।\nस मेदिनीपतिः ख्यातो नवार्णो भूप्रदो मनुः॥'],
+  ['भोक्तृ भोग्य नियन्तृणी ज्ञाप्यान्यस्य पदानि अतः।\nप्रणवे त्रीणि वा अपि एतद्वाचकानि पदान्यतः ॥\nवारहरूपस्य आस्थाने पदानि ककुदानि वा।\nत्रीणि सन्ति ततो वा असौ त्रिपदः परिकीर्तितः॥', 'सखा स्यात् त्रिदशाध्यक्षो ब्रह्मादेः प्रलयापदि', 'मही यस्य च शृङ्गाग्रे महाशृङ्गः स कथ्यते', 'अन्तकायं हिरण्याक्षं कृतवान् यः कृतान्तकृत्।\nवाराहयोः स्वसिद्धान्तकृतेः स्मृति पुराणयोः ।\nकृतान्तकृत् इति ख्यातो वस्वर्णो अभीष्टदायकः॥']
 ]];
 
 export const meanings = [
@@ -481,7 +489,7 @@ export const meanings = [
   ['Is in a lovely abode', 'Protector of the Earth', 'Husband of Lakshmi', 'Attracts the liberated senses']
 ],
   [
-  ['Ruler', 'Powerful', 'Wielder of the bow', 'Omniscient', 'Moves on the bird', 'Prosperous'],
+  ['Ruler', 'Powerful', 'Wielder of the bow', 'Boundless intellect', 'Moves on the bird', 'Prosperous'],
   ['Unsurpassed', 'Unassailable', 'Grateful for virtue', 'The act of virtue', 'Owner of the Self']
 ],
   [
@@ -558,7 +566,7 @@ export const meanings = [
 ],
   [
   ['Daybreak of virtue', 'Showers virtues', 'Pervades without gaps', 'Steps of virtue', 'Belly of virtue'],
-  ['Nourishes', 'Grows', 'Unique', 'Sea of scriptures']
+  ['Nourishes', 'And grows', 'Unique', 'Sea of scriptures']
 ],
   [
   ['Great arms', 'Impossible to contain', 'Whose words are cool and deep', 'Has great wealth', 'Gives wealth', 'The wealth'],
@@ -665,11 +673,15 @@ export const meanings = [
   ['Subdues', 'Is conquered by those who take refuge in him', 'His promises are always true', 'Deserves all gifts, including the self', 'Lord of the authentic']
 ],
   [
-  ['Gives life, preventing devotees from ruin', 'Protects by treating with love and affection', 'The observer', 'Giver of liberation', 'Boundless valor to support devotees'],
+  ['Gives life, preventing devotees from ruin', 'Protects by treating with love and affection', 'Oversees the accomplishments of devotees', 'Giver of liberation', 'Boundless valor to support devotees'],
   ['Placed under the water in the form of a tortoise', 'The self in ananta, the pillar of the universe', 'Reclines in the vast ocean', 'Brings the end']
 ],
   [
   ["The sound of 'a', which is the base of all sounds", 'Worthy of supreme worship', 'Naturally worshipped by those who belong to him', 'Wins over the possessiveness of devotees', 'Delights his devotees'],
   ['Bliss', 'Bliss giver', 'Replete with blissful things', 'True in action from start to goal', 'Pervades the three vedas']
+],
+  [
+  ['Sees ultimate reality', 'Teaches the reality of the elements', 'Acknowledges any humility', 'Lord of the earth'],
+  ['Reveals all three- the enjoyer, object of enjoyment, and the controller', 'Saviour of the various powers', 'Big-tusked', 'Terminates']
 ]];
 
