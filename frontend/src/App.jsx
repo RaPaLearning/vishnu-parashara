@@ -116,7 +116,7 @@ function App() {
         <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>
           {word ? word : 'Click on a name to see its commentary.'}
         </div>
-        <div style={{ fontWeight: 500, marginBottom: 4 }}>{meaning}</div>
+        <div style={{ fontWeight: 500, marginBottom: 4, whiteSpace: 'normal' }}>{meaning}</div>
         <div>
         {commentary.split('\n').map((line, idx) => (
           <div key={idx} style={{ fontSize: '1.2rem' }}>{line}</div>
