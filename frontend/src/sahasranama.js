@@ -229,6 +229,10 @@ export const shlokas = [
   [
   ['महावराहः ', 'गोविन्दः', 'सुषेणः', 'कनकाङ्गदी'],
   ['गुह्यः', 'गभीरः', 'गहनः ', 'गुप्तः', 'चक्रगदाधरः']
+],
+  [
+  ['वेधाः', 'स्वाङ्गः ', 'अजितः', 'कृष्णः', 'दृढः ', 'संकर्षणः', 'अच्युतः '],
+  ['वरुणः', 'वारुणः', 'वृक्षः', 'पुष्कराक्षः ', 'महामनाः']
 ]];
 
 export const commentary = [
@@ -461,7 +465,11 @@ export const commentary = [
 ],
   [
   ['रसातलगतां उर्वी यश्च उद्धत्य उत्थितः क्षणात्।\nमहावराह इति सः स्मृतो हि ऊर्वीप्रदो मनुः॥', 'नष्टां च धरणीं पूर्वं गोविन्दः लब्धवान् इति', 'पञ्चोपनिषदङ्गत्त्वात् सुषेणः परिकीर्तितः ', 'अप्राकृतानि दिव्यानि भूषणानि च नित्यशः।\nरौक्माणि सन्ति यस्यासौ उच्यते कनकाङ्गदी॥'],
-  ['पञ्चोपनिषदङ्गेन गूढत्वात् गुह्य उच्यते', 'तद्वपुः व्यङ्ग्य गाम्भीर्यो गभीर इति कथ्यते', 'अन्यैः दुरवगाहत्वात् गहनः परिकीर्तितः', 'तत् गौरवज्ञयैः गुप्तः स गुप्त इत्यभिधीयते', 'यः शक्तिमद्दिव्याहेतिः स स्यात् चक्रगदाधरः']
+  ['पञ्चोपनिषदङ्गेन गूढत्वात् गुह्य उच्यते', 'तद्वपुः व्यङ्ग्य गाम्भीर्यो गभीर इति कथ्यते', 'अन्यैः दुरवगाहत्वात् गहनः परिकीर्तितः', 'तत् गौरवज्ञयैः गुप्तः स गुप्त इत्यभिधीयते', 'यः शक्तिमद्दिव्यहेतिः स स्यात् चक्रगदाधरः']
+],
+  [
+  ['महाविभवकल्याणं सततं विदधाति यः।\nभक्तेभ्यः परमं वेधाः षडर्णो मंगलप्रदः॥', 'स्व असाधारणमङ्गं ह्री छत्रादि परिबर्हणम्।\nयस्यास्ति नित्यं स स्वाङ्गः षडर्णो परिवारदः॥', 'प्राकृतैर्न जिता या सा यस्यास्ति इत्यजिता पुरी।\nअजितः तेन विज्ञेयः सप्तार्णो मुक्तिदो मनुः॥', 'अप्राकृतातिरुचिरमेचकः कृष्ण ईरितः', 'स्थूलत्वात् बलवत्वाच्च दृढ इत्यभिधीयते', 'संकर्षणः स्मृतो यः समं चिदचितौ कृषेत् ', 'ब्रह्मादिवत् न च्यवते स्थानात् इति अच्युतः स्मृतः'],
+  ['यः स्थितः सर्वं आवृत्य वरुणः स तु कथ्यते ', 'स्वामित्वेन वृणानेषु स्थितो वारुण ईरितः ', 'साधूनां आश्रयत्वाच्च सर्वेनस्सहनादपि।\nसर्वोपजीव्यसर्वस्वो वृक्ष इत्यभिधीयते॥', 'सतां प्रसादवर्षेण पोषके यस्य चाक्षिणी।\nपुष्कराक्षः स विज्ञेयो ह्यष्टार्णः प्रौतिवर्धकः॥', 'अगाध उदार विस्तारं मनो यस्य महामनाः']
 ]];
 
 export const meanings = [
@@ -686,7 +694,7 @@ export const meanings = [
 ],
   [
   ["The sound of 'a', which is the base of all sounds", 'Worthy of supreme worship', 'Naturally worshipped by those who belong to him', 'Wins over the possessiveness of devotees', 'Delights his devotees'],
-  ['Bliss', 'Bliss giver', 'Replete with blissful things', 'True in action from start to goal', 'Pervades the three vedas']
+  ['Bliss', 'Bliss giver', 'Replete with blissful things', 'Authentic in thought, speech, action- from start to goal', 'Pervades the three vedas']
 ],
   [
   ['Sees ultimate reality', 'Teaches the reality of the elements', 'Acknowledges any humility', 'Lord of the earth'],
@@ -695,5 +703,9 @@ export const meanings = [
   [
   ['The great boar', 'Rescuer of earth', 'Powerful army-like body', 'Adorned by pure matter'],
   ['Concealed in all', 'Deep', 'Cannot be understood ', 'Protected', 'Bears the discus and the mace']
+],
+  [
+  ['The provider', 'Having unique marks of sovereignty', "Has a city that's unconstrained", 'Dark hued body', 'Huge and strong in blessing devotees', 'Attracts', "Doesn't slip"],
+  ['Covers everything ', 'Stays with those who seek him', 'The eternal resort', 'With nourishing eyes', 'Broad minded, generous']
 ]];
 
