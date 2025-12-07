@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Enable for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of workflow files
+    schedule:
+      interval: "weekly"
+  # Enable for npm packages (Node.js projects)
+  - package-ecosystem: "npm"
+    directory: "/frontend/" # Location of package.json
+    schedule:
+      interval: "weekly"
+  # Enable for pip packages (Python projects using uv.lock)
+  - package-ecosystem: "pip"
+    directory: "/sahasranama-to-js/" # Location of uv.lock
+    schedule:
+      interval: "weekly"
