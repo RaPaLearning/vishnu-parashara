@@ -253,6 +253,10 @@ export const shlokas = [
   [
   ['अनिवर्ती', 'निवृत्तात्मा', 'संक्षेप्ता', 'क्षेमकृत्', 'शिवः'],
   ['श्रीवत्सवक्षाः ', 'श्रीवासः', 'श्रीपतिः', 'श्रीमतां वरः']
+],
+  [
+  ['श्रीदः', 'श्रीशः', 'श्रीनिवासः ', 'श्रीनिधिः', 'श्रीविभावनः'],
+  ['श्रीधरः', 'श्रीकरः', 'श्रेयः श्रीमान्', 'लोकत्रयाश्रयः ']
 ]];
 
 export const commentary = [
@@ -510,6 +514,10 @@ export const commentary = [
   [
   ['पितृयाण प्रवृत्तानां ससारादनिवर्तनात्।\nअनिवर्ती समाख्यातो हि अष्टार्णो भयदो मनुः॥', 'सर्वे निवृत्तिधर्माणो यस्यात्मानः स तु स्मृतः।\nनिवृत्तात्मा इति अष्टवर्णो दुष्कर्म फलमोचकः॥', 'स्वाभाविकासंकुचितमेधायाः अप्रसारणम्।\nप्रवृत्तिधर्मणां कर्तु शीलं यस्यास्ति सर्वदा। \nस संक्षेप्ता इति कथितः षडर्णो धीविकासदः॥', 'असंकोचज्ञान रूपक्षेमस्य करणात् सतां।\nक्षेमकृच्चापि सर्वेषां॥', 'शिवस्य करणात् शिवः'],
   ['लक्ष्मीवाल्लभ्य सौभाग्य चिन्हं श्रीवत्स नामकं।\nश्रीवत्सवक्षाः अस्यास्ति वक्षसीति स तु स्मृतः॥', 'श्रियो विहारस्थानत्वात् श्रीवास इति चोच्यते', 'स्वयं श्रिया पतित्वेन वृत्तत्वात् श्रीपतिः स्मृतः', 'देवानां श्रीमतां श्रेष्ठः श्रीमतां वर उच्यते ']
+],
+  [
+  ['यः असौ श्रियै स्वप्रणय रसदः श्रीद ईरितः ', 'श्रीशः स श्रिय ईशत्वात् ईशा श्रीरस्येति वा', 'नित्योपघ्न निवासत्वात् श्रीनिवासः श्रियः स्मृतः', 'श्रीरस्मिन् निहिता नित्यं श्रीनिधिः परिकीर्तितः', 'श्रीप्रख्योपाख्ययोर्हेतुः यस्य स श्रीविभावनः'],
+  ['रुच्यर्चिः कौमुदीगन्धान् निसर्गात् धरति श्रियं। \nसुधारत्नेन्दु पुष्पाणि यथा असौ श्रीधरः ततः॥', 'व्यूहादिषु अवतारेषु स्वानुरूपां करोति तां।\nश्रियं यः असौ श्रीकरः स्यात् मुन्यर्णः श्रीकरो मनुः॥', 'श्रेयसे श्रयणीया श्रीः श्रेयःश्रीः नित्ययोगिनी। \nश्रेयः श्रीमान् असौ अस्य वस्वर्णो पुरुषार्थदः॥', 'श्रिया सह जगन्मात्रा पितृवत् सकलाश्रयः।\nलोकत्रयाश्रयः स स्यात् दशार्णो रक्षकत्वदः॥']
 ]];
 
 export const meanings = [
@@ -758,7 +766,7 @@ export const meanings = [
 ],
   [
   ['Described by the three-fold Saama-veda', 'Sings the Saama', 'The dispeller', 'The ultimate bliss', 'The remedy', 'The physician'],
-  ['Cuts the bonds', 'The instructor ', 'Tranquil', 'Concentration ', 'Peace', 'The ultimate means']
+  ['Cuts the bonds', 'Unperturbed', 'Tranquil', 'Concentration ', 'Peace', 'The ultimate means']
 ],
   [
   ['Grants the accessories of yoga', 'Gives eternal peace', 'Creates your world for your deeds', 'Happy', 'Controls the beings who wander as the master of their bodies'],
@@ -767,5 +775,9 @@ export const meanings = [
   [
   ["Doesn't stop people who want to return to this world", 'The essence of those who work towards liberation', 'Limits the knowledge of those who want to remain in this world', 'Does what is good', 'Auspicious '],
   ['With the mole symbolic of fortune', 'The abode of Lakshmi', "Lakshmi's companion", "Foremost in Lakshmi's gaze "]
+],
+  [
+  ['Gives glory', 'Governs and governed by Lakshmi', 'Ever supports Lakshmi', 'With Lakshmi as His jewel', 'Owes his fame to Lakshmi'],
+  ['Bearer of Lakshmi', 'Takes Lakshmi in every form', 'Endowed with Lakshmi, who is the resort to reap all achievements', 'Refuge of the world']
 ]];
 
