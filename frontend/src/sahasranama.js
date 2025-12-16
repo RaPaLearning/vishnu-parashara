@@ -261,6 +261,10 @@ export const shlokas = [
   [
   ['स्वक्षः', 'स्वङ्गः', 'शतानन्दः', 'नन्दिः', 'ज्योतिर्गणेर्श्वरः'],
   ['विजितात्मा', 'विधेयात्मा', 'सत्कीर्तिः', 'छिन्नसंशयः']
+],
+  [
+  ['उदीर्णः', 'सर्वतः चक्षुः', 'अनीशः', 'शाश्वतस्थिरः'],
+  ['भूशयः', 'भूषणः', 'भूतिः', 'विशोकः ', 'शोकनाशनः']
 ]];
 
 export const commentary = [
@@ -526,6 +530,10 @@ export const commentary = [
   [
   ['श्रीसौन्दर्य सुधासिन्धु पारीणकरणो हि यः।', 'स्वक्षः श्रीस्पृहणीयाङ्गः स्वङ्गः इत्येष उच्यते', 'अन्योन्य प्रणयानन्द प्रवाहश्च अमितः अस्य हि।\nशतानंदः स विज्ञेयो दम्पत्यानन्ददो मनुः॥', 'सर्वत्र सर्वथा नन्दिः श्रिया ऋध्द्यति सर्वदा', 'नित्यसूरिगणानां य ईशो ज्योतिर्गणेर्श्वरः'],
   ['सौशील्यस्य गुणस्याथ परमावधि वर्णनं।\nविजितात्मा जितं यस्य मानसं प्रणतैश्च सः॥', 'इह गच्छ इह तिष्ठ इदं भुङ्क्ष्व इति प्रणतैः सदा।\nयोग्यं विधातुं यद्रूपं वीधेयात्मा स कीर्तितः॥', 'इदृक् सौशील्यसत्वात् हि सात्कीर्तिः इति कथ्यते', 'सौशील्यप्रथया चैवं दुष्करत्वादि संशयः।\nछिन्नो येन विशेषेण स प्रोक्तः छिन्नसंशयः॥']
+],
+  [
+  ['प्रत्यक्ष विषयत्वेन हि उत्पन्नः चर्मचक्षुषाम्।\nउदीर्णः इति स प्रोक्तः सप्तार्णो नायानप्रदः॥', 'यत्साक्षात्कार कर्माणि चर्मचक्षूंष्यपि त्वतः।\nसर्वतः सर्वतश्चक्षुः नवार्णो नेत्रशक्तिदः॥', 'प्रोक्तो हि अनीशः भक्तेषु हदायत्त अखिलक्रियः', 'बिंबाकृत्या आत्मना बिंबे स्थितः स्यात् शाश्वतस्थिरः'],
+  ['स्वयंव्यक्तादि रूपेण को शेते भूशयः ततः', 'एवं विश्वजनीन शीलेन एषः श्रियः पतिः।\nतदात्मानं भूषयति भूषणः तत् स कीर्तितः॥', 'यः असौ समृद्धिं ऐश्वर्यं भक्तानां भूतिः ईरितः ', 'नाथत्वात् चापि सर्वेषां अशोकः अनाथताहतेः ', 'भक्तानां स्वेन सम्बन्द्धव्यतिरेक निबन्धनं।\nशोकं नाशयतीत्येषः शोकनाशनः ईरितः॥']
 ]];
 
 export const meanings = [
@@ -702,7 +710,7 @@ export const meanings = [
 ],
   [
   ['Remover of obstacles', 'Purifier of all ', 'The vital air', 'The life-giver', 'Moves others to bow to Him', 'Well known'],
-  ['Lives in loving and delightful hearts; like a treasure of gold', 'Enemy-slayer', 'Full of affection', 'Moves towards devotees', 'Never diminishes']
+  ['Lives in loving and delightful hearts; like a treasure of gold', 'Enemy-slayer', 'Pervasive', 'Moves towards devotees', 'Never diminishes']
 ],
   [
   ['Delights hearts with His qualities', 'Delightful appearance', 'Draws all towards Himself', 'Is in the supreme abode', 'Takes everyone along'],
@@ -791,5 +799,9 @@ export const meanings = [
   [
   ['Has eyes that can see Lakshmi', 'Has a lovely form', 'Hundred-fold bliss', 'Delighted', 'Lord of the lustrous '],
   ['Whose mind has been won over', 'Submissive', 'Truly renown', 'Cuts all doubts']
+],
+  [
+  ['Directly perceived with ordinary eyes', 'Visible to everyone everywhere ', 'Not the master', 'Eternal and steady in His image'],
+  ['Lies down in places chosen by devotees, sages, and His will', 'Adorned by such presence', 'Wealth', 'Without sorrow', 'Destroys sorrow coming from being separated from Him']
 ]];
 
