@@ -273,6 +273,10 @@ export const shlokas = [
   [
   ['कालनेमिनिहा', 'शौरिः', 'शूरः ', 'शूरजनेश्वरः'],
   ['त्रिलोकात्मा', 'त्रिलोकेशः', 'केशवः', 'केशिहा', 'हरिः']
+],
+  [
+  ['कामदेवः', 'कामपालः', 'कामी', 'कान्तः', 'कृतागमः'],
+  ['अनिर्देश्यवपुः', 'विष्णुः', 'वीरः', 'अनन्तः', 'धनञ्जयः']
 ]];
 
 export const commentary = [
@@ -550,6 +554,10 @@ export const commentary = [
   [
   ['कालचक्रस्य या नेमिः अविद्याख्या च दुर्धरा।\nतां नाशयति यश्चासौ कालनेमिनिहा स्मृतः॥\nनबाक्षरे मनुरयं अविद्यामूलमोक्षकः॥', 'शौरिनांना स्थितः शौरिः उत्पलावर्तके शुभे', 'सर्वरक्षःक्षयकरः शूरः इत्यभिधीयते', 'पराक्रमिजनेशत्वात् स्मृतः शूरजनेश्वरः'],
   ['यः सातत्येन लोकान् त्रीन् भक्तानुग्रहकाम्यया।\nगच्छत्यसौ त्रिलोकात्मा वश्वर्णो भूतिदायकः॥', 'त्रीलोकानां इशतया त्रिलोकेशः प्रकीर्तितः', 'ब्रह्मेशयोः स्वाङ्गजत्वात् केशवः परिकीर्तितः ', 'असुरं केशिनामानम् हतवान् केशिहा स्मृतः', 'गिवर्धनस्थो हरितः क्रतुभागहरो हरिः']
+],
+  [
+  ['शंकरालयगः कामदेवः सर्वेष्टदः स्मृतः', 'दत्तानुपालकश्चैव कामपालः प्रकीर्तितः', 'प्रदेय अतिशयात् कामी', 'कान्तश्च कमनीयकः।\nतत्तत् क्षेत्रेशोक्तिरेवमुपर्यपि यथोचितं॥', 'अथ शक्त्यवतारोत्र मन्त्रात्मास्यात् कृतागमः'],
+  ['युगानुसारि रूपत्वात् अनिर्देश्यवपुः स्मृतः', 'स्वशक्त्या सर्वजगतो व्याप्तेः विष्णुः इति स्मृतः ', 'वीरः स्यात् साधुसंत अपकारिणः अजति हन्ति यत्', 'देशतः कालतो वा अपि गुणतो वस्तुतः अपि वा।\nअवधिस्तु अस्य नास्तीति सः अनन्तः समुदाहृतः॥', 'प्रेप्सोपार्जन लोभादि योग्याधिक्यसत्वतः।\nमणिमौक्तिकरत्नादि हेमरुप्याधिकं धनं।\nजयति अधः करोतीति धनञ्जय इतीरितः॥']
 ]];
 
 export const meanings = [
@@ -578,7 +586,7 @@ export const meanings = [
 ],
   [
   ['Beyond grasp', 'Eternal', 'Exceedingly delighted', 'Red-eyed', 'Destroyer'],
-  ['Affluent', 'Has the three-fold worlds as a residence', 'Purity', 'Supreme auspiciousness']
+  ['Affluent', 'Has the three-fold worlds as a residence', 'Purifying presence', 'Supreme auspiciousness']
 ],
   [
   ['Controller', 'Life-giver', 'Life', 'Praise-worthy', 'Pre-eminent, served by praise', 'Lord of the liberated'],
@@ -826,6 +834,10 @@ export const meanings = [
 ],
   [
   ['Destroyer of the wheel of time', 'Son of shoora', 'Valiant', 'Ruler of all valiant people'],
-  ['Always moving about the three worlds', 'Lord of the three worlds', 'Removes distress', 'Destroyer of demons', 'Green, accepting offerings']
+  ['Always moving about the three worlds', 'Lord of the three worlds', 'Removes distress', 'Destroyer of demons', 'Green hue, accepting offerings']
+],
+  [
+  ["Gifts everyone's desires", 'Protector of gifts', 'Has abundant desirable things', 'Charming', 'Reveals the spiritual texts'],
+  ['With indefinable body', 'Pervades the universe by his very nature', 'Destroys sources of suffering', 'Limitless', 'Beyond all wealth']
 ]];
 
