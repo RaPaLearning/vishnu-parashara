@@ -116,17 +116,6 @@ function App() {
             key={script}
             className={selectedScript === script ? 'script-selector selected' : 'script-selector'}
             onClick={() => handleScriptChange(script)}
-            style={{
-              fontSize: '1rem',
-              color: selectedScript === script ? 'orange' : '#666',
-              backgroundColor: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              padding: '0.5rem 1rem',
-              margin: '0 0.25rem',
-              fontWeight: selectedScript === script ? 'bold' : 'normal',
-              transition: 'color 0.2s, font-weight 0.2s'
-            }}
           >
             {label}
           </button>
