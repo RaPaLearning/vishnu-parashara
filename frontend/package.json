@@ -14,6 +14,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@indic-transliteration/sanscript": "^1.3.3",
     "react": "^19.1.1",
     "react-dom": "^19.2.3"
   },

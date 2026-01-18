@@ -3,11 +3,18 @@ import './App.css';
 import { useState } from 'react';
 import { getWordsForShlokaLine, getWordMeaningAndCommentary, numberOfShlokas } from './data';
 import { promptWithContext } from './prompt';
+import { SCRIPT_LABELS, transliterate, getSavedScript, saveScript } from './transliterate';
 
 function App() {
   const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
+  const [selectedScript, setSelectedScript] = useState(getSavedScript());
 
   const [context, setContext] = useState('');
+  const handleScriptChange = (script) => {
+    setSelectedScript(script);
+    saveScript(script);
+  };
+
   const copyContext = (shlokaNum, lineNum, wordIndex) => {
     const textToCopy = promptWithContext(shlokaNum, lineNum, wordIndex);
     navigator.clipboard.writeText(textToCopy).then(() => {
@@ -60,6 +67,7 @@ function App() {
             highlighted.shloka === shlokaNum &&
             highlighted.line === lineNum &&
             highlighted.idx === idx;
+          const displayWord = transliterate(word, selectedScript);
           return (
               <span className={isHighlighted ? 'highlight-word' : undefined}
               key={idx}
@@ -73,11 +81,11 @@ function App() {
               }}
               onClick={() => handleHighlight(shlokaNum, lineNum, idx)}
               >
-              {word}
+              {displayWord}
               </span>
             );
         })}
-        <span>{lineEndings[lineNum - 1](shlokaNum)}</span>
+        <span>{transliterate(lineEndings[lineNum - 1](shlokaNum), selectedScript)}</span>
       </>
     );
   };
@@ -88,12 +96,13 @@ function App() {
     }
     const words = getWordsForShlokaLine(highlighted.shloka, highlighted.line);
     const word = words[highlighted.idx];
+    const displayWord = transliterate(word, selectedScript);
     const { meaning, commentary } = getWordMeaningAndCommentary(
       highlighted.shloka,
       highlighted.line,
       highlighted.idx
     );
-    return {word, meaning, commentary};
+    return {word: displayWord, meaning, commentary};
   };
 
   const { word, meaning, commentary } = explanationContent();
@@ -101,7 +110,17 @@ function App() {
   return (
     <>
       <div className="shloka-box">
-      <p style={{ textAlign: 'center', fontSize: '1rem', color: 'orange' }}>श्री</p>
+      <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
+        {Object.entries(SCRIPT_LABELS).map(([script, label]) => (
+          <button
+            key={script}
+            className={selectedScript === script ? 'script-selector selected' : 'script-selector'}
+            onClick={() => handleScriptChange(script)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
       {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
         <div key={shlokaNum} data-shloka={shlokaNum}>
         {[1, 2].map((lineNum) => (
