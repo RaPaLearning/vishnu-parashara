@@ -13,11 +13,10 @@ describe('transliterate', () => {
     expect(result).toBe('ಶ್ರೀ');
   });
 
-  it('should transliterate another word correctly', () => {
+  it('should transliterate the name correctly', () => {
     const text = 'विष्णुः';
     const result = transliterate(text, SCRIPTS.KANNADA);
-    // Kannada transliteration of विष्णुः
-    expect(result).toMatch(/^ವಿಷ್ಣ/);
+    expect(result).toMatch('ವಿಷ್ಣುಃ');
   });
 });
 
