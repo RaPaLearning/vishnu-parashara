@@ -305,6 +305,10 @@ export const shlokas = [
   [
   ['विश्वमूर्तिः', 'महामूर्तिः', 'दीप्तमूर्तिः', 'अमूर्तिमान्'],
   ['अनेकमूर्तिः', 'अव्यक्तः', 'शतमूर्तिः', 'शताननः']
+],
+  [
+  ['एकः', 'नैकः', 'सः', 'वः', 'कः', 'किम्', 'यत्', 'तत्', 'पदं अनुत्तमं'],
+  ['लोकबन्धुः', 'लोकनाथः', 'माधवः', 'भक्त वत्सलः']
 ]];
 
 export const commentary = [
@@ -614,6 +618,10 @@ export const commentary = [
   [
   ['विश्वं मूर्तिः तनुर्यस्य विश्वमूर्तिस्तु स स्मृतः', 'विश्वैकाश्रयमूर्तित्वात् महामूर्तीः इति स्मृतः', 'यत्किंचित् केनचित् दीप्तं गुणेनात्र विशेषतः।\nतत्सर्वं मूर्तिरस्येति दीप्तमूर्तिरसौ स्मृतः॥', 'अमूर्तिशब्देनोच्यते हि अव्यक्तपुरुषादयः।\nत एव अस्य स्वं इति स स्मृतः स्यात् अमूर्तिमान्॥'],
   ['षोडशस्त्रीसहस्राणि शतमेकम् ततोधिकम्।\nअनेकमूर्तिः इत्युक्तः तत्संख्याक स्वदेहतः॥', 'मनुष्यत्वेन सर्वत्र परभाव प्रकाशनात्।\nबुधैः अव्यक्त इति च कथितः तत्वपारगैः॥', 'अर्जुनाय व्यक्ततया विश्वरूप प्रदर्शनात्।\nशतमूर्तिः इति ख्यातः॥', 'शतशः अथ सहस्रशः।\nअनेकानन संपत्या शतानन इतीरितः॥']
+],
+  [
+  ['द्वितीय स्वजातीय राहित्यात् एक उच्यते', 'नैकः स्वविसजातीय विभूत्याख्य द्वितीयवान् ', 'सर्वेषु कृष्णरूपादिषु आकुमार प्रसिद्धितः।\nअज्ञानं स्यन् स्वविज्ञानम् निश्चयी कुरुते स सः॥', 'यथाप्रसिद्धिवासित्वात् स्वस्य भूतेष्वपि स्वयं', 'सर्वेषु कनतीति कः', 'स ईप्सितार्थज्ञप्त्यर्थ प्रष्टव्यः किमिति स्मृतः', 'रक्षायै पृच्छकानां स यतनात् यत् इति स्मृतः', 'स्वज्ञानभक्तिं भक्तानां तनोतीति तत् उच्यते', 'परमं च प्रपन्नानां प्राप्यं पदमनुत्तमं'],
+  ['लोकानां स्वजनत्वात् हि लोकबन्धुः इति स्मृतः ', 'लोकबन्धुत्वमूलं हि लोकस्वामित्वमित्यतः।\nस्वाभाविकाच्च सम्बन्धात् लोकनाथ इतीरितः॥', 'लोकनाथत्व संबन्धः श्रीमतश्च इति माधवः।\nमधोर्वांशोद्भवत्वाच्च माधवः परिकीर्तितः॥', 'विशेषं वक्ति भक्तेषु यः असौ स्यात् भक्तवत्सलः']
 ]];
 
 export const meanings = [
@@ -917,11 +925,15 @@ export const meanings = [
   ['With valiant army', 'Foremost in His clan', 'Abode of the authentic', 'Auspiciously associated with river Yamuna']
 ],
   [
-  ['Abode of all creation', 'Presides over the 12-letter vasudeva mantra', 'Support of every living being', 'Insatiable'],
+  ['Abode of all creation', 'Presides over the 12-letter vasudeva mantra', 'Support of every living being', "Insatiable, doesn't tolerate harm to devotees"],
   ['Destroys pride', 'Gives pride', 'Not proud of greatness; proud of being a son', 'Uncontrollable', 'Undefeated']
 ],
   [
   ['Has the Universe as His body', 'A corner of whose body is the Universe', 'With everything lustrous being a part of His form', 'Owner of everything subtle'],
   ['Has many forms', 'Conceals His true nature inside a human form', 'Takes a hundred forms to illustrate His nature', 'With a hundred faces']
+],
+  [
+  ['Unique', 'Not one', 'Spreads knowledge', 'The dweller', 'Shines', 'To be sought', 'Takes effort to protect those who seek', 'Increases devotion in devotees', 'The ultimate goal'],
+  ['Having a close relationship with the world', 'Owner of the world by His very nature', 'Always with Lakshmi', 'Affectionate towards devotees']
 ]];
 
