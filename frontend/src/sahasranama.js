@@ -325,6 +325,10 @@ export const shlokas = [
   [
   ['चतुर्मूर्तिः', 'चतुर्बाहुः', 'चतुर्व्यूहः', 'चतुर्गतिः'],
   ['चतुरात्मा', 'चतुर्भावः', 'चतुर्वेदवित्', 'एकपात्']
+],
+  [
+  ['समावर्तः', 'निवृत्तात्मा', 'दुर्जयः', 'दुरतिक्रमः'],
+  ['दुर्लभः', 'दुर्गमः', 'दुर्गः', 'दुरावासः', 'दुरारिहा']
 ]];
 
 export const commentary = [
@@ -654,6 +658,10 @@ export const commentary = [
   [
   ['बलभद्रो वासुदेवः प्रद्युम्नश्च अनिरुद्धकः।\nचतस्रो मूर्तयो यस्य चतुर्मूर्तिः उच्यते॥', 'व्यूहमूल परावस्थ निरुपाधिक रूपतः।\nचत्वारो बाहवो तस्य स चतुर्बाहुः उच्यते॥,', 'समस्तव्यस्त षाड्गुण्य व्यूहावस्थाचतुष्टयः।\nचतुर्व्यूह इति ख्यातः चतुर्वर्गप्रदो मनुः॥', 'चतस्रः प्राप्तयो यस्मिन् भक्तानां च चतुर्गतिः'],
   ['जाग्रदादि स्थूलसूक्ष्म चातुरात्म्य प्रकाशनात्।\nचतुरात्मा स विज्ञेयः वस्वर्णो मनुरुत्तमः॥', 'शास्त्रदानादि कृत्याभिव्यञ्जनात् स्थूलसूक्ष्मतः।\nचतुर्भावः समाख्यातः मुण्यर्णश्च गतिप्रदः॥', 'चतुर्वेदप्राज्ञनिष्ठा वितिर्यद्विषये स तु।\nचतुर्वेदवित् इत्युक्तः नवार्णो निगमप्रदः॥', 'एकांशेन अवतीर्णत्वात् एकपात् इति कथ्यते']
+],
+  [
+  ['एतादृशं हि सर्वत्र सर्वदा सर्वथा अपि वा।\nव्यूहस्य विभवस्यापि यस्यास्ति आवर्तनम् स तु।\nसमावर्तः समाख्यातः वस्वर्णो जन्मनाशकः॥', 'निवृत्तात्मा मनो यस्य सदा जगदमिश्रितं ', 'शक्त्या देवमनुष्याद्यैः वशीकर्तुं न शक्यते।\nअन्वेष्टुं वा अपि यः स स्यात् दुर्जयः सर्ववर्णकः॥', 'अतिक्रम्य स्वपादाब्जं सर्वेषां प्रापकान्तरं।\nनास्तीति सर्वपापघ्नः स स्मृतो दुरतिक्रमः॥'],
+  ['अजितेन्द्रिय दुष्प्रापो दुर्लभः स च कथ्यते', 'नेत्रदुर्बलवृतीनां मध्याह्नद्युमणेर्यथा।\nदुष्प्रापाघृष्यतेजस्त्वात् दुर्गमः परिकीर्तितः॥', 'दुष्प्रवेशतया दुर्गः पापिभिः सर्वथैव सः ', 'दुष्करावासभूमित्वात् दूरावासः इतीरितः', 'दुरारिणस्तु दुर्मार्गगामिनस्तान् निहन्ति यः।\nत्रयीमर्गत्याजनाद्यैः स स्यात् नित्यं दुरारिहा॥']
 ]];
 
 export const meanings = [
@@ -983,5 +991,9 @@ export const meanings = [
   [
   ['With four forms: Balabhadra, Vaasudeva, Pradyumna, Aniruddha', 'Four-armed', 'Bifurcates His six qualities for easy grasp', 'Present in the four goals of virtue, wealth, desires and liberation'],
   ['With devotees in all four states- awake, asleep, deep sleep and beyond', 'Expresses in the actions of creation, sustenance, protection, propagation', 'The One who is known from the four Vedas', 'Whose incarnation is only a part of Him']
+],
+  [
+  ['Whose incarnations are everywhere, always, forever', 'Who is never mixed up with this world', 'Not overcome by any strength', 'Not bypassed'],
+  ['Difficult to attain', 'Impossible to perceive and realize', 'Cannot be entered by those who are tied to this world', 'Whose residence is hard to attain ', 'Dispeller of enemies']
 ]];
 
