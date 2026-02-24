@@ -32,23 +32,3 @@ jobs:
           git add .
           git commit -m "update sahasranama"
           git push origin main
-
-  deploy:
-    needs: sahasranama
-    uses: ./.github/workflows/gh-pages.yml
-
-  pages_build:
-    needs: deploy
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-    steps:
-      - name: Trigger GitHub Pages build
-        uses: actions/github-script@v8
-        with:
-          script: |
-            await github.request("POST /repos/{owner}/{repo}/pages/builds", {
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
