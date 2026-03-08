@@ -361,6 +361,10 @@ export const shlokas = [
   [
   ['भारभृत्', 'कथितः', 'योगी', 'योगीशः', 'सर्वकामदः'],
   ['आश्रमः', 'श्रमणः', 'क्षामः', 'सुपर्णः', 'वायुवाहनः']
+],
+  [
+  ['धनुर्धरः', 'धनुर्वेदः', 'दण्डः', 'दमयिता', 'अदमः'],
+  ['अपराजितः', 'सर्वसहः', 'नियन्ता', 'नियमः', 'यमः']
 ]];
 
 export const commentary = [
@@ -726,6 +730,10 @@ export const commentary = [
   [
   ['मुक्तानां बन्धमोक्षादि भारस्य भरणाद्धि सः।\nभारभृत् सप्तवर्णः स्यात् कार्यनिर्वाहशक्तिदः॥', 'उक्तः शास्त्रेषु कथितः यः सर्वगुणवत्तया', 'योगो हि आघटितार्थस्य घटनं तेन सर्वथा।\nयस्यास्ति नित्यसम्बन्धः स योगी परिकीर्तितः॥', 'योगीशः सनकादीनां योगिनां धुर्य उच्यते', 'अणिमादीन् सर्वकामान् योगस्खलित योगिनां।\nअन्तरायतया मुक्तेः ददत् स्यात् सर्वकामदः॥'],
   ['तेषां तु योगभ्रष्टानां हेतुर्वैष्णवसद्मसु।\nसुभिक्षपरविद्येषु विश्रान्तेः आश्रमः स्मृतः॥', 'अक्षीण पूर्वसंस्कारैः जन्मना अनुभवेन सः।\nश्रम्यते अभ्यस्यते अनेन श्रमणः परिकीर्तितः॥', 'योगाभिमुख्यमात्रेण योगभ्रष्टा अपि स्वयं।\nयस्मात् क्षमन्ते स क्षामो भवाब्धितरणाय वै॥', 'प्रत्यापन्नसमाधीन् यः समाधेः परिपाकतः।\nनयति तमसः पारं सुपर्णः स च कीर्तितः॥', 'वायुना गत्वरेणेव कर्मणः पतितान् सतः।\nगरुत्मता वाहयति यः स स्यात् वायुवाहनः॥']
+],
+  [
+  ['उपासकानां भक्तेर्यः प्रत्यूहविनिवृत्तये।\nधनुषो धारको नित्यं स्वयं स स्यात् धनुर्धरः॥', 'सुरेन्द्राद्या धनुःशास्त्रं यस्मात् विन्दति स श्रुतः।\nधनुर्वेदो ह्यष्टवर्णः धनुर्वेदप्रदायकः॥', 'वेदधर्मारिष्टताति नृपादिमुखतः खलान्।\nदण्डनीत्या दण्डयतीति असौ दण्डः परिकीर्तितः॥', 'ताच्छील्यात् रावणादीनां हर्ता दमयिता स्वयं', 'कश्चित् दमयिता नास्ति यस्यासौ अदमः स्मृतः'],
+  ['क्वचित् कदाचित् कस्माच्चित् सर्वतोमुखशासने।\nयस्य प्रतिहतिर्नास्ति स वै स्यात् अपराजितः॥', 'मदाधिकारिणां सर्वमाराध्यत्वेन दैवतं।\nबिभर्ति सहते यस्तु स सर्वसहः ईरितः॥', 'दैवतेषु च सर्वेषु तत्तदिच्छाम् प्ररोचयन्।\nमन्दाधिकारिणो यः असौ नियन्ता स्यान्नियच्छति॥', 'भोगादिकं नियम्यास्मिन् लभयन् नियमः स्मृतः', 'यमादीन् यच्छति यमः तत्तत्फलनियामकान् ']
 ]];
 
 export const meanings = [
@@ -1090,6 +1098,10 @@ export const meanings = [
 ],
   [
   ['Shoulders the burden', 'Spoken about everywhere', 'Extreme ability to make the impossible happen', 'Bears and perfects the great practitioners', 'Grants all desires'],
-  ['The abode of rest', 'Continuation of effort to reach the supreme', 'Pulls anyone with a little inclination', 'Takes them along to cross beyond this world', 'Lifts swiftly, like the speed of Garuda']
+  ['The abode of rest', 'Continuation of effort to reach the supreme', 'Pulls people who have the inclination', 'Takes them along to cross beyond this world', 'Lifts swiftly, like the speed of Garuda']
+],
+  [
+  ['Worlds the bow to clear the path for devotees', 'Skill', 'Punishment', 'Subdues the wicked', "Isn't subdued"],
+  ["Whose actions can't be obstructed", 'Supports everyone and their worshipers', "Controls everyone's taste of worship", 'Ordains outcomes in line with the nature of worship', 'Controls those who deal with outcomes as well']
 ]];
 
