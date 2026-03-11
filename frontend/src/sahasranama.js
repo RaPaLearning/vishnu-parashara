@@ -369,6 +369,10 @@ export const shlokas = [
   [
   ['सत्त्ववान्', 'सात्त्विकः', 'सत्यः', 'सत्यधर्मपरायणः'],
   ['अभिप्रायः', 'प्रियार्हः ', 'अर्हः', 'प्रियकृत्', 'प्रीतिवर्धनः ']
+],
+  [
+  ['विहायसगतिः', 'ज्योतिः', 'सुरुचिः', 'हुतभुग्विभुः'],
+  ['रविः', 'विरोचनः', 'सूर्यः', 'सविता', 'रविलोचनः']
 ]];
 
 export const commentary = [
@@ -742,6 +746,10 @@ export const commentary = [
   [
   ['प्रकाशलाघवसुखसंपदा मोक्षसाधनं।\nसत्त्वं साक्षादधिष्ठेयं यस्यासौ सत्त्ववान् श्रुतः॥', 'विज्ञानैश्वर्यवैराग्य धर्मरूपफलस्वयं।\nनियम्यार्हति सत्त्वं यः सात्त्विकः परिकीर्तितः॥', 'यथार्थवैभवः सत्यः श्रुतः सात्विकशास्त्रतः', 'उपाधिरहितः सर्वमुख्यो धर्मः परायणम्।\nपरमप्रीणने यस्य सत्यधर्मपरायणः॥'],
   ['स्वच्छेन धर्मनिष्ठेन यः अमितः प्रेयते पुनः।\nनिरुपाधिकम् उद्देश्यतया असौ अभिसंहितः॥\nअभिप्रायः इति ज्ञेयो वस्वर्णो मनुरुत्तमः ॥', 'ऐतदर्थ्यज्ञानिनं यः प्रियार्हः प्रियमर्हति ', 'अनन्येच्छावतां पुंसां योग्यः स अर्हः इति स्मृतः', 'भक्तान् अन्यपरानेव स्वप्रीयान् कुरुते सदा।\nछन्दानुवर्तनेनेति प्रीयकृत् स निगद्यते॥', 'गुणाविष्कारणात् नित्यं उत्तरतः अधिकं।\nयस्तु प्रीतिं वर्धयति प्रीतिवर्धनः ईरितः॥']
+],
+  [
+  ['निरूढभक्तियुक्तो हि नित्यं यस्मात्तु गम्यते ।\nविहायस परं व्योम विहायसगतिः तु सः ॥', 'स्वप्राप्तेः साधनत्वात् यः स्वयं नित्यं विशेषतः।\nअर्चिरादिगतेः ज्योतिः प्रथमं पर्व कथ्यते ॥', 'अहः शुभं यस्य स वै सुरुचिः परिकीर्तितः', 'हुतं सुधापरिणतं भुञ्जानः चन्द्रमास्तथा ।\nविभुः पूर्णो भवेत् यस्मिन् स वै स्यात् हुतभुग्विभुः ॥'],
+  ['यश्चोत्तरायणद्वारा रूयते अत्र प्रशस्यते ।\nस वै रविः समाख्यातः प्राशस्त्यफलदो मनुः ॥', 'अयनद्वयगत्या अर्क यो विरोचयति स्वयं ।\nविरोचन इति ख्यातः प्रकाशफलदो मनुः ॥', 'वायुः सरति यस्माद्धि तस्मात् सूर्यः षडक्षरः', 'वृष्टिसस्यादिकं सूते सविता इति रवेर्मुखात्', 'सूर्यस्य रश्मिसम्बन्धात् विद्युद्वरुण चन्द्रकान् ।\nनिरन्तरं लोचयति रविलोचन ईरितः ॥']
 ]];
 
 export const meanings = [
@@ -1113,7 +1121,11 @@ export const meanings = [
   ["Whose actions can't be obstructed", 'Supports everyone and their worshipers', "Controls everyone's taste of worship", 'Ordains outcomes in line with the nature of worship', 'Controls those who deal with outcomes as well']
 ],
   [
-  ['Presides over the quality of sattva', 'Associates with the quality of sattva', 'True to all the greatness attributed to Him', 'Pleased by uplifting actions done without motives'],
+  ['Directly presides over the quality of sattva', 'Associates with the quality of sattva', 'True to all the greatness attributed to Him', 'Pleased by uplifting actions done without motives'],
   ['The objective when all motives are removed', 'Natural recepient of love for those who desire Him', "Deservingly achieved by those who don't desire anything else", 'Turns people who wish for other things into His devotees as well', 'Enhances joy and devotion']
+],
+  [
+  ['The path to achieve the supreme goal', 'Light, the first step in that path', 'Lovely effulgence of daybreak, the second step in the path', 'Complete like the waxing moon - third step in this path'],
+  ["Praised by the sun's northern progress, the fourth step", "Sun's illumination during the year, covering the two solstices - the fifth step", 'Source of movement for the wind, which is the sixth step', 'Produces through the sun - the seventh step in the path to the supreme', 'Illuminates lightning, moon, and water with sun rays - steps 8 to 10']
 ]];
 
