@@ -13,6 +13,21 @@ export const SCRIPT_LABELS = {
 };
 
 /**
+ * Apply Kannada-specific post-processing to transliterated text.
+ * Converts nasal half-consonants (ṅa=ಙ, ṇa=ಣ, na=ನ, ma=ಮ) followed by virama
+ * to anusvara (ಂ), which is the conventional form in Kannada.
+ * ña (ಞ) is excluded and remains unchanged (e.g., ಯಜ್ಞಃ stays as is).
+ * Only replaces word-internal occurrences: the nasal must be preceded and
+ * followed by a Kannada character, so half-letters at the start or end of a
+ * word (e.g. ನ್ಯಾಯೋ, ಶ್ರೀಮಾನ್) are left unchanged.
+ * @param {string} text - Kannada transliterated text
+ * @returns {string} - Post-processed Kannada text
+ */
+export function applyKannadaTransliteration(text) {
+  return text.replace(/(?<=[\u0C80-\u0CFF])[ಙಣನಮ]್(?=[\u0C80-\u0CFF])/g, 'ಂ');
+}
+
+/**
  * Transliterate text from Devanagari to the target script
  * @param {string} text - Text in Devanagari script
  * @param {string} targetScript - Target script (devanagari, kannada, or iast)
@@ -22,7 +37,11 @@ export function transliterate(text, targetScript) {
   if (targetScript === SCRIPTS.DEVANAGARI) {
     return text;
   }
-  return Sanscript.t(text, SCRIPTS.DEVANAGARI, targetScript);
+  const result = Sanscript.t(text, SCRIPTS.DEVANAGARI, targetScript);
+  if (targetScript === SCRIPTS.KANNADA) {
+    return applyKannadaTransliteration(result);
+  }
+  return result;
 }
 
 /**

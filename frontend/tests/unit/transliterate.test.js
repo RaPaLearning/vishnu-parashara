@@ -1,4 +1,4 @@
-import { transliterate, SCRIPTS, SCRIPT_LABELS, getSavedScript, saveScript } from '../../src/transliterate';
+import { transliterate, applyKannadaTransliteration, SCRIPTS, SCRIPT_LABELS, getSavedScript, saveScript } from '../../src/transliterate';
 
 describe('transliterate', () => {
   it('should return the same text for Devanagari script', () => {
@@ -29,6 +29,31 @@ describe('transliterate', () => {
     const text = 'विष्णुः';
     const result = transliterate(text, SCRIPTS.IAST);
     expect(result).toBe('viṣṇuḥ');
+  });
+
+  it('should use anusvara for nasal half-consonant ṅa (ṅ+virama) in Kannada', () => {
+    const result = transliterate('वेदाङ्गः', SCRIPTS.KANNADA);
+    expect(result).toBe('ವೇದಾಂಗಃ');
+  });
+
+  it('should use anusvara for nasal half-consonant na (n+virama) in Kannada', () => {
+    const result = transliterate('अनन्तात्मा', SCRIPTS.KANNADA);
+    expect(result).toBe('ಅನಂತಾತ್ಮಾ');
+  });
+
+  it('should keep ña (ಞ) unchanged in Kannada', () => {
+    const result = transliterate('यज्ञः', SCRIPTS.KANNADA);
+    expect(result).toBe('ಯಜ್ಞಃ');
+  });
+
+  it('should keep word-final nasal half-consonant unchanged in Kannada', () => {
+    const result = transliterate('श्रीमान्', SCRIPTS.KANNADA);
+    expect(result).toBe('ಶ್ರೀಮಾನ್');
+  });
+
+  it('should keep word-initial nasal half-consonant unchanged in Kannada', () => {
+    const result = transliterate('न्यायो', SCRIPTS.KANNADA);
+    expect(result).toBe('ನ್ಯಾಯೋ');
   });
 });
 
@@ -66,5 +91,39 @@ describe('getSavedScript and saveScript', () => {
     saveScript(SCRIPTS.IAST);
     const result = getSavedScript();
     expect(result).toBe(SCRIPTS.IAST);
+  });
+});
+
+describe('applyKannadaTransliteration', () => {
+  it('should replace ṅa+virama (ಙ್) with anusvara (ಂ)', () => {
+    expect(applyKannadaTransliteration('ವೇದಾಙ್ಗಃ')).toBe('ವೇದಾಂಗಃ');
+  });
+
+  it('should replace na+virama (ನ್) with anusvara (ಂ)', () => {
+    expect(applyKannadaTransliteration('ಅನನ್ತಾತ್ಮಾ')).toBe('ಅನಂತಾತ್ಮಾ');
+  });
+
+  it('should replace ṇa+virama (ಣ್) with anusvara (ಂ)', () => {
+    expect(applyKannadaTransliteration('ಷಣ್ಮುಖ')).toBe('ಷಂಮುಖ');
+  });
+
+  it('should replace ma+virama (ಮ್) with anusvara (ಂ) when nasal half-consonant', () => {
+    expect(applyKannadaTransliteration('ಸಮ್ಭವ')).toBe('ಸಂಭವ');
+  });
+
+  it('should not replace ña+virama (ಞ್) with anusvara', () => {
+    expect(applyKannadaTransliteration('ಯಜ್ಞಃ')).toBe('ಯಜ್ಞಃ');
+  });
+
+  it('should not affect text without nasal half-consonants', () => {
+    expect(applyKannadaTransliteration('ಶ್ರೀ')).toBe('ಶ್ರೀ');
+  });
+
+  it('should not replace na+virama (ನ್) at the end of a word', () => {
+    expect(applyKannadaTransliteration('ಶ್ರೀಮಾನ್')).toBe('ಶ್ರೀಮಾನ್');
+  });
+
+  it('should not replace na+virama (ನ್) at the beginning of a word', () => {
+    expect(applyKannadaTransliteration('ನ್ಯಾಯೋ')).toBe('ನ್ಯಾಯೋ');
   });
 });
