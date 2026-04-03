@@ -36,7 +36,7 @@ describe('SCRIPT_LABELS', () => {
   it('should have correct labels for all scripts', () => {
     expect(SCRIPT_LABELS[SCRIPTS.DEVANAGARI]).toBe('श्री');
     expect(SCRIPT_LABELS[SCRIPTS.KANNADA]).toBe('ಶ್ರೀ');
-    expect(SCRIPT_LABELS[SCRIPTS.IAST]).toBe('Śrī');
+    expect(SCRIPT_LABELS[SCRIPTS.IAST]).toBe('śrī');
   });
 });
 

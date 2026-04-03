@@ -9,7 +9,7 @@ export const SCRIPTS = {
 export const SCRIPT_LABELS = {
   [SCRIPTS.DEVANAGARI]: 'श्री',
   [SCRIPTS.KANNADA]: 'ಶ್ರೀ',
-  [SCRIPTS.IAST]: 'Śrī'
+  [SCRIPTS.IAST]: 'śrī'
 };
 
 /**
