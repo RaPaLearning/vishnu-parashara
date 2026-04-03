@@ -45,6 +45,16 @@ describe('transliterate', () => {
     const result = transliterate('यज्ञः', SCRIPTS.KANNADA);
     expect(result).toBe('ಯಜ್ಞಃ');
   });
+
+  it('should keep word-final nasal half-consonant unchanged in Kannada', () => {
+    const result = transliterate('श्रीमान्', SCRIPTS.KANNADA);
+    expect(result).toBe('ಶ್ರೀಮಾನ್');
+  });
+
+  it('should keep word-initial nasal half-consonant unchanged in Kannada', () => {
+    const result = transliterate('न्यायो', SCRIPTS.KANNADA);
+    expect(result).toBe('ನ್ಯಾಯೋ');
+  });
 });
 
 describe('SCRIPT_LABELS', () => {
@@ -107,5 +117,13 @@ describe('applyKannadaTransliteration', () => {
 
   it('should not affect text without nasal half-consonants', () => {
     expect(applyKannadaTransliteration('ಶ್ರೀ')).toBe('ಶ್ರೀ');
+  });
+
+  it('should not replace na+virama (ನ್) at the end of a word', () => {
+    expect(applyKannadaTransliteration('ಶ್ರೀಮಾನ್')).toBe('ಶ್ರೀಮಾನ್');
+  });
+
+  it('should not replace na+virama (ನ್) at the beginning of a word', () => {
+    expect(applyKannadaTransliteration('ನ್ಯಾಯೋ')).toBe('ನ್ಯಾಯೋ');
   });
 });
