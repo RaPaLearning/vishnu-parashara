@@ -18,12 +18,25 @@ describe('transliterate', () => {
     const result = transliterate(text, SCRIPTS.KANNADA);
     expect(result).toMatch('ವಿಷ್ಣುಃ');
   });
+
+  it('should transliterate Devanagari text to IAST', () => {
+    const text = 'श्री';
+    const result = transliterate(text, SCRIPTS.IAST);
+    expect(result).toBe('śrī');
+  });
+
+  it('should transliterate a Sanskrit name to IAST correctly', () => {
+    const text = 'विष्णुः';
+    const result = transliterate(text, SCRIPTS.IAST);
+    expect(result).toBe('viṣṇuḥ');
+  });
 });
 
 describe('SCRIPT_LABELS', () => {
-  it('should have correct labels for both scripts', () => {
+  it('should have correct labels for all scripts', () => {
     expect(SCRIPT_LABELS[SCRIPTS.DEVANAGARI]).toBe('श्री');
     expect(SCRIPT_LABELS[SCRIPTS.KANNADA]).toBe('ಶ್ರೀ');
+    expect(SCRIPT_LABELS[SCRIPTS.IAST]).toBe('śrī');
   });
 });
 
@@ -46,5 +59,12 @@ describe('getSavedScript and saveScript', () => {
     saveScript(SCRIPTS.DEVANAGARI);
     const result = getSavedScript();
     expect(result).toBe(SCRIPTS.DEVANAGARI);
+  });
+
+  it('should save and retrieve iast preference', () => {
+    localStorage.clear();
+    saveScript(SCRIPTS.IAST);
+    const result = getSavedScript();
+    expect(result).toBe(SCRIPTS.IAST);
   });
 });

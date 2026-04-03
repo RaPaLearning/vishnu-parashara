@@ -2,18 +2,20 @@ import Sanscript from '@indic-transliteration/sanscript';
 
 export const SCRIPTS = {
   DEVANAGARI: 'devanagari',
-  KANNADA: 'kannada'
+  KANNADA: 'kannada',
+  IAST: 'iast'
 };
 
 export const SCRIPT_LABELS = {
   [SCRIPTS.DEVANAGARI]: 'श्री',
-  [SCRIPTS.KANNADA]: 'ಶ್ರೀ'
+  [SCRIPTS.KANNADA]: 'ಶ್ರೀ',
+  [SCRIPTS.IAST]: 'śrī'
 };
 
 /**
  * Transliterate text from Devanagari to the target script
  * @param {string} text - Text in Devanagari script
- * @param {string} targetScript - Target script (devanagari or kannada)
+ * @param {string} targetScript - Target script (devanagari, kannada, or iast)
  * @returns {string} - Transliterated text
  */
 export function transliterate(text, targetScript) {
@@ -25,7 +27,7 @@ export function transliterate(text, targetScript) {
 
 /**
  * Get the saved script preference from localStorage
- * @returns {string} - Script preference (devanagari or kannada)
+ * @returns {string} - Script preference (devanagari, kannada, or iast)
  */
 export function getSavedScript() {
   const saved = localStorage.getItem('selectedScript');
@@ -34,7 +36,7 @@ export function getSavedScript() {
 
 /**
  * Save the script preference to localStorage
- * @param {string} script - Script to save (devanagari or kannada)
+ * @param {string} script - Script to save (devanagari, kannada, or iast)
  */
 export function saveScript(script) {
   localStorage.setItem('selectedScript', script);
