@@ -55,6 +55,11 @@ describe('transliterate', () => {
     const result = transliterate('न्यायो', SCRIPTS.KANNADA);
     expect(result).toBe('ನ್ಯಾಯೋ');
   });
+
+  it('should keep nasal na unchanged in Kannada when it is followed by another nasal', () => {
+    const result = transliterate('जन्ममृत्युजरातिगः', SCRIPTS.KANNADA);
+    expect(result).toBe('ಜನ್ಮಮೃತ್ಯುಜರಾತಿಗಃ');
+  })
 });
 
 describe('SCRIPT_LABELS', () => {
@@ -103,8 +108,8 @@ describe('applyKannadaTransliteration', () => {
     expect(applyKannadaTransliteration('ಅನನ್ತಾತ್ಮಾ')).toBe('ಅನಂತಾತ್ಮಾ');
   });
 
-  it('should replace ṇa+virama (ಣ್) with anusvara (ಂ)', () => {
-    expect(applyKannadaTransliteration('ಷಣ್ಮುಖ')).toBe('ಷಂಮುಖ');
+  it('should keep ṇa+virama (ಣ್) unchanged before another nasal', () => {
+    expect(applyKannadaTransliteration('ಷಣ್ಮುಖ')).toBe('ಷಣ್ಮುಖ');
   });
 
   it('should replace ma+virama (ಮ್) with anusvara (ಂ) when nasal half-consonant', () => {
@@ -125,5 +130,9 @@ describe('applyKannadaTransliteration', () => {
 
   it('should not replace na+virama (ನ್) at the beginning of a word', () => {
     expect(applyKannadaTransliteration('ನ್ಯಾಯೋ')).toBe('ನ್ಯಾಯೋ');
+  });
+
+  it('should keep na+virama (ನ್) unchanged before another nasal', () => {
+    expect(applyKannadaTransliteration('ಜನ್ಮಮೃತ್ಯುಜರಾತಿಗಃ')).toBe('ಜನ್ಮಮೃತ್ಯುಜರಾತಿಗಃ');
   });
 });
