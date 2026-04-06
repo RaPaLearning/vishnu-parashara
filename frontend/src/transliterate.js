@@ -25,7 +25,7 @@ export const SCRIPT_LABELS = {
  * @returns {string} - Post-processed Kannada text
  */
 export function applyKannadaTransliteration(text) {
-  return text.replace(/(?<=[\u0C80-\u0CFF])[ಙಣನಮ]್(?=[\u0C80-\u0CFF])(?![ಙಣನಮ])/g, 'ಂ');
+  return text.replace(/(?<=[\u0C80-\u0CFF])[ಞಙನಮ]್(?=[\u0C80-\u0CFF])(?![ಞಙನಮಯ])/g, 'ಂ');
 }
 
 /**

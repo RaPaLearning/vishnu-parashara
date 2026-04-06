@@ -59,7 +59,21 @@ describe('transliterate', () => {
   it('should keep nasal na unchanged in Kannada when it is followed by another nasal', () => {
     const result = transliterate('जन्ममृत्युजरातिगः', SCRIPTS.KANNADA);
     expect(result).toBe('ಜನ್ಮಮೃತ್ಯುಜರಾತಿಗಃ');
-  })
+  });
+
+  it('should retain the nya character in Kannada', () => {
+    expect(transliterate('संन्यासकृत्', SCRIPTS.KANNADA)).toBe('ಸಂನ್ಯಾಸಕೃತ್');
+    expect(transliterate('मान्यः', SCRIPTS.KANNADA)).toBe('ಮಾನ್ಯಃ');
+    expect(transliterate('धन्यः', SCRIPTS.KANNADA)).toBe('ಧನ್ಯಃ');
+  });
+
+  it('should convert the nja character to Kannada nasal', () => {
+    expect(transliterate('धनञ्जयः', SCRIPTS.KANNADA)).toBe('ಧನಂಜಯಃ');
+  });
+
+  it('should retain Na character in Kannada', () => {
+    expect(transliterate('ब्रह्मण्यो', SCRIPTS.KANNADA)).toBe('ಬ್ರಹ್ಮಣ್ಯೋ');
+  });
 });
 
 describe('SCRIPT_LABELS', () => {
