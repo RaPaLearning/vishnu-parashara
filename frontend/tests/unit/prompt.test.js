@@ -37,7 +37,7 @@ describe('prompt context generation', () => {
   });
   it('generates correct words after the last word in the second line', () => {
     expect(wordsAfter({ shlokaNum: 2, lineNum: 2, wordIndex: 4 }))
-        .toContain('योगो (The means)');
+        .toContain('योगः (The means)');
   });
   it('generates no words after the last word in the last shloka', async () => {
     const {shlokas} = await import('../../src/sahasranama');
