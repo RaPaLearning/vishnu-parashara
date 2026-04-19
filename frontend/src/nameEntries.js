@@ -1,8 +1,8 @@
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from './data';
 
 export const lineEndings = [
-  () => 'à¥¤',
-  (shlokaNum) => `à¥¥ ${shlokaNum} à¥¥`
+  () => '।',
+  (shlokaNum) => `॥ ${shlokaNum} ॥`
 ];
 
 export function getAllNameEntries() {
