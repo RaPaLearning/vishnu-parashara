@@ -6,8 +6,9 @@ This application is built to let you browse the names and their commentary. It a
 
 ## Deploy
 
-Deployment is to GitHub Pages.
-Ref: https://anushnandyala.github.io/react-vite-github-pages-guide/
+Deployment is to [GitHub Pages](https://rapalearning.github.io/vishnu-parashara)
+
+Reference to the method used: https://anushnandyala.github.io/react-vite-github-pages-guide/
 
 `npm run deploy` will deploy to the `gh-pages` branch.
 This repository is configured to publish from `gh-pages`
