@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const tinyScreenQuery = '(max-width: 320px), (max-height: 340px)';
+const tinyScreenQuery = [
+  '(max-width: 480px)',
+  '(max-height: 480px)',
+  '((hover: none) and (pointer: coarse) and (max-width: 900px))'
+].join(', ');
 
 export function useTinyScreen() {
   const [isTinyScreen, setIsTinyScreen] = useState(() => {
