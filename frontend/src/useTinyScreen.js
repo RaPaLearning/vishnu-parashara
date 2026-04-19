@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 const tinyScreenQuery = [
-  '(max-width: 480px)',
-  '(max-height: 480px)',
+  '(max-width: 200px)',
+  '(max-height: 340px)',
   '((hover: none) and (pointer: coarse) and (max-width: 900px))'
 ].join(', ');
 
