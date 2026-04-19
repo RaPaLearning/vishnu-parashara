@@ -1,5 +1,5 @@
 #root {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -21,11 +21,28 @@
   box-sizing: border-box;
 }
 
+.shloka-box span {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  padding-bottom: 0.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.shloka-gap {
+  height: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
   .shloka-box {
     background-color: #322B3B;
     color: #F4F4F4;
   }
+}
+
+.script-selector-row {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .script-selector {
@@ -76,6 +93,8 @@
   white-space: nowrap;
   box-sizing: border-box;
   box-shadow: 0 -4px 16px 0 #7b68ee80;
+  position: relative;
+  overflow-y: auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,6 +109,7 @@
   background-color: #FCFCFF;
   color: #4A4A6A;
   box-shadow: 0 4px 12px 0 #7b68ee80;
+  border-radius: 0.3em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,6 +117,147 @@
     background-color: #1A1A2E; /* dark mode color */
     color: #F4F4F4;           /* adjust text if needed */
     box-shadow: 0 4px 12px 0 #9370db80;
+  }
+}
+
+.meaning-word {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.meaning-text {
+  font-weight: 500;
+  margin-bottom: 4px;
+  white-space: normal;
+}
+
+.commentary-line {
+  font-size: 1.2rem;
+}
+
+.chat-row {
+  display: flex;
+  justify-content: left;
+  margin-top: 16px;
+}
+
+.chat-launch {
+  margin-left: 8px;
+  cursor: pointer;
+  white-space: normal;
+}
+
+.chat-launch-link {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+.tiny-sahasranama {
+  width: 100vw;
+  height: 100dvh;
+  font-family: 'Noto Sans Devanagari', 'Noto Sans Kannada', 'Mangal', 'Tunga', 'Kokila', 'Lohit Devanagari', 'Arial Unicode MS', sans-serif;
+  background-color: #FCFCFF;
+  color: #4A4A6A;
+  overflow: hidden;
+}
+
+.tiny-script-selector {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  padding: 2px;
+  background-color: #EDE7F6;
+  box-shadow: 0 2px 10px 0 #7b68ee66;
+}
+
+.tiny-script-selector .script-selector {
+  font-size: 0.78rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0.35rem 0.42rem;
+}
+
+.tiny-name-track {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.tiny-name-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tiny-name-card {
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  box-sizing: border-box;
+  padding: 2.35rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tiny-name-card:focus {
+  outline: none;
+}
+
+.tiny-count,
+.tiny-location {
+  color: #666;
+  font-size: 0.78rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.tiny-name-card h1 {
+  font-size: 1.42rem;
+  line-height: 1.16;
+  margin: 0.25rem 0 0.2rem;
+  overflow-wrap: anywhere;
+}
+
+.tiny-meaning {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0.45rem 0 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.tiny-commentary {
+  max-height: 48dvh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.24;
+}
+
+.tiny-commentary p {
+  margin: 0 0 0.4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tiny-sahasranama {
+    background-color: #1A1A2E;
+    color: #F4F4F4;
+  }
+
+  .tiny-script-selector {
+    background-color: #322B3B;
+    box-shadow: 0 2px 10px 0 #9370db66;
+  }
+
+  .tiny-count,
+  .tiny-location {
+    color: #BBB;
   }
 }
 
