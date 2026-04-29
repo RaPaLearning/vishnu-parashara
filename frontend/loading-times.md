@@ -1,3 +1,3 @@
 | Import Time | Render Time | Total Time |
 |---|---|---|
-| 28.0ms | 250.9ms | 278.9ms |
+| 88.6ms | 386.3ms | 474.9ms |
