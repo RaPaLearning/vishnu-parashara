@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { getAllNameEntries, isSameEntry } from '../nameEntries';
 import { transliterate } from '../transliterate';
+import { useDoubleTap } from '../useDoubleTap';
 import ScriptSelector from './ScriptSelector';
 
 function getSavedEntry() {
@@ -27,7 +28,7 @@ function getSavedEntry() {
   return null;
 }
 
-function TinySahasranama({ selectedScript, onScriptChange }) {
+function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
   const entries = useMemo(() => getAllNameEntries(), []);
   const savedEntry = useMemo(() => getSavedEntry(), []);
   const savedEntryRef = useRef(null);
@@ -38,8 +39,10 @@ function TinySahasranama({ selectedScript, onScriptChange }) {
     }
   }, []);
 
+  const handleDoubleTap = useDoubleTap(onToggleView);
+
   return (
-    <main className="tiny-sahasranama" aria-label="One name at a time">
+    <main className="tiny-sahasranama" aria-label="One name at a time" onClick={handleDoubleTap}>
       <ScriptSelector
         className="tiny-script-selector"
         selectedScript={selectedScript}

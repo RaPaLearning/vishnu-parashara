@@ -4,16 +4,27 @@ import DesktopSahasranama from './components/DesktopSahasranama';
 import TinySahasranama from './components/TinySahasranama';
 import { promptWithContext } from './prompt';
 import { getSavedScript, saveScript } from './transliterate';
-import { useTinyScreen } from './useTinyScreen';
+
+function getSavedViewMode() {
+  return localStorage.getItem('viewMode') === 'word';
+}
 
 function App() {
   const [selectedScript, setSelectedScript] = useState(getSavedScript());
   const [context, setContext] = useState('');
-  const isTinyScreen = useTinyScreen();
+  const [isWordView, setIsWordView] = useState(getSavedViewMode);
 
   const handleScriptChange = (script) => {
     setSelectedScript(script);
     saveScript(script);
+  };
+
+  const toggleView = () => {
+    setIsWordView((prev) => {
+      const next = !prev;
+      localStorage.setItem('viewMode', next ? 'word' : 'shloka');
+      return next;
+    });
   };
 
   const copyContext = (shlokaNum, lineNum, wordIndex) => {
@@ -27,11 +38,12 @@ function App() {
     window.open(`https://chatgpt.com/?prompt=${encodeURIComponent(context)}`);
   };
 
-  if (isTinyScreen) {
+  if (isWordView) {
     return (
       <TinySahasranama
         selectedScript={selectedScript}
         onScriptChange={handleScriptChange}
+        onToggleView={toggleView}
       />
     );
   }
@@ -44,6 +56,7 @@ function App() {
       setContext={setContext}
       onCopyContext={copyContext}
       onLaunchChatGPT={launchChatGPT}
+      onToggleView={toggleView}
     />
   );
 }
