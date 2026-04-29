@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
 import { lineEndings } from '../nameEntries';
 import { transliterate } from '../transliterate';
+import { useDoubleTap } from '../useDoubleTap';
 import MeaningPanel from './MeaningPanel';
 import ScriptSelector from './ScriptSelector';
 
@@ -12,7 +13,8 @@ function DesktopSahasranama({
   context,
   setContext,
   onCopyContext,
-  onLaunchChatGPT
+  onLaunchChatGPT,
+  onToggleView
 }) {
   const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
 
@@ -48,6 +50,8 @@ function DesktopSahasranama({
     setContext('');
     localStorage.setItem('highlightedWord', JSON.stringify({ shloka, line, idx }));
   };
+
+  const handleDoubleTap = useDoubleTap(onToggleView);
 
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => (
     <>
@@ -91,7 +95,7 @@ function DesktopSahasranama({
 
   return (
     <>
-      <div className="shloka-box">
+      <div className="shloka-box" onClick={handleDoubleTap}>
         <ScriptSelector
           className="script-selector-row"
           selectedScript={selectedScript}

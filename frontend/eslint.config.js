@@ -27,7 +27,7 @@ export default defineConfig([
   {
     files: ["**/*.test.js", "**/*.test.jsx"],
     languageOptions: {
-      globals: { ...globals.browser, jest: true, describe: true, it: true, expect: true }
+      globals: { ...globals.browser, jest: true, describe: true, it: true, expect: true, beforeEach: true, afterEach: true }
     }
   },
   // JSON files: JSON rules only
