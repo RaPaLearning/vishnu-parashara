@@ -19,6 +19,7 @@
   padding: 8px;
   white-space: nowrap;
   box-sizing: border-box;
+  user-select: none;
 }
 
 .shloka-box span {
@@ -160,6 +161,7 @@
   background-color: #FCFCFF;
   color: #4A4A6A;
   overflow: hidden;
+  user-select: none;
 }
 
 .tiny-script-selector {
