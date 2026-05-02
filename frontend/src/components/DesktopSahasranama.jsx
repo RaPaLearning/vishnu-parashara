@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
 import { lineEndings } from '../nameEntries';
 import { transliterate } from '../transliterate';
-import { useDoubleTap } from '../useDoubleTap';
+import { useLongPress } from '../useLongPress';
 import MeaningPanel from './MeaningPanel';
 import ScriptSelector from './ScriptSelector';
 
@@ -51,7 +51,7 @@ function DesktopSahasranama({
     localStorage.setItem('highlightedWord', JSON.stringify({ shloka, line, idx }));
   };
 
-  const handleDoubleTap = useDoubleTap(onToggleView);
+  const longPressHandlers = useLongPress(onToggleView);
 
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => (
     <>
@@ -95,7 +95,7 @@ function DesktopSahasranama({
 
   return (
     <>
-      <div className="shloka-box" onClick={handleDoubleTap}>
+      <div className="shloka-box" {...longPressHandlers}>
         <ScriptSelector
           className="script-selector-row"
           selectedScript={selectedScript}

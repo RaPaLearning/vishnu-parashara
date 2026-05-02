@@ -1,9 +1,9 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import App from '../../src/App';
 
-function simulateDoubleTap(element) {
-  fireEvent.click(element);
-  fireEvent.click(element);
+function simulateLongPress(element) {
+  fireEvent.pointerDown(element, { clientX: 0, clientY: 0 });
+  jest.advanceTimersByTime(500);
 }
 
 describe('View toggle gesture', () => {
@@ -27,21 +27,21 @@ describe('View toggle gesture', () => {
     expect(screen.getByLabelText('One name at a time')).toBeInTheDocument();
   });
 
-  it('switches from shloka view to word view on double-tap of shloka area', () => {
+  it('switches from shloka view to word view on long-press of shloka area', () => {
     render(<App />);
     const shlokaBox = document.querySelector('.shloka-box');
     act(() => {
-      simulateDoubleTap(shlokaBox);
+      simulateLongPress(shlokaBox);
     });
     expect(screen.getByLabelText('One name at a time')).toBeInTheDocument();
   });
 
-  it('switches from word view to shloka view on double-tap', () => {
+  it('switches from word view to shloka view on long-press', () => {
     localStorage.setItem('viewMode', 'word');
     render(<App />);
     const main = screen.getByLabelText('One name at a time');
     act(() => {
-      simulateDoubleTap(main);
+      simulateLongPress(main);
     });
     expect(screen.getByText('विश्वं')).toBeInTheDocument();
   });
@@ -50,27 +50,28 @@ describe('View toggle gesture', () => {
     render(<App />);
     const shlokaBox = document.querySelector('.shloka-box');
     act(() => {
-      simulateDoubleTap(shlokaBox);
+      simulateLongPress(shlokaBox);
     });
     expect(localStorage.getItem('viewMode')).toBe('word');
   });
 
-  it('does not toggle on single tap', () => {
+  it('does not toggle on a tap', () => {
     render(<App />);
     const shlokaBox = document.querySelector('.shloka-box');
     act(() => {
-      fireEvent.click(shlokaBox);
+      fireEvent.pointerDown(shlokaBox, { clientX: 0, clientY: 0 });
+      fireEvent.pointerUp(shlokaBox);
     });
     expect(screen.getByText('विश्वं')).toBeInTheDocument();
   });
 
-  it('does not toggle when clicks are more than 300ms apart', () => {
+  it('does not toggle when pointer moves during hold', () => {
     render(<App />);
     const shlokaBox = document.querySelector('.shloka-box');
     act(() => {
-      fireEvent.click(shlokaBox);
-      jest.advanceTimersByTime(301);
-      fireEvent.click(shlokaBox);
+      fireEvent.pointerDown(shlokaBox, { clientX: 0, clientY: 0 });
+      fireEvent.pointerMove(shlokaBox, { clientX: 20, clientY: 0 });
+      jest.advanceTimersByTime(500);
     });
     expect(screen.getByText('विश्वं')).toBeInTheDocument();
   });
