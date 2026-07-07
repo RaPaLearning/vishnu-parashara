@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 function MeaningPanel({ word, meaning, commentary, context, onChatClick, onLaunchChatGPT }) {
   return (
     <div className="meaning-box">

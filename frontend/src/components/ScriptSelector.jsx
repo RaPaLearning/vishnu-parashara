@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { SCRIPT_LABELS } from '../transliterate';
 
 function ScriptSelector({ selectedScript, onScriptChange, className = '' }) {
