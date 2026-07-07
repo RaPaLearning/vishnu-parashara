@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef } from 'react';
 import { getAllNameEntries, isSameEntry } from '../nameEntries';
 import { transliterate } from '../transliterate';

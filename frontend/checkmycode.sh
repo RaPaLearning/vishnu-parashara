@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-npx eslint .
+npm run lint
 echo "✅ Linted"
 npm test
 echo "✅ Tested & Passed"

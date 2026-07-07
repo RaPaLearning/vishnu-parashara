@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
 import { lineEndings } from '../nameEntries';
