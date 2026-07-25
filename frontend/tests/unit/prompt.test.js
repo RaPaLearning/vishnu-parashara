@@ -3,7 +3,7 @@ import {wordsBefore, wordsAfter, promptWithContext} from '../../src/prompt';
 describe('prompt context generation', () => {
   it('generates correct words before a middle word', () => {
     const beforeSequence = wordsBefore({ shlokaNum: 4, lineNum: 1, wordIndex: 3 });
-    expect(beforeSequence).toContain('सर्वः (All)');
+    expect(beforeSequence).toContain('सर्वः (All pervasive)');
     expect(beforeSequence).toContain('शर्वः (Remover)');
     expect(beforeSequence).toContain('शिवः (Confers auspiciousness)');
   });
