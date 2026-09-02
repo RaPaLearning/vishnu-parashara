@@ -1010,7 +1010,7 @@ export const meanings = [
 ],
   [
   ['Has no equal', 'Destroyer', 'Formidable', 'Knower of conventions', 'Takes offerings'],
-  ['Distinguished by all symbols', 'Always with Lakshmi', 'Victor in battles']
+  ['Distinguished by all symbols', 'Always with Lakshmi', 'Wins over limitations']
 ],
   [
   ['Never wanes', 'Red complexion', 'Sought after', 'Cause', 'Worlds in the belly', 'Patient'],
