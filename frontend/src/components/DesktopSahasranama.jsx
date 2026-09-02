@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
 import { lineEndings } from '../nameEntries';
 import { transliterate } from '../transliterate';
@@ -15,33 +15,42 @@ function DesktopSahasranama({
   onLaunchChatGPT,
   onToggleView
 }) {
-  const [highlighted, setHighlighted] = useState({ shloka: null, line: null, idx: null });
-
-  useEffect(() => {
-    const saved = localStorage.getItem('highlightedWord');
-    if (!saved) {
-      return;
-    }
-
+  const [highlighted, setHighlighted] = useState(() => {
     try {
-      const parsed = JSON.parse(saved);
-      if (
-        parsed &&
-        typeof parsed.shloka === 'number' &&
-        typeof parsed.line === 'number' &&
-        typeof parsed.idx === 'number'
-      ) {
-        setHighlighted(parsed);
-        setTimeout(() => {
-          const shlokaElement = document.querySelector(`[data-shloka="${parsed.shloka}"]`);
-          if (shlokaElement) {
-            shlokaElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-        }, 0);
+      const saved = localStorage.getItem('highlightedWord');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (
+          parsed &&
+          typeof parsed.shloka === 'number' &&
+          typeof parsed.line === 'number' &&
+          typeof parsed.idx === 'number'
+        ) {
+          return parsed;
+        }
       }
     } catch {
       console.error('Failed to parse saved highlighted word from localStorage');
     }
+    return { shloka: null, line: null, idx: null };
+  });
+
+  const initialShlokaRef = useRef(highlighted.shloka);
+
+  // Scroll the restored highlight into view once on mount.
+  useEffect(() => {
+    const shloka = initialShlokaRef.current;
+    if (shloka === null) {
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      const shlokaElement = document.querySelector(`[data-shloka="${shloka}"]`);
+      if (shlokaElement) {
+        shlokaElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 0);
+    return () => clearTimeout(timeout);
   }, []);
 
   const handleHighlight = (shloka, line, idx) => {
