@@ -162,6 +162,13 @@
   color: #4A4A6A;
   overflow: hidden;
   user-select: none;
+  touch-action: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.tiny-sahasranama:focus {
+  outline: none;
 }
 
 .tiny-script-selector {
@@ -185,31 +192,106 @@
   padding: 0.35rem 0.42rem;
 }
 
-.tiny-name-track {
-  height: 100%;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
+.tiny-carousel {
+  position: relative;
+  flex: 1;
+  margin-top: 2.6rem;
+  overflow: hidden;
+  will-change: transform;
 }
 
-.tiny-name-track::-webkit-scrollbar {
-  display: none;
-}
-
-.tiny-name-card {
-  min-height: 100dvh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+.tiny-slot {
+  position: absolute;
+  left: 0;
+  right: 0;
   box-sizing: border-box;
-  padding: 2.35rem 0.75rem 1rem;
+  padding: 0 0.9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  transition:
+    top 0.3s ease,
+    height 0.3s ease,
+    font-size 0.3s ease,
+    opacity 0.3s ease;
+  animation: tinySlotIn 0.3s ease;
 }
 
-.tiny-name-card:focus {
-  outline: none;
+@keyframes tinySlotIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.tiny-slot-current {
+  top: 24%;
+  height: 50%;
+  opacity: 1;
+}
+
+.tiny-slot-peek {
+  cursor: pointer;
+}
+
+.tiny-slot-prev-1,
+.tiny-slot-next-1 {
+  height: 10%;
+  font-size: 1.05rem;
+  opacity: 0.75;
+}
+
+.tiny-slot-prev-1 {
+  top: 14%;
+}
+
+.tiny-slot-next-1 {
+  top: 74%;
+}
+
+.tiny-slot-prev-2,
+.tiny-slot-next-2 {
+  height: 8%;
+  font-size: 0.88rem;
+  opacity: 0.5;
+}
+
+.tiny-slot-prev-2 {
+  top: 6%;
+}
+
+.tiny-slot-next-2 {
+  top: 84%;
+}
+
+.tiny-slot-prev-3,
+.tiny-slot-next-3 {
+  height: 8%;
+  font-size: 0.72rem;
+  opacity: 0.3;
+}
+
+.tiny-slot-prev-3 {
+  top: 0;
+}
+
+.tiny-slot-next-3 {
+  top: 92%;
+}
+
+.tiny-peek-name {
+  font-size: 1em;
+  line-height: 1.1;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tiny-peek-count {
+  font-size: 0.7em;
+  line-height: 1;
+  color: #666;
 }
 
 .tiny-count,
@@ -220,7 +302,7 @@
   margin: 0;
 }
 
-.tiny-name-card h1 {
+.tiny-slot-current h1 {
   font-size: 1.42rem;
   line-height: 1.16;
   margin: 0.25rem 0 0.2rem;
@@ -236,14 +318,23 @@
 }
 
 .tiny-commentary {
-  max-height: 48dvh;
-  overflow-y: auto;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   line-height: 1.24;
 }
 
 .tiny-commentary p {
   margin: 0 0 0.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tiny-slot {
+    transition: none;
+    animation: none;
+  }
+
+  .tiny-carousel {
+    transition: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -258,7 +349,8 @@
   }
 
   .tiny-count,
-  .tiny-location {
+  .tiny-location,
+  .tiny-peek-count {
     color: #BBB;
   }
 }
