@@ -1013,7 +1013,7 @@ export const meanings = [
   ['Distinguished by all symbols', 'Always with Lakshmi', 'Wins over limitations']
 ],
   [
-  ['Never wanes', 'Red complexion', 'Sought after', 'Cause', 'Worlds in the belly', 'Patient'],
+  ['Never wanes', 'Red complexion', 'Sought after', 'Cause', 'Worlds in the belly', 'Patiently endures'],
   ['Supporter of the earth', 'Extremely fortunate', 'Quick', 'Limitless eater']
 ],
   [
@@ -1094,7 +1094,7 @@ export const meanings = [
 ],
   [
   ['Auspicious, repels misfortune', 'Goes by all auspicious qualities ', 'Having Nanda as father, enjoying', 'Adorned by his fragrant garland ', 'Having the plough as the instrument '],
-  ["Realized by the sound of 'aa'", 'Resplendent', 'Patient', 'The foremost instructor for higher achievement']
+  ["Realized by the sound of 'aa'", 'Resplendent', 'Patiently bears with everyone', 'The foremost instructor for higher achievement']
 ],
   [
   ['With a splendid bow', 'With a broken axe', 'Splits internal and external foes', 'Gives the wealth of the scriptures'],
