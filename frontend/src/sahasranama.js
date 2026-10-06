@@ -865,7 +865,7 @@ export const meanings = [
   ["By whom the liberated aren't sent away", 'Generous', 'Direct witness', 'Knower of the field', 'And never wanes']
 ],
   [
-  ['The means', 'Leader of yoga-practitioners', 'Lord of primordial matter and jeevatmas'],
+  ['The means', 'Leads the practitioners to their ultimate goal', 'Lord of primordial matter and jeevatmas'],
   ['Body of a human combined with lion', 'Having a lovely form', 'With awesome locks of hair', 'Supreme person']
 ],
   [
