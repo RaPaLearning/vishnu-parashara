@@ -869,7 +869,7 @@ export const meanings = [
   ['Body of a human combined with lion', 'Having a lovely form', 'With awesome locks of hair', 'Supreme person']
 ],
   [
-  ['All pervasive', 'Remover', 'Confers auspiciousness', 'Persistent, without breaks', 'Eagerly resorted to by all', 'Inexhaustible treasure'],
+  ['All pervasive', 'Remover of suffering', 'Confers auspiciousness', 'Persistent, without breaks', 'Eagerly resorted to by all', 'Inexhaustible treasure'],
   ['Manifests for approachability', 'Saviour', 'Supporter', 'Sublime born without blemish', 'All powerful', 'Supreme ruler']
 ],
   [
@@ -885,7 +885,7 @@ export const meanings = [
   ['Affluent', 'Has the three-fold worlds as a residence', 'Purifying presence', 'Supreme auspiciousness']
 ],
   [
-  ['Controller', 'Life-giver', 'Life', 'Praise-worthy', 'Pre-eminent, served by praise', 'Lord of the liberated'],
+  ['Controller', 'Life-giver', 'Life', 'Unending greatness', 'Ever praised for such greatness', 'Lord of the liberated'],
   ['Is in a lovely abode', 'Protector of the Earth', 'Husband of Lakshmi', 'Attracts the liberated senses']
 ],
   [
