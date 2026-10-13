@@ -986,7 +986,7 @@ export const meanings = [
 ],
   [
   ['Creator at the beginning of a yuga', 'Rotates the yugas', 'Multiple wonders', 'Voracious eater'],
-  ['Cannot be seen', 'Yet has a manifest form', 'Conqueror of a hundred', 'Boundless']
+  ['Cannot be seen', 'Yet has a manifest form', 'Conqueror of a thousand', 'Boundless']
 ],
   [
   ['Liked', 'Equal attitude towards others', 'Dear to eminent persons', 'Has the plume of lordship', 'Binds', 'Drenches the fatigued and consoles'],
@@ -1018,7 +1018,7 @@ export const meanings = [
 ],
   [
   ['Remover of bondage', 'Creator of commotion', 'Entertains himself', "Always has Lakshmi's company", 'Supreme ruler'],
-  ['The means to attain Him, with the organs being a small part of it', 'Moves those organs to act', 'The independent agent in every action', 'Chooses to be moved for the sake of devotees', 'Inscrutable', 'Saviour']
+  ['The means to attain Him, including the organs of the body', 'Moves those organs to act', 'The independent agent in every action', 'Chooses to be moved for the sake of devotees', 'Inscrutable', 'Saviour']
 ],
   [
   ['The pivot', 'Basis for the divisions of time', 'The final end', 'Giver of the supreme abode', 'The stationary'],
