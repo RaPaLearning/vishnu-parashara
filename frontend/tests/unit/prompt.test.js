@@ -4,7 +4,7 @@ describe('prompt context generation', () => {
   it('generates correct words before a middle word', () => {
     const beforeSequence = wordsBefore({ shlokaNum: 4, lineNum: 1, wordIndex: 3 });
     expect(beforeSequence).toContain('सर्वः (All pervasive)');
-    expect(beforeSequence).toContain('शर्वः (Remover)');
+    expect(beforeSequence).toContain('शर्वः (Remover of suffering)');
     expect(beforeSequence).toContain('शिवः (Confers auspiciousness)');
   });
   it('generates correct words before a first word in the second line', () => {
