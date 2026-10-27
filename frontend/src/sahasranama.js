@@ -1122,7 +1122,7 @@ export const meanings = [
 ],
   [
   ['Directly perceived with ordinary eyes', 'Visible to everyone everywhere ', 'Not the master', 'Eternal and steady in His image'],
-  ['Lies down in places chosen by devotees, sages, and His will', 'Adorned by such presence', 'Wealth', 'Without sorrow', 'Destroys the sorrow of being separated from Him']
+  ['Lies down in places chosen by devotees, sages, and His will', 'Adorned by such presence', 'Wealth', 'Without sorrow of being unable to care', 'Destroys the sorrow of being separated from Him']
 ],
   [
   ['Has lustre that opens the eyes', 'Worshipped in all forms', 'Shines to be desired in this world', 'Pulls out all stops for His devotees', 'Purifies in His place'],
