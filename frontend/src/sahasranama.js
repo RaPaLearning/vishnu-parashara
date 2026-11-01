@@ -962,7 +962,7 @@ export const meanings = [
 ],
   [
   ['Uncountable', 'Immeasurable', 'Superior', 'Makes them eminent', 'Clean'],
-  ['Achieves all desires', 'Achieves all intentions', 'Bestows powers', 'Makes the means as pleasant as the goal']
+  ['Achieves all desires', 'Achieves all intentions', 'Bestows achievements', 'The means to achieve']
 ],
   [
   ['Daybreak of virtue', 'Showers virtues', 'Pervades without gaps', 'Steps of virtue', 'Belly of virtue'],
