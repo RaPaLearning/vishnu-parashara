@@ -223,7 +223,12 @@ export async function enableReminders() {
   assertPushSupported();
   const permission = await Notification.requestPermission();
   if (permission !== 'granted') {
-    throw new Error('Notification permission was not granted.');
+    throw new Error(
+      'Notification permission was not granted (' + permission + '). If no prompt appeared: check the site\u2019s ' +
+        'notification permission in the browser (address bar icon \u2192 Permissions \u2192 Notifications \u2192 Ask) ' +
+        'and, on Android, that the browser app itself may show notifications ' +
+        '(Android Settings \u2192 Apps \u2192 Chrome \u2192 Notifications).'
+    );
   }
   const registration = await navigator.serviceWorker.register('sw.js');
   await navigator.serviceWorker.ready;
