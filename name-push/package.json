@@ -1,0 +1,17 @@
+{
+  "name": "vishnu-name-push",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker backend that pushes the next Vishnu Sahasranama name to idle devices",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "generate-keys": "node scripts/generate-keys.mjs",
+    "test-webpush": "node scripts/test-webpush.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
+}

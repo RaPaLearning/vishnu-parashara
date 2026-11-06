@@ -1,10 +1,48 @@
 import { useEffect, useRef, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
-import { lineEndings } from '../nameEntries';
+import { getAllNameEntries, isSameEntry, lineEndings } from '../nameEntries';
+import { consumeNameParam, followName, notifyNameChanged } from '../push/reminders';
 import { transliterate } from '../transliterate';
 import MeaningPanel from './MeaningPanel';
+import ReminderToggle from './ReminderToggle';
 import ScriptSelector from './ScriptSelector';
 import ViewToggleButton from './ViewToggleButton';
+
+function entryToSelection(entry) {
+  return { shloka: entry.shloka, line: entry.line, idx: entry.idx };
+}
+
+function parseSavedHighlighted() {
+  try {
+    const saved = localStorage.getItem('highlightedWord');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (
+        parsed &&
+        typeof parsed.shloka === 'number' &&
+        typeof parsed.line === 'number' &&
+        typeof parsed.idx === 'number'
+      ) {
+        return parsed;
+      }
+    }
+  } catch {
+    console.error('Failed to parse saved highlighted word from localStorage');
+  }
+  return null;
+}
+
+function getInitialHighlighted() {
+  // Notification deep links open the page at ?name=<flat index>.
+  const fromUrl = consumeNameParam();
+  if (fromUrl >= 0) {
+    const entry = getAllNameEntries()[fromUrl];
+    if (entry) {
+      return entryToSelection(entry);
+    }
+  }
+  return parseSavedHighlighted() ?? { shloka: null, line: null, idx: null };
+}
 
 function DesktopSahasranama({
   selectedScript,
@@ -15,25 +53,7 @@ function DesktopSahasranama({
   onLaunchChatGPT,
   onToggleView
 }) {
-  const [highlighted, setHighlighted] = useState(() => {
-    try {
-      const saved = localStorage.getItem('highlightedWord');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (
-          parsed &&
-          typeof parsed.shloka === 'number' &&
-          typeof parsed.line === 'number' &&
-          typeof parsed.idx === 'number'
-        ) {
-          return parsed;
-        }
-      }
-    } catch {
-      console.error('Failed to parse saved highlighted word from localStorage');
-    }
-    return { shloka: null, line: null, idx: null };
-  });
+  const [highlighted, setHighlighted] = useState(getInitialHighlighted);
 
   const initialShlokaRef = useRef(highlighted.shloka);
 
@@ -57,7 +77,36 @@ function DesktopSahasranama({
     setHighlighted({ shloka, line, idx });
     setContext('');
     localStorage.setItem('highlightedWord', JSON.stringify({ shloka, line, idx }));
+    const entryIndex = getAllNameEntries().findIndex((entry) =>
+      isSameEntry(entry, { shloka, line, idx })
+    );
+    if (entryIndex >= 0) {
+      notifyNameChanged(entryIndex);
+    }
   };
+
+  // Jump to a name requested by the backend (notification tap, or an advance
+  // that happened while the page was closed).
+  useEffect(
+    () =>
+      followName((entryIndex) => {
+        const entry = getAllNameEntries()[entryIndex];
+        if (!entry) {
+          return;
+        }
+        const selection = { shloka: entry.shloka, line: entry.line, idx: entry.idx };
+        setHighlighted(selection);
+        setContext('');
+        localStorage.setItem('highlightedWord', JSON.stringify(selection));
+        setTimeout(() => {
+          const shlokaElement = document.querySelector(`[data-shloka="${entry.shloka}"]`);
+          if (shlokaElement) {
+            shlokaElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 0);
+      }),
+    [setContext]
+  );
 
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => (
     <>
@@ -111,6 +160,7 @@ function DesktopSahasranama({
             label="Switch to word-by-word view"
             onClick={onToggleView}
           />
+          <ReminderToggle />
         </div>
         {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
           <div key={shlokaNum} data-shloka={shlokaNum}>

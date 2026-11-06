@@ -83,6 +83,18 @@
   color: orange;
 }
 
+.view-toggle-button.reminder-toggle {
+  right: 2.75rem;
+}
+
+.view-toggle-button.reminder-toggle.reminder-on {
+  color: #2e9e5b;
+}
+
+.view-toggle-button.reminder-toggle.reminder-on:hover {
+  color: orange;
+}
+
 @media (prefers-color-scheme: dark) {
   .view-toggle-button {
     color: #999;
@@ -90,6 +102,10 @@
 
   .view-toggle-button:hover {
     color: orange;
+  }
+
+  .view-toggle-button.reminder-toggle.reminder-on {
+    color: #6fd08c;
   }
 }
 
@@ -242,6 +258,16 @@
 }
 
 .tiny-script-selector .view-toggle-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.tiny-script-selector .view-toggle-button.reminder-toggle {
+  right: 30px;
+  padding: 0.3rem;
+}
+
+.tiny-script-selector .view-toggle-button.reminder-toggle svg {
   width: 17px;
   height: 17px;
 }

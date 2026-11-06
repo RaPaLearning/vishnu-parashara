@@ -1,0 +1,26 @@
+{
+	// Cloudflare Worker configuration for the name-push backend.
+	"name": "vishnu-name-push",
+	"main": "src/worker.js",
+	"compatibility_date": "2025-06-01",
+	// Cron runs every minute; the worker itself enforces the 15-minute idle
+	// interval per device.
+	"triggers": {
+		"crons": [
+			"* * * * *"
+		]
+	},
+	"kv_namespaces": [
+		{
+			"binding": "NAMES_KV",
+			// Run: npx wrangler kv namespace create NAMES_KV
+			// then paste the id printed by that command here.
+			"id": "d74f9d04a4aa4afebb66db436e7f58c2",
+			"remote": true
+		}
+	],
+	// VAPID keys are NOT stored here. Set them as secrets:
+	//   npx wrangler secret put VAPID_PUBLIC_KEY
+	//   npx wrangler secret put VAPID_PRIVATE_KEY
+	"vars": {}
+}

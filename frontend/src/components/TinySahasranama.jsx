@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getAllNameEntries, isSameEntry } from '../nameEntries';
+import { consumeNameParam, followName, notifyNameChanged } from '../push/reminders';
 import { transliterate } from '../transliterate';
+import ReminderToggle from './ReminderToggle';
 import ScriptSelector from './ScriptSelector';
 import ViewToggleButton from './ViewToggleButton';
 
@@ -46,7 +48,14 @@ function TinySahasranama({
   onLaunchChatGPT
 }) {
   const entries = useMemo(() => getAllNameEntries(), []);
-  const [index, setIndex] = useState(() => loadSavedIndex(entries));
+  const [index, setIndex] = useState(() => {
+    // Notification deep links open the page at ?name=<flat index>.
+    const fromUrl = consumeNameParam();
+    if (fromUrl >= 0 && fromUrl < entries.length) {
+      return fromUrl;
+    }
+    return loadSavedIndex(entries);
+  });
 
   const indexRef = useRef(index);
   const suppressClickRef = useRef(false);
@@ -73,8 +82,16 @@ function TinySahasranama({
         JSON.stringify({ shloka: entry.shloka, line: entry.line, idx: entry.idx })
       );
       setIndex(clamped);
+      notifyNameChanged(clamped);
     },
     [entries]
+  );
+
+  // Jump to a name requested by the backend (notification tap, or an advance
+  // that happened while the page was closed).
+  useEffect(
+    () => followName((entryIndex) => goTo(Math.min(entryIndex, entries.length - 1))),
+    [goTo, entries.length]
   );
 
   const goNext = useCallback(() => goTo(indexRef.current + 1), [goTo]);
@@ -225,6 +242,7 @@ function TinySahasranama({
           label="Switch to shloka view"
           onClick={onToggleView}
         />
+        <ReminderToggle />
       </div>
       <div className="tiny-carousel" ref={carouselRef}>
         {offsets.map((offset) => {
