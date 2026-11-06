@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getAllNameEntries, isSameEntry } from '../nameEntries';
 import { transliterate } from '../transliterate';
-import { useLongPress } from '../useLongPress';
 import ScriptSelector from './ScriptSelector';
+import ViewToggleButton from './ViewToggleButton';
 
 const PEEK_RANGE = 3;
 const WHEEL_THRESHOLD = 40;
@@ -36,7 +36,15 @@ function loadSavedIndex(entries) {
   return 0;
 }
 
-function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
+function TinySahasranama({
+  selectedScript,
+  onScriptChange,
+  onToggleView,
+  context,
+  setContext,
+  onCopyContext,
+  onLaunchChatGPT
+}) {
   const entries = useMemo(() => getAllNameEntries(), []);
   const [index, setIndex] = useState(() => loadSavedIndex(entries));
 
@@ -71,6 +79,11 @@ function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
 
   const goNext = useCallback(() => goTo(indexRef.current + 1), [goTo]);
   const goPrev = useCallback(() => goTo(indexRef.current - 1), [goTo]);
+
+  // Clear the copied chat prompt whenever the highlighted word changes.
+  useEffect(() => {
+    setContext('');
+  }, [index, setContext]);
 
   // Animate the elastic drag offset back to rest.
   const resetDragOffset = useCallback((animate) => {
@@ -137,32 +150,24 @@ function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
     };
   }, [goNext, goPrev, resetDragOffset]);
 
-  const {
-    onPointerDown: lpDown,
-    onPointerUp: lpUp,
-    onPointerMove: lpMove,
-    onPointerCancel: lpCancel
-  } = useLongPress(() => {
-    suppressClickRef.current = true;
-    onToggleView();
-  });
-
   const handlePointerDown = (e) => {
     suppressClickRef.current = false;
-    lpDown(e);
     dragRef.current = { pointerId: e.pointerId, startY: e.clientY };
   };
 
-  const handlePointerMove = (e) => {
-    lpMove(e);
+  const handleChatClick = (e) => {
+    e.stopPropagation();
+    const entry = entries[index];
+    if (context.length === 0) {
+      onCopyContext(entry.shloka, entry.line, entry.idx);
+    } else {
+      onLaunchChatGPT();
+    }
   };
 
-  const handlePointerUp = (e) => {
-    lpUp(e);
-  };
-
-  const handlePointerCancel = (e) => {
-    lpCancel(e);
+  const handleChatLaunchClick = (e) => {
+    e.stopPropagation();
+    onLaunchChatGPT();
   };
 
   const handleWheel = (e) => {
@@ -210,15 +215,17 @@ function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
       onKeyDown={handleKeyDown}
       onWheel={handleWheel}
       onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      onPointerCancel={handlePointerCancel}
     >
-      <ScriptSelector
-        className="tiny-script-selector"
-        selectedScript={selectedScript}
-        onScriptChange={onScriptChange}
-      />
+      <div className="tiny-script-selector">
+        <ScriptSelector
+          selectedScript={selectedScript}
+          onScriptChange={onScriptChange}
+        />
+        <ViewToggleButton
+          label="Switch to shloka view"
+          onClick={onToggleView}
+        />
+      </div>
       <div className="tiny-carousel" ref={carouselRef}>
         {offsets.map((offset) => {
           const entryIndex = index + offset;
@@ -234,7 +241,28 @@ function TinySahasranama({ selectedScript, onScriptChange, onToggleView }) {
                 <div className="tiny-count">
                   {entryIndex + 1}
                 </div>
-                <h1>{transliterate(entry.word, selectedScript)}</h1>
+                <div className="tiny-name-row">
+                  <h1>{transliterate(entry.word, selectedScript)}</h1>
+                  <button
+                    type="button"
+                    className="tiny-chat-button"
+                    aria-label="Chat"
+                    title="Chat about this name"
+                    onClick={handleChatClick}
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                </div>
+                {context.length > 0 && (
+                  <div className="chat-launch tiny-chat-launch" onClick={handleChatLaunchClick}>
+                    <div>Prompt copied. Paste in an AI chat.</div>
+                    <div className="chat-launch-link">
+                      Or click to launch in chatgpt.com. Press send there
+                    </div>
+                  </div>
+                )}
                 <p className="tiny-meaning">{entry.meaning}</p>
                 <div className="tiny-commentary">
                   {entry.commentary.split('\n').map((line, idx) => (

@@ -44,6 +44,10 @@ function App() {
         selectedScript={selectedScript}
         onScriptChange={handleScriptChange}
         onToggleView={toggleView}
+        context={context}
+        setContext={setContext}
+        onCopyContext={copyContext}
+        onLaunchChatGPT={launchChatGPT}
       />
     );
   }

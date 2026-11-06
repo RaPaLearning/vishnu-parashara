@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { getWordMeaningAndCommentary, getWordsForShlokaLine, numberOfShlokas } from '../data';
 import { lineEndings } from '../nameEntries';
 import { transliterate } from '../transliterate';
-import { useLongPress } from '../useLongPress';
 import MeaningPanel from './MeaningPanel';
 import ScriptSelector from './ScriptSelector';
+import ViewToggleButton from './ViewToggleButton';
 
 function DesktopSahasranama({
   selectedScript,
@@ -59,8 +59,6 @@ function DesktopSahasranama({
     localStorage.setItem('highlightedWord', JSON.stringify({ shloka, line, idx }));
   };
 
-  const longPressHandlers = useLongPress(onToggleView);
-
   const formatWordsInShlokaLine = (shlokaNum, lineNum) => (
     <>
       {getWordsForShlokaLine(shlokaNum, lineNum).map((word, idx) => {
@@ -103,12 +101,17 @@ function DesktopSahasranama({
 
   return (
     <>
-      <div className="shloka-box" {...longPressHandlers}>
-        <ScriptSelector
-          className="script-selector-row"
-          selectedScript={selectedScript}
-          onScriptChange={onScriptChange}
-        />
+      <div className="shloka-box">
+        <div className="script-selector-row">
+          <ScriptSelector
+            selectedScript={selectedScript}
+            onScriptChange={onScriptChange}
+          />
+          <ViewToggleButton
+            label="Switch to word-by-word view"
+            onClick={onToggleView}
+          />
+        </div>
         {Array.from({ length: numberOfShlokas() }, (_, i) => i + 1).map((shlokaNum) => (
           <div key={shlokaNum} data-shloka={shlokaNum}>
             {[1, 2].map((lineNum) => (
