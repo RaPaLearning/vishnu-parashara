@@ -1153,7 +1153,7 @@ export const meanings = [
   ['Grants the supreme status of having Him', 'Son of Vasudeva', 'Resides for the benefit of the world', 'Whose mind is with Vasudeva', 'He who was handed over']
 ],
   [
-  ['Removes obstacles to goodness', 'Whose actions remove all bonds', 'Existence', "Becomes his people's holdings in every way", 'He is everything for His people; they are everything for Him'],
+  ['Removes obstacles to goodness', 'Whose actions are lovable', 'Existence', "Becomes his people's holdings in every way", 'He is everything for His people; they are everything for Him'],
   ['With valiant army', 'Foremost in His clan', 'Abode of the authentic', 'Auspiciously associated with river Yamuna']
 ],
   [
