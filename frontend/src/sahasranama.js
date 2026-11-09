@@ -885,7 +885,7 @@ export const meanings = [
   ['Affluent', 'Has the three-fold worlds as a residence', 'Purifying presence', 'Supreme auspiciousness']
 ],
   [
-  ['Controller', 'Life-giver', 'Life', 'Unending greatness', 'Ever praised for such greatness', 'Lord of the liberated'],
+  ['Regulates all things, through every state of their existence.', 'Life-giver', 'Life', 'Unending greatness', 'Ever praised for such greatness', 'Lord of the liberated'],
   ['Is in a lovely abode', 'Protector of the Earth', 'Husband of Lakshmi', 'Attracts the liberated senses']
 ],
   [
@@ -981,7 +981,7 @@ export const meanings = [
   ['Medicine', 'Barrier of the universe', 'Valor and virtue']
 ],
   [
-  ['Lord of all in the past, present, future', 'Moves about', 'Purifier', 'Insatiable'],
+  ['Owner of all past, present, future', 'Moves about', 'Purifier', 'Insatiable'],
   ['Destroyer of desires', 'Creator of desires', 'Desirable', 'Lovable', 'Grants desires', 'Powerful']
 ],
   [
@@ -1129,7 +1129,7 @@ export const meanings = [
   ['Unstoppable', "Can't be confronted", 'Illuminates', 'Having immeasurable strides']
 ],
   [
-  ['Destroyer of the wheel of time', 'Son of shoora', 'Valiant', 'Ruler of all valiant people'],
+  ['Destroyer of the wheel of time', 'Worshipped as the son of Shoora (Vasudeva)', 'Valiant', 'Ruler of all valiant people'],
   ['Always moving about the three worlds', 'Lord of the three worlds', 'Whose organs give the power of beginnings and the power of closures', 'Destroyer of distress', 'Green hue, accepting offerings']
 ],
   [
