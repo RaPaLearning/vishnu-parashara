@@ -981,7 +981,7 @@ export const meanings = [
   ['Medicine', 'Barrier of the universe', 'Valor and virtue']
 ],
   [
-  ['Owner of all past, present, future', 'Moves about', 'Purifier', 'Insatiable'],
+  ['Sovereign of all past, present, future', 'Moves about', 'Purifier', 'Insatiable'],
   ['Destroyer of desires', 'Creator of desires', 'Desirable', 'Lovable', 'Grants desires', 'Powerful']
 ],
   [
@@ -989,7 +989,7 @@ export const meanings = [
   ['Cannot be seen', 'Yet has a manifest form', 'Conqueror of a thousand', 'Boundless']
 ],
   [
-  ['Liked', 'Equal attitude towards others', 'Dear to eminent persons', 'Has the plume of lordship', 'Binds', 'Drenches the fatigued and consoles'],
+  ['Liked', 'Equal attitude towards others', 'Dear to eminent persons', 'Has the plume of lordship', 'Binds', 'Drenches the fatigued and consoles them'],
   ['Gave up anger', 'Showed anger', 'Cuts', 'Arms for favoring the world', 'Supporter of the world']
 ],
   [
@@ -1273,7 +1273,7 @@ export const meanings = [
   ['The worship for those who are void of capability', 'The fruit of worship', 'The performer of worship', "Has others' worship as an accessory of His activity", 'Grants faith, qualifications and things needed for worship']
 ],
   [
-  ['Brings completion to worship', 'Created worship', 'Owner and purpose of all worship', 'Sustains  and enjoys all worship', 'By knowing Him, the goal of worship is achieved'],
+  ['Brings completion to worship', 'Created worship', 'Owner and purpose of all worship', 'Sustains  and enjoys all worship', 'By whose awareness, the goal of worship is achieved'],
   ['Gives His awareness at the completion of worship', 'The secret satisfaction of worship', 'The object of enjoyment', 'And the one who enjoys those who enjoy Him']
 ],
   [
